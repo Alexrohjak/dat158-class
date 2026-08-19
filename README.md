@@ -95,3 +95,13 @@ ML modul 3 at the earliest.
 - `data/`, `models/`, `.venv/` and `reference/` are gitignored — generated or
   re-downloadable, not source.
 - Commit at the end of each week. `git add -A && git commit -m "uke NN"`.
+
+## Where are we?
+
+```bash
+python src/week.py          # current week + what is filed so far
+python src/week.py --all    # whole semester
+```
+
+Future weeks are never reported as missing. If a week is empty, the material
+almost certainly is not published yet.
