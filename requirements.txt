@@ -1,0 +1,14 @@
+# Core environment for HOML Part I (chapters 1-9, scikit-learn).
+# Install with:  pip install -r requirements.txt
+#
+# These are the packages you actually asked for. Everything else in your .venv
+# is a dependency pulled in automatically. requirements-lock.txt has the exact
+# pinned versions of all 100+ packages, for reproducing this exact environment.
+
+numpy
+pandas
+scikit-learn
+matplotlib
+seaborn
+jupyterlab
+ipykernel

@@ -1,0 +1,30 @@
+# Virtual environment
+.venv/
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Data — downloaded or generated, not source. Keep the folders, drop the contents.
+data/raw/*
+data/processed/*
+data/external/*
+!data/**/.gitkeep
+!data/README.md
+
+# Trained models — regenerate them, don't version them
+models/*
+!models/.gitkeep
+
+# Cloned reference material (the book's own repo)
+reference/
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
