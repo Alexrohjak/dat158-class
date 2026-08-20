@@ -1,174 +1,12 @@
-# DAT158-1 26H Maskinlæring og videregående algoritmer
+# Uke 34 — Machine Learning
 
-Mirrored from Canvas by `src/canvas_sync.py`. **Do not edit by hand** —
-re-run the script instead. Per-week records are in `weeks/*/README.md`.
+**17. - 23. aug** · ML modul 1: Introduksjon til maskinlæring
 
-Course: `DAT158-1 26H` (id 35853)
+Reading: [`../../ml/book-homl/chapter-map.md`](../../ml/book-homl/chapter-map.md)
 
-## Canvas sections
-
-| Section | Link |
-|---|---|
-| Heim | /courses/35853 |
-| Personar | /courses/35853/users |
-| Kunngjeringar | /courses/35853/announcements |
-| Modular | /courses/35853/modules |
-| Oppgåver | /courses/35853/assignments |
-| Vurderingar | /courses/35853/grades |
-| Panopto video | /courses/35853/external_tools/1650 |
-| Zoom | /courses/35853/external_tools/1247 |
-| Pensum/Litteratur | /courses/35853/external_tools/2182 |
-| Notebook | /courses/35853/notebook |
-
-## Modules
-
-### ML modul 1: Introduksjon til maskinlæring
-
-- **Introduksjon til maskinlæring** — Page
-- **Kom igang med Python og ML-bibliotekene** — Page
-
-### Advanced algorithms
-
-- **Veke 35 (24.08 - 30.08)** — Page
-
-## Pages
-
-### DAT158-1 25H Maskinlæring og videregående algoritmer
-
-*Module: Front page · updated 2026-08-20T08:44:24Z*
-
-Velkommen til DAT158 - Maskinlæring og videregående algoritmer
-
-Gå til Moduler for å komme i gang.
-
-Praktisk informasjon
-
-Emnebeskrivelse: https://www.hvl.no/studier/studieprogram/emne/DAT158
-
-Forelesere: Sven-Olai Høyland, Steffen Mæland og Erlend Raa Vagset
-
-Studentassistenter: TBA
-
-Timeplan og rom: TimeEdit
-
-Repo for ML-delen: GitHub
-
-Fremdriftsplan
-
-Planen oppdateres underveis -- sjekk innom regelmessig
-
-Uke
-Del
-Tema
-
-34
-17. - 23. aug
-
-ML
-
- ML modul 1: Introduksjon til maskinlæring
-
- Zoomlenke for Førde og Haugesund: Zoom
-
-Onsdag: Forelesningsnotater
-
-Fredag: (kommer)
-
-35
-24. - 30. aug
-
-Alg
-
- Algoritmer - Tekstprosessering
-
-36
-31. aug - 6. sep
-ML
-
- ML modul 1: Introduksjon til maskinlæring
-
-37
-7. - 13. sep
-Alg
-
- Algoritmer - NP-completeness, Chapter 1
-
-38
-14. - 20. sep
-Alg
-
-Chapter 2
-
-39
-21. - 27. sep
-ML
-
- ML modul 2: Maskinlæringsmodeller
-
-40
-28. sep - 4. okt
-ML
-
- ML modul 2: Maskinlæringsmodeller
-
-41
-5. - 11. okt
-Alg
-
- Chapter 3 & Chapter 4
-
-42
-12. - 18. okt
-Alg
-
-43
-19. - 25. okt
-ML
-
- ML modul 3: End-to-end maskinlæringssystem
-
-44
-26. okt - 1. nov
-ML
-
-  ML modul 3: End-to-end maskinlæringssystem
-
-45
-2. - 8. nov
-Alg
-
-Chapter 6 & 7
-
-46
-9. - 15. nov
-Alg
-
-47
-16. - 21. nov
-ML
-
-Eksamen
-
- TBA
-
-**Attached files:**
-- DAT158-course-logo.png
-- FinalCurriculum_2025.pdf
-
-**Links:**
-- https://www.hvl.no/studier/studieprogram/emne/DAT158
-- https://www.hvl.no/en/employee/?user=3600298
-- https://www.hvl.no/person/?user=Steffen.Meland
-- https://www.hvl.no/person/?user=Erlend.Raa.Vagset
-- https://cloud.timeedit.net/hvl/web/pen/riqY8y5X0gvZ71QZQ525717Q67876X6Y71161Z5Q60o8YY76X1876Q77Y767c8Zp7QZq1Qo.html
-- https://github.com/HVL-ML/DAT158
-- https://hvl.zoom.us/j/63122964590?pwd=uCdb8RGnzbjZJNeafwlnOVJbEA9vpl.1
-- https://hvl-ml.github.io/DAT158/slides/1-intro/1-intro.html
-- https://hvl-ml.github.io/DAT158/slides/3-systems/lecture3.html
+## Posted by the lecturer
 
 ### Introduksjon til maskinlæring
-
-*Module: ML modul 1: Introduksjon til maskinlæring · updated 2026-08-04T13:54:35Z*
 
 I denne første modulen skal vi sette oss inn i hva maskinlæring er og hva det kan brukes til, men vi går ganske rett på sak og skal få oss litt praktisk erfaring med hvordan data brukes til å løse ulike oppgaver.
 
@@ -198,7 +36,7 @@ Info om Python og om bibliotekene vi kommer til å bruke er lagt ut under Kom ig
 
 For flere eksempler på hvor og når det er bra å bruke maskinlæring, se Google for Developers sitt minikurs i ML Problem Framing.
 
-**Attached files:**
+**Files:**
 - CCComputing-CompAtCERN_7090-1.jpg
 
 **Links:**
@@ -207,8 +45,6 @@ For flere eksempler på hvor og når det er bra å bruke maskinlæring, se Googl
 - https://developers.google.com/machine-learning/problem-framing
 
 ### Kom igang med Python og ML-bibliotekene
-
-*Module: ML modul 1: Introduksjon til maskinlæring · updated 2026-08-05T06:27:25Z*
 
 Python
 
@@ -260,7 +96,7 @@ Pandas:
 
   - Dokumentasjonen inneholder også en 10-minutters guide til de sentrale funksjonene.
 
-**Attached files:**
+**Files:**
 - _0f757c07-5f2a-4730-93b3-ebf111f37f86.jpg
 
 **Links:**
@@ -279,41 +115,17 @@ Pandas:
 - https://www.kaggle.com/learn/pandas
 - https://pandas.pydata.org/docs/user_guide/10min.html
 
-### Veke 35 (24.08 - 30.08)
+## In this folder
 
-*Module: Advanced algorithms · updated 2026-08-20T08:42:30Z*
+- `slides/` — 5 item(s), 105 KB
+  - `1-intro`
+  - `1-intro.html`
+  - `1-intro_files`
+  - `lecture3.html`
+  - `lecture3_files`
+- `exercises/` — empty
+- `code/` — empty
 
-Startar med tekst behandling
+---
 
-Zoomlenke: Sjå praktisk informasjon på startsida
-
-Kapittel frå lærebok: Kapittel_9_GoodrichAndTammassia.pdf
-
-Det blir lagt ut lysark for heile tema / kapittel og så vil det bli opplyst kvar vi startar.
-
-Lysark: Chapter 9 TextProcessing.pdf
-
-Onsdag 26. augsust - Frå starten
-
-Fredag 28. august - Planlagt, men kan bli endre: Forsettelse på lysark 31 (Standard tries)
-
-Mentimeter for spørsmål: Mentimeter for Spørsmål.pdf
-
-Oppgaver (obligatorisk): Kommer
-
-**Attached files:**
-- Kapittel_9_GoodrichAndTammassia.pdf
-- Chapter 9 TextProcessing.pdf
-- Mentimeter for Spørsmål.pdf
-
-## Announcements
-
-### Første forelesning
-
-*Posted 2026-08-18T14:02:56Z*
-
-Hei og velkommen til første forelesning i DAT158 i morgen kl 10.15. I Bergen møtes vi i F118 (Aud 14), i Førde i VIE1070 (Balchen), og i Haugesund i Auditorium B. Det blir sprek info om innhold og opplegg i kurset, så møt opp!
-
-## Assignments
-
-*None published yet.*
+<!-- Generated by src/canvas_sync.py. Do not edit — re-run the script. -->

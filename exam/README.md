@@ -32,22 +32,29 @@ Both halves are examined. Keep the split visible:
 - `ml-revision.md` — machine learning
 - `alg-revision.md` — advanced algorithms
 
-## Building revision notes as you go
+## Revision material
 
-The cheapest revision material is the one you already wrote. Each week's
-`notes.md` has a "Questions I couldn't answer" section — those questions,
-collected across 14 weeks, are your revision list. Do not start it in November.
+Four things, in order of usefulness:
+
+1. **Past papers** — see below. Closest thing to knowing the questions.
+2. **The exercise notebooks** in `../reference/DAT158/notebooks/`, which have a
+   `solutions/` folder. Working these is the ML half's revision.
+3. **The slide decks** in `../weeks/*/slides/`, all archived offline. The exam
+   is set from what was lectured.
+4. **The exam guide** the lecturer promises for mid-November.
+
+Since the exam allows **no aids**, recall matters — start before December.
 
 ## Past papers
 
-**Canvas has a `Tidligere eksamener` folder** — confirmed to exist, containing
-one file plus a subfolder named `Oppgaver_Uten_Losning` ("problems without
-solutions").
+**Canvas has a `Tidligere eksamener` folder** containing one file plus a
+subfolder `Oppgaver_Uten_Losning` ("problems without solutions") — but as of
+uke 34 **nothing in it is published to students yet**.
 
-The API cannot list it: students get a 403 on the course Files area, and the
-Files tab is not in the course navigation. So `src/canvas_sync.py` will not
-pull these automatically. Get at them by browsing Canvas directly, or ask the
-lecturer for a link — once a file is linked from a page, the sync script picks
-it up.
+The API cannot list it either: students get a 403 on the course Files area, and
+the Files tab is not in the course navigation. So `src/canvas_sync.py` will not
+pull these automatically until the lecturer links them from a page — at which
+point the sync picks them up on its own.
 
-Drop whatever you retrieve in this folder.
+Worth asking the lecturer directly if they have not appeared by November. Drop
+whatever you retrieve in this folder.

@@ -18,15 +18,23 @@ The chapter numbers run 1, 2, 3 & 4, 6 & 7 *and* 9 because there are **two**
 books. The low numbers are Williamson & Shmoys; chapter 9 is Goodrich &
 Tamassia.
 
-## Textbooks — there are two
+## Textbooks
 
-Confirmed from `Curriculum DAT158 Algorithm part`, written by the lecturer and
-linked from the Canvas front page. A copy is in
-[`../docs/canvas/files/FinalCurriculum_2025.pdf`](../docs/canvas/files/FinalCurriculum_2025.pdf).
+Canvas → *Pensum/Litteratur* lists **one** book for this half, for 2026/27:
 
-**Caveat: that document is the *2025* curriculum.** The lecturer has not yet
-posted a 26H version. Treat it as a very strong indication, not gospel, and
-re-check when this year's appears.
+> Williamsen & Shmoys, The Design of Approximation Algorithms,
+> Gratis på: http://www.designofapproxalgs.com/
+
+(That "Williamsen" is the reading list's own typo — the author is **Williamson**.)
+
+Goodrich & Tamassia is **not** on the official reading list. The lecturer posts
+its chapter 9 directly instead, so treat it as supplied material rather than a
+book you are expected to own.
+
+The per-chapter breakdown below comes from `Curriculum DAT158 Algorithm part`
+([`../docs/canvas/files/FinalCurriculum_2025.pdf`](../docs/canvas/files/FinalCurriculum_2025.pdf)),
+which is the **2025** document — the books are confirmed for 26H, the exact
+sections are not. Re-check when this year's curriculum appears.
 
 ### 1. Williamson & Shmoys — *The Design of Approximation Algorithms*
 
@@ -54,8 +62,8 @@ It is probably folded into one of the TBA weeks (42 or 46).
 
 ### 2. Goodrich & Tamassia — *Algorithm Design: Foundations, Analysis and Internet Examples*
 
-Used for **chapter 9 only** (Text Processing, uke 35). The lecturer posted the
-chapter itself, so you do not need the whole book:
+**Not on the reading list.** Used for **chapter 9 only** (Text Processing,
+uke 35), and the lecturer posts the chapter itself, so there is nothing to buy:
 [`../weeks/uke35-alg/slides/Kapittel_9_GoodrichAndTammassia.pdf`](../weeks/uke35-alg/slides/)
 
 ### Also examinable

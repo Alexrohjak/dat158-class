@@ -49,7 +49,7 @@ None published yet — see [`assignments/`](assignments/).
 | I have… | It goes in… |
 |---|---|
 | A lecture slide deck | `weeks/ukeNN-xx/slides/` |
-| Notes from a lecture | `weeks/ukeNN-xx/notes.md` |
+| A file the lecturer posted | `weeks/ukeNN-xx/slides/` — or just re-run the sync |
 | Code I wrote this week | `weeks/ukeNN-xx/code/` |
 | A weekly exercise | `weeks/ukeNN-xx/exercises/` |
 | A graded assignment | `assignments/` |
@@ -90,7 +90,7 @@ curl -L -o reference/williamson-shmoys-design-of-approximation-algorithms.pdf \
 | What | Why you want it |
 |---|---|
 | `reference/DAT158/` | **The course's own repo.** `notebooks/` holds the weekly ML exercises — module 1 is already published as `DAT158-1.1` … `1.6`, with a `solutions/` folder. `git -C reference/DAT158 pull` each week. |
-| `reference/handson-ml3/` | Official HOML notebooks (Apache 2.0). All 28 chapters plus two maths primers. The book's *text* is not in there and is not free; the *code* is. |
+| `reference/handson-ml3/` | Official HOML notebooks (Apache 2.0). All 28 chapters plus two maths primers. The book's *text* is not in there — read that online free through HVL, via Canvas → Pensum/Litteratur. |
 | `reference/williamson-shmoys-*.pdf` | The approximation-algorithms textbook, free from the authors. |
 
 > **A warning about all three.** Each contains worked solutions. Reading one
@@ -127,7 +127,8 @@ one at *Account → Settings → + New Access Token*.
 
 Output lands in [`docs/canvas/course.md`](docs/canvas/course.md) — a flattened
 mirror of every module page, announcement and assignment. **Don't edit it by
-hand**; re-run the script. Your own writing goes in `weeks/*/notes.md`.
+hand**; re-run the script. Each week folder also gets a generated
+`README.md` recording what was posted that week.
 
 Three things the API cannot reach, because they are LTI external tools:
 **Pensum/Litteratur**, **Panopto** and **Zoom**. Open those in a browser.

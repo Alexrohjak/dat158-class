@@ -62,8 +62,14 @@ your answers out of the version-controlled part of this repo.
 ## Textbook
 
 **Hands-On Machine Learning with Scikit-Learn, Keras & TensorFlow**, Aurélien
-Géron, 3rd ed. (O'Reilly, 2022). Chapter-by-chapter notes:
+Géron, **3. utg., O'Reilly, 2022** (xxv + 834 pages). Confirmed on the 2026/27
+reading list, which says the ML half *"vil ta utgangspunkt i boken til Aurélien
+Geron"*. Chapter-by-chapter notes:
 [`book-homl/chapter-map.md`](book-homl/chapter-map.md).
+
+**You can read it online for free.** The reading list marks it *"Tilgjengelig
+fra Høgskulen på Vestlandet"* with a *"Les online"* link — HVL has a licence.
+Go through Canvas → *Pensum/Litteratur* rather than buying a copy.
 
 Official notebooks are cloned to `../reference/handson-ml3/` (Apache 2.0).
 

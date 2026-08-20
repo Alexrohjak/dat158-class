@@ -3,9 +3,13 @@
 Read-only: this script only ever issues GET requests. It never submits, posts,
 marks anything complete, or changes a single Canvas setting.
 
-    python src/canvas_sync.py              # refresh the digest, no downloads
-    python src/canvas_sync.py --download   # also fetch linked PDFs/slides
-    python src/canvas_sync.py --quiet      # only report what changed
+    python src/canvas_sync.py                 # sync everything, fetch new files
+    python src/canvas_sync.py --no-download   # text only, skip the files
+    python src/canvas_sync.py --quiet         # only report what changed
+
+Writes one `README.md` per week folder recording what the lecturer posted, and
+downloads the files alongside it. Those files are generated — edit them and the
+next run overwrites your changes.
 
 Needs a token in .env (gitignored) — see .env.example.
 
@@ -33,6 +37,7 @@ import urllib.request
 from pathlib import Path
 
 from paths import ROOT
+from week import DATES, PLAN, folder
 
 OUT = ROOT / "docs" / "canvas"
 RAW = OUT / "raw"
@@ -277,13 +282,29 @@ def collect(api: Canvas) -> dict:
 # output
 # --------------------------------------------------------------------------
 
-def week_folder_for(page: dict) -> Path | None:
-    """Map a page like 'Veke 35 (24.08 - 30.08)' to weeks/uke35-alg/."""
+def weeks_for_page(page: dict) -> list[int]:
+    """Which teaching weeks a Canvas page belongs to.
+
+    Two routes, because the two halves label things differently. The algorithms
+    pages name their week outright ("Veke 35 (24.08 - 30.08)"). The ML pages do
+    not — they are grouped under a module whose name matches the topic in PLAN,
+    and a module usually spans two weeks, so both get the record.
+    """
     match = WEEK_IN_TITLE.search(page.get("title") or "")
-    if not match:
-        return None
-    week = match.group(1)
-    hits = sorted((ROOT / "weeks").glob(f"uke{week}-*"))
+    if match:
+        week = int(match.group(1))
+        return [week] if week in PLAN else []
+
+    module = (page.get("module") or "").strip().casefold()
+    if not module or module == "front page":
+        return []
+    return sorted(u for u, (_, topic) in PLAN.items()
+                  if topic.strip().casefold() == module)
+
+
+def primary_week(page: dict) -> int | None:
+    """Where a page's files go. Earliest week wins, so nothing is duplicated."""
+    hits = weeks_for_page(page)
     return hits[0] if hits else None
 
 
@@ -293,7 +314,7 @@ def write_digest(snap: dict) -> Path:
         f"# {snap['course']['name']}",
         "",
         "Mirrored from Canvas by `src/canvas_sync.py`. **Do not edit by hand** —",
-        "re-run the script instead. Your own notes belong in `weeks/*/notes.md`.",
+        "re-run the script instead. Per-week records are in `weeks/*/README.md`.",
         "",
         f"Course: `{snap['course']['code']}` (id {snap['course']['id']})",
         "",
@@ -367,26 +388,116 @@ def download_files(api: Canvas, snap: dict, quiet: bool) -> list[str]:
     """Put each linked file next to the week it belongs to."""
     report = []
     for page in snap["pages"]:
-        target = week_folder_for(page)
-        dest_dir = (target / "slides") if target else (OUT / "files")
+        uke = primary_week(page)
+        dest_dir = (folder(uke) / "slides") if uke else (OUT / "files")
         for fid in page["file_ids"]:
             meta = snap["files"].get(str(fid))
             if not meta or not meta.get("url"):
                 report.append(f"  skip  file {fid} — no download URL")
                 continue
-            dest = dest_dir / meta["name"]
+            # Inline decoration (banner images and the like) is not lecture
+            # material — keep it out of the week folders.
+            target = dest_dir
+            if uke and str(meta.get("type", "")).startswith("image/"):
+                target = OUT / "files"
+            dest = target / meta["name"]
             status = api.download(meta["url"], dest)
             if status != "exists" or not quiet:
                 report.append(f"  {status:11} {dest.relative_to(ROOT)}")
     return report
 
 
+def folder_contents(uke: int) -> list[str]:
+    """What is actually filed in a week folder, as markdown bullets."""
+    base = folder(uke)
+    lines = []
+    for sub in ("slides", "exercises", "code"):
+        d = base / sub
+        files = sorted(f for f in d.iterdir() if f.name != ".gitkeep") if d.exists() else []
+        if not files:
+            lines.append(f"- `{sub}/` — empty")
+            continue
+        total = sum(f.stat().st_size for f in files if f.is_file())
+        lines.append(f"- `{sub}/` — {len(files)} item(s), {total // 1024} KB")
+        for f in files:
+            lines.append(f"  - `{f.name}`")
+    return lines
+
+
+def write_week_records(snap: dict) -> list[int]:
+    """One README.md per week: what the lecturer posted, and what we hold.
+
+    Generated, not authored. Anything hand-written here is lost on the next run
+    — personal notes do not belong in a file the sync owns.
+    """
+    by_week: dict[int, list[dict]] = {}
+    for page in snap["pages"]:
+        for uke in weeks_for_page(page):
+            by_week.setdefault(uke, []).append(page)
+
+    written = []
+    for uke, (part, topic) in sorted(PLAN.items()):
+        base = folder(uke)
+        if not base.exists():
+            continue
+        label = "Machine Learning" if part == "ml" else "Advanced Algorithms"
+        book = ("../../ml/book-homl/chapter-map.md" if part == "ml"
+                else "../../alg/README.md")
+
+        out = [
+            f"# Uke {uke} — {label}",
+            "",
+            f"**{DATES[uke]}** · {topic}",
+            "",
+            f"Reading: [`{book}`]({book})",
+            "",
+        ]
+
+        pages = by_week.get(uke, [])
+        if pages:
+            out += ["## Posted by the lecturer", ""]
+            for page in pages:
+                out.append(f"### {page['title']}")
+                out.append("")
+                out.append(page["text"] or "*(no text)*")
+                out.append("")
+                if page["file_ids"]:
+                    out.append("**Files:**")
+                    for fid in page["file_ids"]:
+                        meta = snap["files"].get(str(fid))
+                        out.append(f"- {meta['name'] if meta else f'file {fid} (unreadable)'}")
+                    out.append("")
+                if page["links"]:
+                    out.append("**Links:**")
+                    out += [f"- {u}" for u in page["links"]]
+                    out.append("")
+        else:
+            out += [
+                "## Posted by the lecturer",
+                "",
+                "*Nothing published for this week yet.* Re-run "
+                "`python src/canvas_sync.py` once it appears.",
+                "",
+            ]
+
+        out += ["## In this folder", ""] + folder_contents(uke) + [
+            "",
+            "---",
+            "",
+            "<!-- Generated by src/canvas_sync.py. Do not edit — re-run the script. -->",
+        ]
+
+        (base / "README.md").write_text("\n".join(out) + "\n")
+        written.append(uke)
+    return written
+
+
 # --------------------------------------------------------------------------
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--download", action="store_true",
-                        help="also fetch linked PDFs into the week folders")
+    parser.add_argument("--no-download", action="store_true",
+                        help="skip fetching files; refresh the text only")
     parser.add_argument("--quiet", action="store_true",
                         help="only report changes")
     args = parser.parse_args()
@@ -398,6 +509,7 @@ def main() -> None:
     snap = collect(api)
     digest = write_digest(snap)
     raw = write_raw(snap)
+    weeks = write_week_records(snap)
 
     if not args.quiet:
         print(f"Course : {snap['course']['name']}")
@@ -408,8 +520,9 @@ def main() -> None:
         print()
         print(f"Wrote {digest.relative_to(ROOT)}")
         print(f"Wrote {raw.relative_to(ROOT)}")
+        print(f"Wrote {len(weeks)} week records (weeks/*/README.md)")
 
-    if args.download:
+    if not args.no_download:
         print()
         print("Files:")
         for line in download_files(api, snap, args.quiet) or ["  nothing to do"]:
