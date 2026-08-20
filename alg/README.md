@@ -18,14 +18,12 @@ The chapter numbering (1, 2, 3 & 4, 6 & 7) clearly follows one textbook.
 
 ## Textbook — Goodrich & Tamassia
 
-Identified from Canvas (uke 35 page), not yet cross-checked against the
-official reading list:
+From the uke 35 Canvas page:
 
 - **Author(s):** Michael T. Goodrich and Roberto Tamassia
-- **Title / edition:** *not yet confirmed* — the two candidates are
-  *Algorithm Design: Foundations, Analysis, and Internet Examples* and
-  *Algorithm Design and Applications*. Chapter 9 being "Text Processing"
-  points at the former.
+- **Title / edition:** not stated on the week page. Chapter 9 being "Text
+  Processing" points at *Algorithm Design: Foundations, Analysis, and Internet
+  Examples*, but check Pensum/Litteratur for the edition the course expects.
 - **Evidence:** the lecturer posted `Kapittel_9_GoodrichAndTammassia.pdf`
   (11 MB, the chapter itself) — saved to
   [`../weeks/uke35-alg/slides/`](../weeks/uke35-alg/slides/)
@@ -34,12 +32,15 @@ official reading list:
 LTI external tool, so `src/canvas_sync.py` cannot read it — open it in a
 browser and record the answer here.
 
-### Chapter numbering — unresolved
+### Chapter order
 
-Uke 35 is **chapter 9** (Text Processing), but the semester plan lists
-chapters 1, 2, 3 & 4, 6 & 7 for the later weeks. Either the course works
-through the book out of order, or the low-numbered chapters belong to a second
-text covering NP-completeness. Worth asking in the first algorithms lecture.
+The course does **not** work through the book front to back. Uke 35 starts at
+chapter 9 (Text Processing); chapters 1, 2, 3 & 4, 6 & 7 come later. Expect
+more of this — take the order from Canvas each week rather than from the book's
+own sequence.
+
+Canvas is the source of truth. Where this file, the semester plan, or the book
+disagrees with Canvas, Canvas is right.
 
 ### Lecturer
 
