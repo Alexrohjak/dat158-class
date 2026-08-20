@@ -33,7 +33,11 @@ re-check when this year's appears.
 The main text, and the one behind almost every "Chapter N" in the plan.
 
 **Free and legal:** the authors publish the full book at
-https://www.designofapproxalgs.com/book.pdf (2.4 MB). No need to buy it.
+https://www.designofapproxalgs.com/book.pdf (2.3 MB). No need to buy it.
+
+Already downloaded to
+`../reference/williamson-shmoys-design-of-approximation-algorithms.pdf`
+(gitignored — re-fetch with the command in the root README).
 
 Chapters on the 2025 curriculum:
 

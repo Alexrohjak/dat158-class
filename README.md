@@ -76,15 +76,25 @@ grep -ri "overfitting" weeks/    # search all your notes
 
 ## Reference material
 
-`reference/handson-ml3/` holds the official HOML notebooks (Apache 2.0, cloned
-from github.com/ageron/handson-ml3). All 28 chapter notebooks plus two bonus
-maths primers. Gitignored — it's a public repo, re-clone it anywhere:
+Everything in `reference/` is gitignored — all of it is public and
+re-downloadable, so it is not this repo's job to version it. Rebuild the whole
+folder with:
 
 ```bash
+git clone https://github.com/HVL-ML/DAT158.git reference/DAT158
 git clone https://github.com/ageron/handson-ml3.git reference/handson-ml3
+curl -L -o reference/williamson-shmoys-design-of-approximation-algorithms.pdf \
+     https://www.designofapproxalgs.com/book.pdf
 ```
 
-Note: the book's *text* is not in there and is not free. The *code* is.
+| What | Why you want it |
+|---|---|
+| `reference/DAT158/` | **The course's own repo.** `notebooks/` holds the weekly ML exercises — module 1 is already published as `DAT158-1.1` … `1.6`, with a `solutions/` folder. `git -C reference/DAT158 pull` each week. |
+| `reference/handson-ml3/` | Official HOML notebooks (Apache 2.0). All 28 chapters plus two maths primers. The book's *text* is not in there and is not free; the *code* is. |
+| `reference/williamson-shmoys-*.pdf` | The approximation-algorithms textbook, free from the authors. |
+
+> **A warning about all three.** Each contains worked solutions. Reading one
+> before you have struggled with the problem feels like learning and is not.
 
 ## Environment
 
