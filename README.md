@@ -89,9 +89,31 @@ First run extracts and caches (~15s for a 500-page book). After that it is
 instant until a file changes. The cache lives in `.searchcache/` and is
 gitignored — delete it any time.
 
-**One blind spot:** `Kapittel_9_GoodrichAndTammassia.pdf` is a scan with no
-text layer, so its 36 pages cannot be searched without OCR. `--sources` lists
-any file in that state.
+### Scanned PDFs
+
+Some material arrives as images of pages — the uke 35 textbook chapter is a
+36-page scan with no text layer, invisible to search. `src/ocr_scans.py`
+recovers the text:
+
+```bash
+python src/ocr_scans.py --list       # which files are affected
+python src/ocr_scans.py --no-sudo    # recover their text
+```
+
+`--no-sudo` rasterises each page and OCRs it into the search cache, needing no
+system packages — but it requires `pip install rapidocr-onnxruntime` first
+(~300 MB, deliberately not in `requirements.txt`). The PDF is left untouched,
+so **Ctrl+F in a PDF reader still will not work** — only `find.py` will.
+
+Because the text lives in the cache rather than in the PDF, `find.py --rebuild`
+discards it. Re-run `ocr_scans.py --no-sudo` if that happens.
+
+The alternative, if you would rather have a genuinely searchable PDF, is a real
+text layer — needs root, and then plain `python src/ocr_scans.py`:
+
+```bash
+sudo apt install ocrmypdf tesseract-ocr tesseract-ocr-nor
+```
 
 ## Reference material
 

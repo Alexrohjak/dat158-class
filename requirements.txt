@@ -16,3 +16,8 @@ ipykernel
 # Text extraction for src/find.py (searching slides and textbooks)
 pypdf
 cryptography
+
+# Optional — only for src/ocr_scans.py --no-sudo, which recovers text from
+# scanned PDFs. Pulls in onnxruntime and opencv (~300 MB), so it is deliberately
+# NOT installed by default:
+#     pip install rapidocr-onnxruntime
