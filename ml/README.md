@@ -4,16 +4,41 @@ Weeks 34, 36, 39, 40, 43, 44, 47 — `../weeks/*-ml/`
 
 ## Modules
 
-| Module | Weeks | Topic |
-|--------|-------|-------|
-| 1 | 34, 36 | Introduksjon til maskinlæring |
-| 2 | 39, 40 | Maskinlæringsmodeller |
-| 3 | 43, 44 | End-to-end maskinlæringssystem |
-| ? | 47 | TBA |
+| Module | Weeks | Topic | HOML chapters |
+|--------|-------|-------|---------------|
+| 1 | 34, 36 | Introduksjon til maskinlæring | **1, 2, 3** (confirmed) |
+| 2 | 39, 40 | Maskinlæringsmodeller | not yet published |
+| 3 | 43, 44 | End-to-end maskinlæringssystem | not yet published |
+| ? | 47 | TBA | — |
 
-Module 1 maps to HOML chapter 1, module 3 clearly maps to HOML chapter 2
-("End-to-end"), and module 2 spans chapters 3–7. Confirm against the lecturer's
-reading list rather than trusting that guess.
+Module 1's chapter list is confirmed from the Canvas module page — it is
+chapters **1, 2 and 3**, not chapter 1 alone as originally guessed here. That
+front-loads the two most important chapters in the book, so do not treat these
+first weeks as a gentle warm-up.
+
+Chapter 1 is [free to read online](https://www.oreilly.com/library/view/hands-on-machine-learning/9781098125967/ch01.html).
+
+### Module 1 learning objectives
+
+Straight from Canvas:
+
+- Understand basic concepts in ML, and recognise when ML is a good — or bad —
+  choice for a task
+- Understand the elements of a complete software product built around ML
+- Be able to use libraries to train a model and make predictions on simple
+  datasets
+
+## Exercises live on GitHub, not in Canvas
+
+> *"Oppgaver ligger ute under kursets GitHub-side"*
+
+**https://github.com/HVL-ML/DAT158** — the lecturer's repo holds the weekly
+exercises and the library install instructions. The final project is expected
+to be delivered as a publicly accessible repo.
+
+Clone it somewhere outside this repo and copy work into
+`../weeks/ukeNN-ml/exercises/` as you go, or add it as a second remote — but
+keep your own solutions in this repo, since that one will be updated.
 
 ## Textbook
 

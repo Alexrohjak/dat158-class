@@ -28,3 +28,8 @@ reference/
 .DS_Store
 .vscode/
 .idea/
+
+# Secrets — Canvas API token etc. Never commit.
+.env
+.env.*
+!.env.example

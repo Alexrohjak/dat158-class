@@ -21,9 +21,9 @@ weeks, matching Canvas.
 
 | Uke | Dates | Del | Tema | Folder |
 |-----|-------|-----|------|--------|
-| 34 | 17.–23. aug | ML | Modul 1: Introduksjon til maskinlæring | [`uke34-ml`](weeks/uke34-ml/) |
-| 35 | 24.–30. aug | Alg | Tekstprosessering | [`uke35-alg`](weeks/uke35-alg/) |
-| 36 | 31. aug–6. sep | ML | Modul 1: Introduksjon til maskinlæring | [`uke36-ml`](weeks/uke36-ml/) |
+| 34 | 17.–23. aug | ML | Modul 1: Introduksjon (HOML 1–3) | [`uke34-ml`](weeks/uke34-ml/) |
+| 35 | 24.–30. aug | Alg | Tekstprosessering (G&T kap. 9) | [`uke35-alg`](weeks/uke35-alg/) |
+| 36 | 31. aug–6. sep | ML | Modul 1: Introduksjon (HOML 1–3) | [`uke36-ml`](weeks/uke36-ml/) |
 | 37 | 7.–13. sep | Alg | NP-completeness, Chapter 1 | [`uke37-alg`](weeks/uke37-alg/) |
 | 38 | 14.–20. sep | Alg | Chapter 2 | [`uke38-alg`](weeks/uke38-alg/) |
 | 39 | 21.–27. sep | ML | Modul 2: Maskinlæringsmodeller | [`uke39-ml`](weeks/uke39-ml/) |
@@ -58,8 +58,8 @@ and update this table when it changes.
 
 - **[`ml/`](ml/)** — Machine Learning. Textbook is HOML; see
   [`ml/book-homl/chapter-map.md`](ml/book-homl/chapter-map.md).
-- **[`alg/`](alg/)** — Advanced Algorithms. Textbook still to be recorded; see
-  [`alg/README.md`](alg/README.md).
+- **[`alg/`](alg/)** — Advanced Algorithms. Textbook is Goodrich & Tamassia
+  (edition still unconfirmed); see [`alg/README.md`](alg/README.md).
 
 Week folders are tagged `-ml` or `-alg`, so:
 
@@ -95,6 +95,38 @@ ML modul 3 at the earliest.
 - `data/`, `models/`, `.venv/` and `reference/` are gitignored — generated or
   re-downloadable, not source.
 - Commit at the end of each week. `git add -A && git commit -m "uke NN"`.
+
+## Syncing from Canvas
+
+Canvas is the source of truth, and it changes weekly. `src/canvas_sync.py`
+mirrors it into this repo — read-only, GETs only, it never submits or changes
+anything on Canvas.
+
+```bash
+python src/canvas_sync.py              # refresh docs/canvas/course.md
+python src/canvas_sync.py --download   # also pull new PDFs into weeks/*/slides/
+```
+
+Needs a Canvas API token in `.env` (gitignored — see `.env.example`). Generate
+one at *Account → Settings → + New Access Token*.
+
+Output lands in [`docs/canvas/course.md`](docs/canvas/course.md) — a flattened
+mirror of every module page, announcement and assignment. **Don't edit it by
+hand**; re-run the script. Your own writing goes in `weeks/*/notes.md`.
+
+Three things the API cannot reach, because they are LTI external tools:
+**Pensum/Litteratur**, **Panopto** and **Zoom**. Open those in a browser.
+The course Files area is also blocked for students (403) — the script finds
+files by scanning page links instead, so an uploaded-but-unlinked file stays
+invisible until the lecturer links it.
+
+## Exercises are on GitHub
+
+The ML half's exercises are **not** in Canvas. They live in the lecturer's repo:
+
+**https://github.com/HVL-ML/DAT158**
+
+The final project is expected to be delivered as a publicly accessible repo.
 
 ## Where are we?
 

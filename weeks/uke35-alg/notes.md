@@ -7,9 +7,28 @@
 
 ---
 
+## From Canvas
+
+<!-- Pulled by src/canvas_sync.py — the lecturer's words, not yours.
+     Full text: ../../docs/canvas/course.md -->
+
+**Startar med tekstbehandling.**
+
+| | |
+|---|---|
+| Textbook chapter | Goodrich & Tamassia **kap. 9** — `slides/Kapittel_9_GoodrichAndTammassia.pdf` |
+| Slides | `slides/Chapter 9 TextProcessing.pdf` |
+| Wed 26. aug | From the start |
+| Fri 28. aug | Planned (may change): continue from **slide 31, Standard tries** |
+| Exercises | Obligatorisk — *"Kommer"*, not published yet |
+| Zoom | See "praktisk informasjon" on the Canvas front page |
+
+---
+
 ## Before the lecture
 
-- [ ] Read:
+- [ ] Read: Goodrich & Tamassia ch. 9 (Text Processing) — `slides/Kapittel_9_GoodrichAndTammassia.pdf`
+- [ ] Skim slides 1–31 of `slides/Chapter 9 TextProcessing.pdf` before Friday
 - [ ] Skim last week's notes
 
 ## Lecture notes
