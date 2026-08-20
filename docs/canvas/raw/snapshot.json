@@ -1,6 +1,28 @@
 {
   "pages": [
     {
+      "title": "DAT158-1 25H Maskinlæring og videregående algoritmer",
+      "slug": "dat158-1-25h-maskinlaering-og-videregaende-algoritmer",
+      "module": "Front page",
+      "updated": "2026-08-20T08:44:24Z",
+      "text": "Velkommen til DAT158 - Maskinlæring og videregående algoritmer\n\nGå til Moduler for å komme i gang.\n\nPraktisk informasjon\n\nEmnebeskrivelse: https://www.hvl.no/studier/studieprogram/emne/DAT158\n\nForelesere: Sven-Olai Høyland, Steffen Mæland og Erlend Raa Vagset\n\nStudentassistenter: TBA\n\nTimeplan og rom: TimeEdit\n\nRepo for ML-delen: GitHub\n\nFremdriftsplan\n\nPlanen oppdateres underveis -- sjekk innom regelmessig\n\nUke\nDel\nTema\n\n34\n17. - 23. aug\n\nML\n\n ML modul 1: Introduksjon til maskinlæring\n\n Zoomlenke for Førde og Haugesund: Zoom\n\nOnsdag: Forelesningsnotater\n\nFredag: (kommer)\n\n35\n24. - 30. aug\n\nAlg\n\n Algoritmer - Tekstprosessering\n\n36\n31. aug - 6. sep\nML\n\n ML modul 1: Introduksjon til maskinlæring\n\n37\n7. - 13. sep\nAlg\n\n Algoritmer - NP-completeness, Chapter 1\n\n38\n14. - 20. sep\nAlg\n\nChapter 2\n\n39\n21. - 27. sep\nML\n\n ML modul 2: Maskinlæringsmodeller\n\n40\n28. sep - 4. okt\nML\n\n ML modul 2: Maskinlæringsmodeller\n\n41\n5. - 11. okt\nAlg\n\n Chapter 3 & Chapter 4\n\n42\n12. - 18. okt\nAlg\n\n43\n19. - 25. okt\nML\n\n ML modul 3: End-to-end maskinlæringssystem\n\n44\n26. okt - 1. nov\nML\n\n  ML modul 3: End-to-end maskinlæringssystem\n\n45\n2. - 8. nov\nAlg\n\nChapter 6 & 7\n\n46\n9. - 15. nov\nAlg\n\n47\n16. - 21. nov\nML\n\nEksamen\n\n TBA",
+      "file_ids": [
+        3871696,
+        3871730
+      ],
+      "links": [
+        "https://www.hvl.no/studier/studieprogram/emne/DAT158",
+        "https://www.hvl.no/en/employee/?user=3600298",
+        "https://www.hvl.no/person/?user=Steffen.Meland",
+        "https://www.hvl.no/person/?user=Erlend.Raa.Vagset",
+        "https://cloud.timeedit.net/hvl/web/pen/riqY8y5X0gvZ71QZQ525717Q67876X6Y71161Z5Q60o8YY76X1876Q77Y767c8Zp7QZq1Qo.html",
+        "https://github.com/HVL-ML/DAT158",
+        "https://hvl.zoom.us/j/63122964590?pwd=uCdb8RGnzbjZJNeafwlnOVJbEA9vpl.1",
+        "https://hvl-ml.github.io/DAT158/slides/1-intro/1-intro.html",
+        "https://hvl-ml.github.io/DAT158/slides/3-systems/lecture3.html"
+      ]
+    },
+    {
       "title": "Introduksjon til maskinlæring",
       "slug": "introduksjon-til-maskinlaering",
       "module": "ML modul 1: Introduksjon til maskinlæring",
@@ -96,6 +118,12 @@
   ],
   "assignments": [],
   "files": {
+    "3871696": {
+      "name": "DAT158-course-logo.png",
+      "size": 1238053,
+      "type": "image/png",
+      "updated": "2026-06-22T13:23:40Z"
+    },
     "3871699": {
       "name": "CCComputing-CompAtCERN_7090-1.jpg",
       "size": 124765,
@@ -119,6 +147,12 @@
       "size": 36329,
       "type": "application/pdf",
       "updated": "2026-08-20T10:42:31Z"
+    },
+    "3871730": {
+      "name": "FinalCurriculum_2025.pdf",
+      "size": 224141,
+      "type": "application/pdf",
+      "updated": "2026-06-22T13:23:44Z"
     },
     "3923722": {
       "name": "Chapter 9 TextProcessing.pdf",

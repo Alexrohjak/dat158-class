@@ -8,17 +8,20 @@ Free official notebooks: https://github.com/ageron/handson-ml3
 
 Your current `.venv` covers all of this.
 
+**On the DAT158 curriculum:** chapters **1, 2, 3, 4, 6, 7** and **Appendix A**.
+Chapters 5, 8 and 9 are not examinable — read them if you want, but not first.
+
 | Ch | Title | What you actually learn |
 |----|-------|-------------------------|
-| 1 | The Machine Learning Landscape | Vocabulary and the map of the field. No real code. Read it properly — it is where the terms get defined. |
-| 2 | End-to-End Machine Learning Project | **The most important chapter in the book.** A complete project start to finish on California housing data. Do every step by hand. |
-| 3 | Classification | MNIST digits. Precision, recall, ROC curves — why accuracy alone lies to you. |
-| 4 | Training Models | What is happening *inside* `.fit()`. Gradient descent, linear/logistic regression. The most mathematical chapter; also the one that makes everything else click. |
-| 5 | Support Vector Machines | SVMs and the kernel trick. |
-| 6 | Decision Trees | Simple, visualisable models. Good intuition builders. |
-| 7 | Ensemble Learning and Random Forests | Combining weak models into strong ones. Random forests, boosting. Very practical. |
-| 8 | Dimensionality Reduction | PCA. Handling data with too many features. |
-| 9 | Unsupervised Learning Techniques | k-means, DBSCAN, Gaussian mixtures. Learning without labels. |
+| 1 ✅ | The Machine Learning Landscape | Vocabulary and the map of the field. No real code. Read it properly — it is where the terms get defined. |
+| 2 ✅ | End-to-End Machine Learning Project | **The most important chapter in the book.** A complete project start to finish on California housing data. Do every step by hand. |
+| 3 ✅ | Classification | MNIST digits. Precision, recall, ROC curves — why accuracy alone lies to you. |
+| 4 ✅ | Training Models | What is happening *inside* `.fit()`. Gradient descent, linear/logistic regression. The most mathematical chapter; also the one that makes everything else click. |
+| 5 — | Support Vector Machines | SVMs and the kernel trick. |
+| 6 ✅ | Decision Trees | Simple, visualisable models. Good intuition builders. |
+| 7 ✅ | Ensemble Learning and Random Forests | Combining weak models into strong ones. Random forests, boosting. Very practical. |
+| 8 — | Dimensionality Reduction | PCA. Handling data with too many features. |
+| 9 — | Unsupervised Learning Techniques | k-means, DBSCAN, Gaussian mixtures. Learning without labels. |
 
 ## Part II — Neural Networks and Deep Learning (Keras/TensorFlow)
 

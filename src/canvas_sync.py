@@ -172,6 +172,24 @@ def collect(api: Canvas) -> dict:
     if err:
         snap["errors"].append(f"tabs: {err}")
 
+    # The front page carries the semester plan, the recurring Zoom link and
+    # links to lecture notes. It is not reachable through /pages (that index is
+    # disabled for this course), so fetch it directly.
+    front, err = api.get(f"/courses/{api.cid}/front_page")
+    if err:
+        snap["errors"].append(f"front page: {err}")
+    else:
+        body = front.get("body", "")
+        snap["pages"].append({
+            "title": front.get("title"),
+            "slug": front.get("url"),
+            "module": "Front page",
+            "updated": front.get("updated_at"),
+            "text": to_text(body),
+            "file_ids": file_ids(body),
+            "links": external_links(body),
+        })
+
     modules, err = api.get(f"/courses/{api.cid}/modules", per_page=100)
     if err:
         snap["errors"].append(f"modules: {err}")

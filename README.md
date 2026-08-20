@@ -35,10 +35,14 @@ weeks, matching Canvas.
 | 45 | 2.–8. nov | Alg | Chapter 6 & 7 | [`uke45-alg`](weeks/uke45-alg/) |
 | 46 | 9.–15. nov | Alg | *(TBA)* | [`uke46-alg`](weeks/uke46-alg/) |
 | 47 | 16.–21. nov | ML | *(TBA)* | [`uke47-ml`](weeks/uke47-ml/) |
-| — | — | — | **Eksamen: TBA** | [`exam/`](exam/) |
+| — | 8. des | — | **Eksamen — 4t skriftleg, 09:00** | [`exam/`](exam/) |
 
 7 ML weeks, 7 Alg weeks. Plan is updated during the semester — re-check Canvas
-and update this table when it changes.
+and update this table when it changes. Canvas is the source of truth; where the
+book's own chapter order disagrees, follow Canvas.
+
+**Four obligatory exercises** must be approved before you can sit the exam.
+None published yet — see [`assignments/`](assignments/).
 
 ## Where things go
 
@@ -58,8 +62,9 @@ and update this table when it changes.
 
 - **[`ml/`](ml/)** — Machine Learning. Textbook is HOML; see
   [`ml/book-homl/chapter-map.md`](ml/book-homl/chapter-map.md).
-- **[`alg/`](alg/)** — Advanced Algorithms. Textbook is Goodrich & Tamassia
-  (edition still unconfirmed); see [`alg/README.md`](alg/README.md).
+- **[`alg/`](alg/)** — Advanced Algorithms. **Two** textbooks: Williamson &
+  Shmoys (free online) for most chapters, Goodrich & Tamassia for ch. 9. See
+  [`alg/README.md`](alg/README.md).
 
 Week folders are tagged `-ml` or `-alg`, so:
 

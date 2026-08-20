@@ -6,10 +6,18 @@ Weeks 34, 36, 39, 40, 43, 44, 47 — `../weeks/*-ml/`
 
 | Module | Weeks | Topic | HOML chapters |
 |--------|-------|-------|---------------|
-| 1 | 34, 36 | Introduksjon til maskinlæring | **1, 2, 3** (confirmed) |
-| 2 | 39, 40 | Maskinlæringsmodeller | not yet published |
-| 3 | 43, 44 | End-to-end maskinlæringssystem | not yet published |
+| 1 | 34, 36 | Introduksjon til maskinlæring | **1, 2, 3** |
+| 2 | 39, 40 | Maskinlæringsmodeller | 4, 6, 7 (likely) |
+| 3 | 43, 44 | End-to-end maskinlæringssystem | 2 revisited |
 | ? | 47 | TBA | — |
+
+**The examinable ML curriculum is HOML chapters 1, 2, 3, 4, 6, 7 and
+Appendix A** — from the lecturer's curriculum document
+([`../docs/canvas/files/FinalCurriculum_2025.pdf`](../docs/canvas/files/FinalCurriculum_2025.pdf),
+2025 edition; a 26H version has not appeared yet).
+
+Note what is **not** on it: chapter 5 (SVMs), chapters 8–9, and all of Part II.
+Module 1 accounts for 1–3, so chapters 4, 6 and 7 must fall in module 2.
 
 Module 1's chapter list is confirmed from the Canvas module page — it is
 chapters **1, 2 and 3**, not chapter 1 alone as originally guessed here. That

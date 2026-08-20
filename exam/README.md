@@ -1,6 +1,29 @@
 # Exam
 
-**Date: TBA** — check Canvas → Vurderingar.
+## 8 December 2026, 09:00
+
+From the official course description, https://www.hvl.no/studier/studieprogram/emne/DAT158 —
+**verify against Studentweb**, which is the authoritative source for time and room.
+
+| | |
+|---|---|
+| **Date** | Tuesday 8 December 2026, 09:00 |
+| **Form** | 4-hour written exam (skoleeksamen), on campus |
+| **Language** | Questions in English; answer in Norwegian *or* English |
+| **Aids** | **None** |
+| **Grading** | A–F, F is fail |
+| **Prerequisite** | Four obligatory exercises must be submitted by their deadlines and approved *before* you may sit the exam |
+
+Both halves are examined, 5 studiepoeng each.
+
+An **exam guide** is promised for **mid-November** — the lecturer says so in the
+curriculum document. Watch for it.
+
+### The four obligatory exercises
+
+These gate the exam, so they matter more than their weight suggests (they are
+pass/fail, and none published yet as of uke 34). Track them in
+[`../assignments/`](../assignments/) with the deadline in each README.
 
 ## Revision
 

@@ -33,6 +33,139 @@ Course: `DAT158-1 26H` (id 35853)
 
 ## Pages
 
+### DAT158-1 25H Maskinlæring og videregående algoritmer
+
+*Module: Front page · updated 2026-08-20T08:44:24Z*
+
+Velkommen til DAT158 - Maskinlæring og videregående algoritmer
+
+Gå til Moduler for å komme i gang.
+
+Praktisk informasjon
+
+Emnebeskrivelse: https://www.hvl.no/studier/studieprogram/emne/DAT158
+
+Forelesere: Sven-Olai Høyland, Steffen Mæland og Erlend Raa Vagset
+
+Studentassistenter: TBA
+
+Timeplan og rom: TimeEdit
+
+Repo for ML-delen: GitHub
+
+Fremdriftsplan
+
+Planen oppdateres underveis -- sjekk innom regelmessig
+
+Uke
+Del
+Tema
+
+34
+17. - 23. aug
+
+ML
+
+ ML modul 1: Introduksjon til maskinlæring
+
+ Zoomlenke for Førde og Haugesund: Zoom
+
+Onsdag: Forelesningsnotater
+
+Fredag: (kommer)
+
+35
+24. - 30. aug
+
+Alg
+
+ Algoritmer - Tekstprosessering
+
+36
+31. aug - 6. sep
+ML
+
+ ML modul 1: Introduksjon til maskinlæring
+
+37
+7. - 13. sep
+Alg
+
+ Algoritmer - NP-completeness, Chapter 1
+
+38
+14. - 20. sep
+Alg
+
+Chapter 2
+
+39
+21. - 27. sep
+ML
+
+ ML modul 2: Maskinlæringsmodeller
+
+40
+28. sep - 4. okt
+ML
+
+ ML modul 2: Maskinlæringsmodeller
+
+41
+5. - 11. okt
+Alg
+
+ Chapter 3 & Chapter 4
+
+42
+12. - 18. okt
+Alg
+
+43
+19. - 25. okt
+ML
+
+ ML modul 3: End-to-end maskinlæringssystem
+
+44
+26. okt - 1. nov
+ML
+
+  ML modul 3: End-to-end maskinlæringssystem
+
+45
+2. - 8. nov
+Alg
+
+Chapter 6 & 7
+
+46
+9. - 15. nov
+Alg
+
+47
+16. - 21. nov
+ML
+
+Eksamen
+
+ TBA
+
+**Attached files:**
+- DAT158-course-logo.png
+- FinalCurriculum_2025.pdf
+
+**Links:**
+- https://www.hvl.no/studier/studieprogram/emne/DAT158
+- https://www.hvl.no/en/employee/?user=3600298
+- https://www.hvl.no/person/?user=Steffen.Meland
+- https://www.hvl.no/person/?user=Erlend.Raa.Vagset
+- https://cloud.timeedit.net/hvl/web/pen/riqY8y5X0gvZ71QZQ525717Q67876X6Y71161Z5Q60o8YY76X1876Q77Y767c8Zp7QZq1Qo.html
+- https://github.com/HVL-ML/DAT158
+- https://hvl.zoom.us/j/63122964590?pwd=uCdb8RGnzbjZJNeafwlnOVJbEA9vpl.1
+- https://hvl-ml.github.io/DAT158/slides/1-intro/1-intro.html
+- https://hvl-ml.github.io/DAT158/slides/3-systems/lecture3.html
+
 ### Introduksjon til maskinlæring
 
 *Module: ML modul 1: Introduksjon til maskinlæring · updated 2026-08-04T13:54:35Z*
