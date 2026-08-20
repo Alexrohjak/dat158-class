@@ -71,8 +71,27 @@ Week folders are tagged `-ml` or `-alg`, so:
 ```bash
 ls weeks/*-ml      # every ML week
 ls weeks/*-alg     # every algorithms week
-grep -ri "overfitting" weeks/    # search all your notes
 ```
+
+## Finding things
+
+```bash
+python src/find.py tries          # where is this covered?
+python src/find.py --sources      # what is indexed
+```
+
+Searches the week records, the Canvas mirror, both textbooks, every slide deck
+and every exercise notebook — and reports the page or cell, so you can go
+straight there. `grep` only reads the markdown; the lecture content is in PDFs
+and notebooks, which is what you actually want during revision.
+
+First run extracts and caches (~15s for a 500-page book). After that it is
+instant until a file changes. The cache lives in `.searchcache/` and is
+gitignored — delete it any time.
+
+**One blind spot:** `Kapittel_9_GoodrichAndTammassia.pdf` is a scan with no
+text layer, so its 36 pages cannot be searched without OCR. `--sources` lists
+any file in that state.
 
 ## Reference material
 

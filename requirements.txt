@@ -12,3 +12,7 @@ matplotlib
 seaborn
 jupyterlab
 ipykernel
+
+# Text extraction for src/find.py (searching slides and textbooks)
+pypdf
+cryptography

@@ -33,3 +33,6 @@ reference/
 .env
 .env.*
 !.env.example
+
+# Extracted PDF/notebook text for src/find.py — rebuildable
+.searchcache/
