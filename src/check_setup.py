@@ -1,4 +1,4 @@
-"""Verify the ml-class environment is working.
+"""Verify the dat158-class environment is working.
 
 Run with:  python src/check_setup.py
 """

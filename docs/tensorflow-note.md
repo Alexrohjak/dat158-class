@@ -26,7 +26,7 @@ pre-installed, free GPU access. The book's notebooks have "Open in Colab" button
 
 Best choice if you just want to follow the book. The only cost is that your work
 lives in Google Drive rather than this repo. Download finished notebooks into
-`notebooks/` when done.
+`weeks/ukeNN-ml/code/` when done.
 
 ### Option B — a second venv on an older Python
 
@@ -37,7 +37,7 @@ sudo add-apt-repository ppa:deadsnakes/ppa
 sudo apt update
 sudo apt install python3.12 python3.12-venv
 
-cd ~/code/ml-class
+cd ~/code/dat158-class
 python3.12 -m venv .venv-dl
 source .venv-dl/bin/activate
 pip install tensorflow numpy pandas matplotlib jupyterlab ipykernel
@@ -46,8 +46,8 @@ pip install tensorflow numpy pandas matplotlib jupyterlab ipykernel
 Then register both as Jupyter kernels so you can pick per-notebook:
 
 ```bash
-source .venv/bin/activate    && python -m ipykernel install --user --name ml-class     --display-name "ml-class (sklearn)"
-source .venv-dl/bin/activate && python -m ipykernel install --user --name ml-class-dl  --display-name "ml-class (tensorflow)"
+source .venv/bin/activate    && python -m ipykernel install --user --name dat158     --display-name "dat158 (sklearn)"
+source .venv-dl/bin/activate && python -m ipykernel install --user --name dat158-dl  --display-name "dat158 (tensorflow)"
 ```
 
 Best choice if you want everything local and reproducible.
