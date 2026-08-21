@@ -123,7 +123,17 @@ Pandas:
   - `1-intro_files`
   - `lecture3.html`
   - `lecture3_files`
-- `exercises/` — empty
+- `exercises/` — 10 item(s), 599 KB
+  - `DAT158-1.1-Simple_examples.ipynb`
+  - `DAT158-1.2-Intro_to_ML.ipynb`
+  - `DAT158-1.3-Binary_classification.ipynb`
+  - `DAT158-1.4-Multiclass_classification.ipynb`
+  - `DAT158-1.5-Regression.ipynb`
+  - `DAT158-1.6-Hyperparameter_optimization.ipynb`
+  - `assets`
+  - `data`
+  - `solutions`
+  - `utils.py`
 - `code/` — empty
 
 ---
