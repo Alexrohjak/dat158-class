@@ -62,6 +62,48 @@ breast-cancer set. Re-run it yourself any time with:
 
 Note it needs a network connection — two cells pull datasets over HTTP.
 
+### Module 1's notebooks all run
+
+Beyond the lecturer's own test, every module 1 exercise notebook was executed
+end to end on the `dat158` kernel — 380 code cells, 56 plots:
+
+| Notebook | Code cells | Errors |
+|----------|-----------:|--------|
+| 1.1 Simple examples | 74 | 1 — see below |
+| 1.2 Intro to ML | 40 | 0 |
+| 1.3 Binary classification | 61 | 6 — see below |
+| 1.4 Multiclass classification | 57 | 0 |
+| 1.5 Regression | 104 | 0 |
+| 1.6 Hyperparameter optimization | 44 | 0 |
+
+Neither set of errors is an environment fault.
+
+**1.3** stops at an exercise you are meant to complete: the notebook says you
+must define `X_train_scaled`, `X_test_scaled` and `sgd_clf_scaled` yourself.
+The other five errors cascade from that first one — `X_test` never becomes a
+numpy array, so `X_test[0]` raises `KeyError` instead of indexing a row.
+Filling the blank from `notebooks/solutions/1.3-1-sgd_normalized.py` and
+re-running takes it to **zero errors**.
+
+**1.1 cell 205** is a bug in the notebook, not in your setup:
+
+```python
+if (colab or kaggle):
+    %pip install gradio
+```
+
+Neither `colab` nor `kaggle` is defined anywhere in the file — a leftover from
+the lecturer's template. It only guards a gradio install, and gradio is already
+installed, so skip the cell or run `colab = kaggle = False` first.
+
+**1.4 is slow by nature.** It trains one-vs-one classifiers on MNIST and took
+over six minutes at full CPU with ~2 GB resident. That is the notebook, not a
+hang — do not kill it.
+
+Gradio was checked past the import: an `Interface` around a trained iris model
+launched, served HTTP 200, and closed cleanly. That is the module 1 lecture 4
+workflow working end to end.
+
 ### A wrinkle in the lock file
 
 `requirements-lock.txt` is `pip freeze`, minus the seven packages that exist
