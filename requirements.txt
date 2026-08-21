@@ -13,6 +13,13 @@ seaborn
 jupyterlab
 ipykernel
 
+# Required by the lecturer's own environment.yml, on top of the above.
+# gradio is what ML module 1 lecture 4 uses to serve a trained model;
+# openpyxl lets pandas read .xlsx; ipywidgets is for interactive notebooks.
+gradio
+openpyxl
+ipywidgets
+
 # Text extraction for src/find.py (searching slides and textbooks)
 pypdf
 cryptography

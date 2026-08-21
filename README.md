@@ -140,8 +140,17 @@ curl -L -o reference/williamson-shmoys-design-of-approximation-algorithms.pdf \
 
 ## Environment
 
-Python 3.14 + numpy, pandas, scikit-learn, matplotlib, seaborn, JupyterLab.
-Covers all of HOML Part I. TensorFlow has no Python 3.14 build yet — see
+Python 3.14 + numpy, pandas, scikit-learn, matplotlib, seaborn, JupyterLab,
+plus gradio, openpyxl and ipywidgets from the lecturer's `environment.yml`.
+Covers all of HOML Part I and everything the course notebooks need.
+
+The venv **is** the course's `dat158` environment — Anaconda was not installed,
+which `setup.md` explicitly permits. It is registered as a Jupyter kernel called
+**DAT158**, so pick that from the kernel menu when you open a notebook. The
+reasoning and the full mapping against `environment.yml` are in
+[`docs/setup-notes.md`](docs/setup-notes.md).
+
+TensorFlow has no Python 3.14 build yet — see
 [`docs/tensorflow-note.md`](docs/tensorflow-note.md). Not a problem before
 ML modul 3 at the earliest.
 

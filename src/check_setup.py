@@ -4,6 +4,7 @@ Run with:  python src/check_setup.py
 """
 
 import sys
+from pathlib import Path
 
 
 def main() -> int:
@@ -14,23 +15,38 @@ def main() -> int:
         print("\n  WARNING: this is not the project virtual environment.")
         print("  Run 'source .venv/bin/activate' first.\n")
 
-    packages = ["numpy", "pandas", "sklearn", "matplotlib", "seaborn"]
+    # Core: what HOML Part I needs. Course: what the lecturer's environment.yml
+    # adds on top — gradio is used to serve models in ML module 1, lecture 4.
+    groups = {
+        "core": ["numpy", "pandas", "sklearn", "matplotlib", "seaborn"],
+        "course": ["gradio", "openpyxl", "ipywidgets"],
+    }
     missing = []
 
-    print()
-    for name in packages:
-        try:
-            module = __import__(name)
-            version = getattr(module, "__version__", "?")
-            print(f"  ok    {name:<14} {version}")
-        except ImportError:
-            print(f"  MISSING  {name}")
-            missing.append(name)
+    for label, packages in groups.items():
+        print(f"\n  {label}")
+        for name in packages:
+            try:
+                module = __import__(name)
+                version = getattr(module, "__version__", "?")
+                print(f"    ok    {name:<14} {version}")
+            except ImportError:
+                print(f"    MISSING  {name}")
+                missing.append(name)
 
     if missing:
         print(f"\nMissing packages: {', '.join(missing)}")
         print("Fix with: pip install -r requirements.txt")
         return 1
+
+    # Step 6 of the lecturer's setup.md — the notebooks expect this kernel.
+    kernel = Path.home() / ".local/share/jupyter/kernels/dat158/kernel.json"
+    if kernel.exists():
+        print("\n  ok    Jupyter kernel 'DAT158' registered")
+    else:
+        print("\n  MISSING  Jupyter kernel 'DAT158'")
+        print("  Fix with: python -m ipykernel install --user "
+              "--name dat158 --display-name \"DAT158\"")
 
     # A real end-to-end check: train a model and make sure it learns something.
     from sklearn.datasets import load_iris
