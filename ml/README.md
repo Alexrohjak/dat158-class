@@ -55,9 +55,31 @@ notebooks/DAT158-1.3-Binary_classification.ipynb   notebooks/DAT158-1.6-Hyperpar
 
 Refresh it weekly with `git -C ../reference/DAT158 pull`.
 
-**Copy a notebook into `../weeks/ukeNN-ml/exercises/` before working on it.**
-Editing it in place means your work is wiped by the next pull, and it keeps
-your answers out of the version-controlled part of this repo.
+**Work on a copy in `../weeks/ukeNN-ml/exercises/`, never in `reference/`.**
+Editing in place means the next `git pull` wipes your answers, and it keeps
+them out of the version-controlled part of this repo.
+
+Copying the `.ipynb` alone is not enough. The notebooks read `data/`,
+`assets/` and `solutions/` as siblings, so a lone notebook fails the moment
+1.5 reaches `data/vehicles/` or 1.3 tries to `%load` its solution. Module 1 is
+already set up in [`../weeks/uke34-ml/exercises/`](../weeks/uke34-ml/exercises/):
+the six notebooks and `utils.py` are real copies, and those three directories
+are symlinks back into `reference/`. Your edits are versioned; the 1.6 MB of
+course data is not, and it updates itself on the next pull.
+
+To do the same for a later module:
+
+```bash
+cd weeks/ukeNN-ml/exercises
+cp ../../../reference/DAT158/notebooks/DAT158-N.*.ipynb .
+cp ../../../reference/DAT158/notebooks/utils.py .
+for d in data assets solutions; do
+    ln -sfn ../../../reference/DAT158/notebooks/$d $d
+done
+```
+
+The symlinks dangle until `reference/DAT158` exists, so re-clone it first if you
+have rebuilt this repo from scratch.
 
 ## Where the slides really live
 
