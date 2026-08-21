@@ -59,6 +59,63 @@ Refresh it weekly with `git -C ../reference/DAT158 pull`.
 Editing it in place means your work is wiped by the next pull, and it keeps
 your answers out of the version-controlled part of this repo.
 
+## Where the slides really live
+
+The Canvas front page links two decks. The published site
+(https://hvl-ml.github.io/DAT158/) indexes the same two. **Both undersell what
+is actually online** — every deck for the whole course is already served, just
+unlinked, and reachable by URL:
+
+| Module | Decks at `hvl-ml.github.io/DAT158/slides/…` |
+|--------|---------------------------------------------|
+| 1 — Introduction | `1-intro/1-intro`, `1-intro/2-python`, `1-intro/3-metrics`, `1-intro/4-ml-engineering` |
+| 2 — Models | `2-models/lecture1` … `lecture4` |
+| 3 — Systems | `3-systems/lecture1` … `lecture3` |
+| 4 — Repetition | `4-repetition/lecture1` |
+
+Plus two interactive widgets used by the metrics lecture:
+`1-intro/roc_curve.html` and `1-intro/classification_threshold.html`.
+
+Module 1's remaining two cover metrics (confusion matrix, precision/recall,
+thresholds, ROC) and ML engineering (cross-validation, train/val/test, serving
+a model with Gradio or Streamlit). Both mention **Assignment 1**.
+
+### Read them, but do not trust them yet
+
+The source is the `lectures` branch of the course repo — not `main`, which only
+carries the notebooks:
+
+```bash
+git -C ../reference/DAT158 fetch origin lectures
+git -C ../reference/DAT158 log --oneline FETCH_HEAD
+```
+
+That log is the honest record of what is current. Everything beyond
+`1-intro`/`2-python` arrived in one bulk commit on 18 August whose contents
+date to **November 2025 — last year's edition**. The lecturer revises a deck
+in the days around teaching it (`1-intro` was touched on the 19th and again on
+the 21st). So the later decks are a genuine preview of where the course goes,
+and a poor guide to what will actually be said.
+
+Nothing beyond module 1's first two decks is mirrored into `../weeks/` for that
+reason: a stale copy in a week folder reads as authoritative and is not. Mirror
+one when Canvas assigns it to a week.
+
+### If you mirror one by hand
+
+The decks reference `../../site_libs/...`, so a deck must sit two directories
+below a copy of `site_libs/` — which is why `2-python.html` lives in
+`../weeks/uke34-ml/slides/1-intro/` and not beside `1-intro.html`.
+
+`1-intro.html` is the exception: it was mirrored before the lecturer's 21 August
+rebuild, when paths carried a redundant `1-intro_files/` prefix that made the
+flatter location work. Its content matches the live version exactly — only the
+asset paths differ — so it is left alone.
+
+Note also that `../weeks/uke34-ml/slides/lecture3.html` is `3-systems/lecture3`,
+i.e. **module 3** material that landed in uke 34 only because Canvas's front
+page happened to link it. It is not a uke 34 lecture.
+
 ## Textbook
 
 **Hands-On Machine Learning with Scikit-Learn, Keras & TensorFlow**, Aurélien
