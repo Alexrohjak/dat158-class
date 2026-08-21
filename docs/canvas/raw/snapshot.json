@@ -4,8 +4,8 @@
       "title": "DAT158-1 25H Maskinlæring og videregående algoritmer",
       "slug": "dat158-1-25h-maskinlaering-og-videregaende-algoritmer",
       "module": "Front page",
-      "updated": "2026-08-20T08:44:24Z",
-      "text": "Velkommen til DAT158 - Maskinlæring og videregående algoritmer\n\nGå til Moduler for å komme i gang.\n\nPraktisk informasjon\n\nEmnebeskrivelse: https://www.hvl.no/studier/studieprogram/emne/DAT158\n\nForelesere: Sven-Olai Høyland, Steffen Mæland og Erlend Raa Vagset\n\nStudentassistenter: TBA\n\nTimeplan og rom: TimeEdit\n\nRepo for ML-delen: GitHub\n\nFremdriftsplan\n\nPlanen oppdateres underveis -- sjekk innom regelmessig\n\nUke\nDel\nTema\n\n34\n17. - 23. aug\n\nML\n\n ML modul 1: Introduksjon til maskinlæring\n\n Zoomlenke for Førde og Haugesund: Zoom\n\nOnsdag: Forelesningsnotater\n\nFredag: (kommer)\n\n35\n24. - 30. aug\n\nAlg\n\n Algoritmer - Tekstprosessering\n\n36\n31. aug - 6. sep\nML\n\n ML modul 1: Introduksjon til maskinlæring\n\n37\n7. - 13. sep\nAlg\n\n Algoritmer - NP-completeness, Chapter 1\n\n38\n14. - 20. sep\nAlg\n\nChapter 2\n\n39\n21. - 27. sep\nML\n\n ML modul 2: Maskinlæringsmodeller\n\n40\n28. sep - 4. okt\nML\n\n ML modul 2: Maskinlæringsmodeller\n\n41\n5. - 11. okt\nAlg\n\n Chapter 3 & Chapter 4\n\n42\n12. - 18. okt\nAlg\n\n43\n19. - 25. okt\nML\n\n ML modul 3: End-to-end maskinlæringssystem\n\n44\n26. okt - 1. nov\nML\n\n  ML modul 3: End-to-end maskinlæringssystem\n\n45\n2. - 8. nov\nAlg\n\nChapter 6 & 7\n\n46\n9. - 15. nov\nAlg\n\n47\n16. - 21. nov\nML\n\nEksamen\n\n TBA",
+      "updated": "2026-08-21T07:07:49Z",
+      "text": "Velkommen til DAT158 - Maskinlæring og videregående algoritmer\n\nGå til Moduler for å komme i gang.\n\nPraktisk informasjon\n\nEmnebeskrivelse: https://www.hvl.no/studier/studieprogram/emne/DAT158\n\nForelesere: Sven-Olai Høyland, Steffen Mæland og Erlend Raa Vagset\n\nStudentassistenter: TBA\n\nTimeplan og rom: TimeEdit\n\nRepo for ML-delen: GitHub\n\nDiscord-server: invite\n\nFremdriftsplan\n\nPlanen oppdateres underveis -- sjekk innom regelmessig\n\nUke\nDel\n Tema\n\n34\n17. - 23. aug\n\nML\n\n ML modul 1: Introduksjon til maskinlæring\n\n Zoomlenke for Førde og Haugesund: Zoom\n\nOnsdag: Forelesningsnotater\n\nFredag: Forelesningsnotater\n\n35\n24. - 30. aug\n\nAlg\n\n Algoritmer - Tekstprosessering\n\n36\n31. aug - 6. sep\nML\n\n ML modul 1: Introduksjon til maskinlæring\n\n37\n7. - 13. sep\nAlg\n\n Algoritmer - NP-completeness, Chapter 1\n\n38\n14. - 20. sep\nAlg\n\nChapter 2\n\n39\n21. - 27. sep\nML\n\n ML modul 2: Maskinlæringsmodeller\n\n40\n28. sep - 4. okt\nML\n\n ML modul 2: Maskinlæringsmodeller\n\n41\n5. - 11. okt\nAlg\n\n Chapter 3 & Chapter 4\n\n42\n12. - 18. okt\nAlg\n\n43\n19. - 25. okt\nML\n\n ML modul 3: End-to-end maskinlæringssystem\n\n44\n26. okt - 1. nov\nML\n\n  ML modul 3: End-to-end maskinlæringssystem\n\n45\n2. - 8. nov\nAlg\n\nChapter 6 & 7\n\n46\n9. - 15. nov\nAlg\n\n47\n16. - 21. nov\nML\n\nEksamen\n\n 08.12.2026 kl. 09:00\n\n Mer info på StudentWeb",
       "file_ids": [
         3871696,
         3871730
@@ -17,8 +17,10 @@
         "https://www.hvl.no/person/?user=Erlend.Raa.Vagset",
         "https://cloud.timeedit.net/hvl/web/pen/riqY8y5X0gvZ71QZQ525717Q67876X6Y71161Z5Q60o8YY76X1876Q77Y767c8Zp7QZq1Qo.html",
         "https://github.com/HVL-ML/DAT158",
+        "https://discord.gg/fYu4yh7kp",
         "https://hvl.zoom.us/j/63122964590?pwd=uCdb8RGnzbjZJNeafwlnOVJbEA9vpl.1",
         "https://hvl-ml.github.io/DAT158/slides/1-intro/1-intro.html",
+        "https://hvl-ml.github.io/DAT158/slides/1-intro/2-python.html",
         "https://hvl-ml.github.io/DAT158/slides/3-systems/lecture3.html"
       ]
     },

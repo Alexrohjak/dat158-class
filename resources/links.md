@@ -22,6 +22,7 @@ Student assistants: TBA.
 | https://cloud.timeedit.net/hvl/web/pen/riqY8y5X0gvZ71QZQ525717Q67876X6Y71161Z5Q60o8YY76X1876Q77Y767c8Zp7QZq1Qo.html | TimeEdit — timetable and rooms |
 | https://fsweb.no/studentweb/login.jsf?inst=FSHVL | Studentweb — authoritative exam time and room |
 | https://hvl.zoom.us/j/63122964590?pwd=uCdb8RGnzbjZJNeafwlnOVJbEA9vpl.1 | **Zoom for Førde and Haugesund** — recurring |
+| https://discord.gg/fYu4yh7kp | Course Discord — added to the front page 21 Aug, used alongside Canvas announcements |
 | https://bibsys-xc.alma.exlibrisgroup.com/leganto/public/47BIBSYS_HIB/searchlists?auth=SAML&search=DAT158 | Leganto reading list (needs Feide login) |
 | https://hvl.instructure.com/courses/35853/assignments | Oppgåver |
 | https://hvl.instructure.com/courses/35853/grades | Vurderingar |
@@ -29,6 +30,7 @@ Student assistants: TBA.
 | https://hvl.instructure.com/courses/35853/modules | Modular |
 | https://hvl.instructure.com/courses/35853/external_tools/2182 | Pensum/Litteratur (LTI — browser only) |
 | https://hvl-ml.github.io/DAT158/slides/1-intro/1-intro.html | Lecture 1 slides — Introduction (web) |
+| https://hvl-ml.github.io/DAT158/slides/1-intro/2-python.html | Lecture 2 slides — Python, numpy, types of ML (web) |
 | https://hvl-ml.github.io/DAT158/slides/3-systems/lecture3.html | Lecture 3 slides — ML systems (web) |
 | https://hvl.instructure.com/courses/35853/external_tools/1650 | Panopto lecture recordings (LTI — browser only) |
 | https://hvl.instructure.com/courses/35853/external_tools/1247 | Zoom (LTI — browser only; the weekly link is on the Canvas front page) |

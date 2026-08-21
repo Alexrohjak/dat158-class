@@ -35,7 +35,7 @@ Course: `DAT158-1 26H` (id 35853)
 
 ### DAT158-1 25H Maskinlæring og videregående algoritmer
 
-*Module: Front page · updated 2026-08-20T08:44:24Z*
+*Module: Front page · updated 2026-08-21T07:07:49Z*
 
 Velkommen til DAT158 - Maskinlæring og videregående algoritmer
 
@@ -53,13 +53,15 @@ Timeplan og rom: TimeEdit
 
 Repo for ML-delen: GitHub
 
+Discord-server: invite
+
 Fremdriftsplan
 
 Planen oppdateres underveis -- sjekk innom regelmessig
 
 Uke
 Del
-Tema
+ Tema
 
 34
 17. - 23. aug
@@ -72,7 +74,7 @@ ML
 
 Onsdag: Forelesningsnotater
 
-Fredag: (kommer)
+Fredag: Forelesningsnotater
 
 35
 24. - 30. aug
@@ -149,7 +151,9 @@ ML
 
 Eksamen
 
- TBA
+ 08.12.2026 kl. 09:00
+
+ Mer info på StudentWeb
 
 **Attached files:**
 - DAT158-course-logo.png
@@ -162,8 +166,10 @@ Eksamen
 - https://www.hvl.no/person/?user=Erlend.Raa.Vagset
 - https://cloud.timeedit.net/hvl/web/pen/riqY8y5X0gvZ71QZQ525717Q67876X6Y71161Z5Q60o8YY76X1876Q77Y767c8Zp7QZq1Qo.html
 - https://github.com/HVL-ML/DAT158
+- https://discord.gg/fYu4yh7kp
 - https://hvl.zoom.us/j/63122964590?pwd=uCdb8RGnzbjZJNeafwlnOVJbEA9vpl.1
 - https://hvl-ml.github.io/DAT158/slides/1-intro/1-intro.html
+- https://hvl-ml.github.io/DAT158/slides/1-intro/2-python.html
 - https://hvl-ml.github.io/DAT158/slides/3-systems/lecture3.html
 
 ### Introduksjon til maskinlæring

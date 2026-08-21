@@ -40,6 +40,7 @@ SOURCES = [
     ("guide",       "resources/*.md"),
     ("guide",       "exam/*.md"),
     ("slides",      "weeks/*/slides/*.pdf"),
+    ("slides",      "weeks/*/slides/**/*.html"),
     ("textbook",    "reference/*.pdf"),
     ("notebook",    "reference/DAT158/notebooks/*.ipynb"),
     ("canvas file", "docs/canvas/files/*.pdf"),

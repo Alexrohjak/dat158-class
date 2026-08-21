@@ -35,14 +35,15 @@ weeks, matching Canvas.
 | 45 | 2.–8. nov | Alg | Chapter 6 & 7 | [`uke45-alg`](weeks/uke45-alg/) |
 | 46 | 9.–15. nov | Alg | *(TBA)* | [`uke46-alg`](weeks/uke46-alg/) |
 | 47 | 16.–21. nov | ML | *(TBA)* | [`uke47-ml`](weeks/uke47-ml/) |
-| — | 8. des | — | **Eksamen — 4t skriftleg, 09:00** | [`exam/`](exam/) |
+| — | 8. des | — | **Eksamen — 4t skriftleg, 09:00** (confirmed on Canvas 21. aug) | [`exam/`](exam/) |
 
 7 ML weeks, 7 Alg weeks. Plan is updated during the semester — re-check Canvas
 and update this table when it changes. Canvas is the source of truth; where the
 book's own chapter order disagrees, follow Canvas.
 
 **Four obligatory exercises** must be approved before you can sit the exam.
-None published yet — see [`assignments/`](assignments/).
+None published in Canvas yet, but the ML half's two — a quiz and the project —
+now have proposed dates. See [`assignments/`](assignments/).
 
 ## Where things go
 
@@ -159,8 +160,8 @@ mirrors it into this repo — read-only, GETs only, it never submits or changes
 anything on Canvas.
 
 ```bash
-python src/canvas_sync.py              # refresh docs/canvas/course.md
-python src/canvas_sync.py --download   # also pull new PDFs into weeks/*/slides/
+python src/canvas_sync.py                # refresh, and pull new PDFs into weeks/*/slides/
+python src/canvas_sync.py --no-download  # text only, skip the files
 ```
 
 Needs a Canvas API token in `.env` (gitignored — see `.env.example`). Generate
