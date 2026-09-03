@@ -17,6 +17,7 @@ Contents of the subfolders are gitignored. This file is not — keep it updated.
 | File | Location | Source | Downloaded | Notes |
 |------|----------|--------|------------|-------|
 | _(example)_ `housing.csv` | `raw/` | HOML ch.2, github.com/ageron/data | — | California housing, 20 640 rows |
+| `sult-hamsun-no.txt` | `raw/` | Project Gutenberg #30027, gutenberg.org/ebooks/30027.txt.utf-8 | 3. sep 2026 | Knut Hamsun, *Sult* (1890), Norwegian, public domain. 366 KB raw; 329 982 characters and 93 distinct symbols after the Gutenberg header and footer are stripped. Used as the Norwegian corpus for **assignment 1, problem 2b** (Boyer-Moore comparisons per character). |
 
 ## Datasets that need no download
 
