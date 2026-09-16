@@ -81,11 +81,23 @@ done
 The symlinks dangle until `reference/DAT158` exists, so re-clone it first if you
 have rebuilt this repo from scratch.
 
+## The tutorial track
+
+[`../tutorial/`](../tutorial/) has `ml01` and `ml02`, covering module 1 in two
+sittings — 115 checks between them. They deliberately use **no scikit-learn**:
+you implement the confusion matrix, precision, recall, ROC points and k-fold
+yourself, because the exam is four hours with no aids and `sklearn.metrics`
+will not be in the room.
+
+Do them alongside the lecturer's notebooks, not instead of. The notebooks cover
+more ground; the tutorial is small, mechanical and checkable.
+
 ## Where the slides really live
 
-The Canvas front page links two decks. The published site
-(https://hvl-ml.github.io/DAT158/) indexes the same two. **Both undersell what
-is actually online** — every deck for the whole course is already served, just
+The Canvas front page links three decks as of uke 36 — `1-intro` and `2-python`
+for uke 34, and `3-metrics` for uke 36's Wednesday. The published site
+(https://hvl-ml.github.io/DAT158/) indexes fewer. **Both undersell what is
+actually online** — every deck for the whole course is already served, just
 unlinked, and reachable by URL:
 
 | Module | Decks at `hvl-ml.github.io/DAT158/slides/…` |
@@ -101,6 +113,17 @@ Plus two interactive widgets used by the metrics lecture:
 Module 1's remaining two cover metrics (confusion matrix, precision/recall,
 thresholds, ROC) and ML engineering (cross-validation, train/val/test, serving
 a model with Gradio or Streamlit). Both mention **Assignment 1**.
+
+Both are now filed in [`../weeks/uke36-ml/slides/`](../weeks/uke36-ml/slides/),
+and — unlike the module 2–4 decks — **both are current**. The lecturer revised
+them on **1 September**, the day before uke 36's Wednesday lecture, in commit
+`e8ebde6` "Update lectures week 36"; the copies here are byte-identical to that
+revision. So the caveat below does not apply to these two.
+
+Canvas has linked `3-metrics` as uke 36's Wednesday notes. `4-ml-engineering`
+is not linked yet — but it was revised in the same commit, and uke 36 is module
+1's last week, so it is almost certainly the Friday deck. Re-run the sync to
+confirm once the lecturer posts the link.
 
 ### Read them, but do not trust them yet
 

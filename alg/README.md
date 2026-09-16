@@ -18,6 +18,16 @@ The chapter numbers run 1, 2, 3 & 4, 6 & 7 *and* 9 because there are **two**
 books. The low numbers are Williamson & Shmoys; chapter 9 is Goodrich &
 Tamassia.
 
+## The tutorial track
+
+[`../tutorial/alg01/`](../tutorial/alg01/) covers uke 35's text processing —
+brute force, Boyer-Moore, KMP, tries, Huffman and LCS, with 76 checks.
+
+Three of those are what **Algorithms number 1** asks you to implement, so the
+tutorial ships **without** a reference solution until the deadline has passed;
+the test data differs from the assignment's on purpose. Learn the algorithm
+there, apply it to the assignment's own strings.
+
 ## Textbooks
 
 Canvas → *Pensum/Litteratur* lists **one** book for this half, for 2026/27:

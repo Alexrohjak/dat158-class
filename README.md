@@ -42,8 +42,39 @@ and update this table when it changes. Canvas is the source of truth; where the
 book's own chapter order disagrees, follow Canvas.
 
 **Four obligatory exercises** must be approved before you can sit the exam.
-None published in Canvas yet, but the ML half's two — a quiz and the project —
-now have proposed dates. See [`assignments/`](assignments/).
+**Two are now published**, both with real Canvas deadlines:
+
+| Due | What |
+|-----|------|
+| **4. sep** | Algorithms number 1 — nine problems on G&T ch. 9, three needing Python |
+| **11. sep** | ML assignment 1 — 20 points, brief not attached yet |
+
+The brief for the first is in [`assignments/`](assignments/), which also tracks
+the two still outstanding.
+
+## Working through the material
+
+`tutorial/` is a self-study track that runs alongside the lectures: a lesson,
+a set of stubs to fill in, and tests that tell you when you have it right.
+
+```bash
+cd tutorial
+./check.py --list      # what exists, and how far you are
+./check.py ml01        # run ML week 1 against your answers
+```
+
+| Week | Covers | Checks |
+|---|---|:--:|
+| `ml01` | uke 34 — what ML is, numpy, a first model | 54 |
+| `ml02` | uke 36 — confusion matrix, precision/recall, ROC, cross-validation | 61 |
+| `alg01` | uke 35 — pattern matching, tries, Huffman, LCS | 76 |
+
+Stubs report as `todo` rather than `FAIL`, so you can do one exercise at a time.
+No new dependencies — the harness is one stdlib-only file. See
+[`tutorial/README.md`](tutorial/README.md).
+
+How this fits around the lectures, the Wednesday lab and the weekly sync is in
+[`docs/weekly-routine.md`](docs/weekly-routine.md).
 
 ## Where things go
 
@@ -58,6 +89,7 @@ now have proposed dates. See [`assignments/`](assignments/).
 | A dataset | `data/raw/` — and log it in `data/README.md` |
 | Revision material | `exam/` |
 | A half-formed idea | `scratch/` — no rules there |
+| Tutorial answers I'm writing | `tutorial/ukeNN/exercises.py` — in place, it's yours |
 
 ## The two halves
 
@@ -81,10 +113,11 @@ python src/find.py tries          # where is this covered?
 python src/find.py --sources      # what is indexed
 ```
 
-Searches the week records, the Canvas mirror, both textbooks, every slide deck
-and every exercise notebook — and reports the page or cell, so you can go
-straight there. `grep` only reads the markdown; the lecture content is in PDFs
-and notebooks, which is what you actually want during revision.
+Searches the week records, the Canvas mirror, both textbooks, every slide deck,
+every exercise notebook and every assignment brief — and reports the page or
+cell, so you can go straight there. `grep` only reads the markdown; the lecture
+content is in PDFs and notebooks, which is what you actually want during
+revision.
 
 First run extracts and caches (~15s for a 500-page book). After that it is
 instant until a file changes. The cache lives in `.searchcache/` and is
@@ -180,6 +213,10 @@ Output lands in [`docs/canvas/course.md`](docs/canvas/course.md) — a flattened
 mirror of every module page, announcement and assignment. **Don't edit it by
 hand**; re-run the script. Each week folder also gets a generated
 `README.md` recording what was posted that week.
+
+Files are filed by where they belong: lecture material next to its week, a
+brief attached to a Canvas assignment into `assignments/`, and anything with no
+week under `docs/canvas/files/`.
 
 Three things the API cannot reach, because they are LTI external tools:
 **Pensum/Litteratur**, **Panopto** and **Zoom**. Open those in a browser.
