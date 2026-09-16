@@ -5,9 +5,9 @@
     python src/find.py trie --context 3   # more surrounding lines
     python src/find.py --rebuild          # force re-extraction
 
-Searches week records, the Canvas mirror, both textbooks, every slide deck and
-every exercise notebook — and tells you the page or cell, so you can go
-straight there.
+Searches week records, the Canvas mirror, both textbooks, every slide deck,
+every exercise notebook and every assignment brief — and tells you the page or
+cell, so you can go straight there.
 
 `grep -r` only reads the markdown. The lecture content is in PDFs and notebooks,
 which is exactly the material you want during revision, so this extracts those
@@ -44,6 +44,10 @@ SOURCES = [
     ("textbook",    "reference/*.pdf"),
     ("notebook",    "reference/DAT158/notebooks/*.ipynb"),
     ("canvas file", "docs/canvas/files/*.pdf"),
+    ("assignment",  "assignments/**/*.pdf"),
+    ("guide",       "assignments/*.md"),
+    ("tutorial",    "tutorial/*/LESSON.md"),
+    ("tutorial",    "tutorial/solutions/*/PAPER.md"),
 ]
 
 

@@ -39,6 +39,7 @@ from pathlib import Path
 from paths import ROOT
 from week import DATES, PLAN, folder
 
+ASSIGNMENTS = ROOT / "assignments"
 OUT = ROOT / "docs" / "canvas"
 RAW = OUT / "raw"
 
@@ -385,25 +386,45 @@ def write_raw(snap: dict) -> Path:
 
 
 def download_files(api: Canvas, snap: dict, quiet: bool) -> list[str]:
-    """Put each linked file next to the week it belongs to."""
+    """Put each linked file where it belongs.
+
+    Slides go next to their week, assignment briefs in assignments/, and
+    anything with no week — announcements, front-page decoration — under
+    docs/canvas/files/.
+    """
     report = []
+
+    def fetch(fid: int, dest_dir: Path, uke: int | None = None) -> None:
+        meta = snap["files"].get(str(fid))
+        if not meta or not meta.get("url"):
+            report.append(f"  skip  file {fid} — no download URL")
+            return
+        # Inline decoration (banner images and the like) is not lecture
+        # material — keep it out of the week folders.
+        target = dest_dir
+        if uke and str(meta.get("type", "")).startswith("image/"):
+            target = OUT / "files"
+        dest = target / meta["name"]
+        status = api.download(meta["url"], dest)
+        if status != "exists" or not quiet:
+            report.append(f"  {status:11} {dest.relative_to(ROOT)}")
+
     for page in snap["pages"]:
         uke = primary_week(page)
         dest_dir = (folder(uke) / "slides") if uke else (OUT / "files")
         for fid in page["file_ids"]:
-            meta = snap["files"].get(str(fid))
-            if not meta or not meta.get("url"):
-                report.append(f"  skip  file {fid} — no download URL")
-                continue
-            # Inline decoration (banner images and the like) is not lecture
-            # material — keep it out of the week folders.
-            target = dest_dir
-            if uke and str(meta.get("type", "")).startswith("image/"):
-                target = OUT / "files"
-            dest = target / meta["name"]
-            status = api.download(meta["url"], dest)
-            if status != "exists" or not quiet:
-                report.append(f"  {status:11} {dest.relative_to(ROOT)}")
+            fetch(fid, dest_dir, uke)
+
+    # An assignment brief is the one thing you cannot afford to miss, and it
+    # is attached to the assignment rather than to any week's page.
+    for assign in snap["assignments"]:
+        for fid in assign["file_ids"]:
+            fetch(fid, ASSIGNMENTS)
+
+    for ann in snap["announcements"]:
+        for fid in ann["file_ids"]:
+            fetch(fid, OUT / "files")
+
     return report
 
 

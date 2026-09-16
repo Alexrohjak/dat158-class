@@ -21,9 +21,11 @@ curriculum document. Watch for it.
 
 ### The four obligatory exercises
 
-These gate the exam, so they matter more than their weight suggests (they are
-pass/fail, and none published yet as of uke 34). Track them in
-[`../assignments/`](../assignments/) with the deadline in each README.
+These gate the exam, so they matter more than their weight suggests. **Two of
+the four are published** as of uke 36 — Algorithms number 1 (due 4. sep) and
+ML assignment 1 (due 11. sep). Track all of them in
+[`../assignments/`](../assignments/), which carries the deadlines and the
+briefs.
 
 ## Revision
 

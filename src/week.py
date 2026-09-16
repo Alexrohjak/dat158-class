@@ -1,4 +1,4 @@
-"""Where are we in the semester, and is anything missing for weeks already taught?
+"""Where are we in the semester, what is due, and is anything missing?
 
     python src/week.py            # current week
     python src/week.py --all      # whole semester at a glance
@@ -11,9 +11,16 @@ line means Canvas has been synced for that week, not that anyone wrote anything.
 """
 
 import argparse
-from datetime import date
+import json
+from datetime import date, datetime, timezone
 
 from paths import ROOT
+
+try:                                    # stdlib since 3.9; only used for display
+    from zoneinfo import ZoneInfo
+    OSLO = ZoneInfo("Europe/Oslo")
+except Exception:                       # pragma: no cover - fall back to UTC
+    OSLO = timezone.utc
 
 # uke -> (part, topic). Mirrors the Canvas semester plan; update when it changes.
 PLAN = {
@@ -64,6 +71,53 @@ def survey(uke: int) -> dict:
     }
 
 
+def deadlines() -> list[tuple[date, str]]:
+    """Assignment due dates, from the Canvas snapshot. Empty if it has not synced.
+
+    Canvas stores due_at in UTC; a 23:59 Norwegian deadline is 21:59Z in summer,
+    so convert before taking the date or everything lands a day early.
+    """
+    snap = ROOT / "docs" / "canvas" / "raw" / "snapshot.json"
+    if not snap.exists():
+        return []
+    try:
+        data = json.loads(snap.read_text())
+    except (json.JSONDecodeError, OSError):
+        return []
+
+    out = []
+    for a in data.get("assignments", []):
+        due, name = a.get("due_at"), a.get("name")
+        if not due or not name:
+            continue
+        try:
+            when = datetime.fromisoformat(due.replace("Z", "+00:00"))
+        except ValueError:
+            continue
+        out.append((when.astimezone(OSLO).date(), name))
+    return sorted(out)
+
+
+def report_deadlines(today: date) -> None:
+    """Print what is due, loudest first. Silent when there is nothing."""
+    upcoming = [(d, n) for d, n in deadlines() if d >= today]
+    if not upcoming:
+        return
+
+    print("Due:")
+    for d, name in upcoming[:5]:
+        days = (d - today).days
+        if days == 0:
+            urgency = "TODAY"
+        elif days == 1:
+            urgency = "TOMORROW"
+        else:
+            urgency = f"{days} days"
+        flag = "  <-- " if days <= 3 else "      "
+        print(f"  {d:%d %b}  {urgency:<9}{flag}{name}")
+    print()
+
+
 def line(uke: int, current: int) -> str:
     part, topic = PLAN[uke]
     s = survey(uke)
@@ -99,6 +153,8 @@ def main() -> int:
     part, topic = PLAN[current]
     print(f"Current: uke{current} ({part.upper()}) — {topic}")
     print(f"Folder:  weeks/uke{current}-{part}/\n")
+
+    report_deadlines(today)
 
     weeks = sorted(PLAN) if args.all else [u for u in sorted(PLAN) if u <= current]
     for uke in weeks:
