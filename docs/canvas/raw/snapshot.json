@@ -4,23 +4,25 @@
       "title": "DAT158-1 25H Maskinlæring og videregående algoritmer",
       "slug": "dat158-1-25h-maskinlaering-og-videregaende-algoritmer",
       "module": "Front page",
-      "updated": "2026-08-21T07:07:49Z",
-      "text": "Velkommen til DAT158 - Maskinlæring og videregående algoritmer\n\nGå til Moduler for å komme i gang.\n\nPraktisk informasjon\n\nEmnebeskrivelse: https://www.hvl.no/studier/studieprogram/emne/DAT158\n\nForelesere: Sven-Olai Høyland, Steffen Mæland og Erlend Raa Vagset\n\nStudentassistenter: TBA\n\nTimeplan og rom: TimeEdit\n\nRepo for ML-delen: GitHub\n\nDiscord-server: invite\n\nFremdriftsplan\n\nPlanen oppdateres underveis -- sjekk innom regelmessig\n\nUke\nDel\n Tema\n\n34\n17. - 23. aug\n\nML\n\n ML modul 1: Introduksjon til maskinlæring\n\n Zoomlenke for Førde og Haugesund: Zoom\n\nOnsdag: Forelesningsnotater\n\nFredag: Forelesningsnotater\n\n35\n24. - 30. aug\n\nAlg\n\n Algoritmer - Tekstprosessering\n\n36\n31. aug - 6. sep\nML\n\n ML modul 1: Introduksjon til maskinlæring\n\n37\n7. - 13. sep\nAlg\n\n Algoritmer - NP-completeness, Chapter 1\n\n38\n14. - 20. sep\nAlg\n\nChapter 2\n\n39\n21. - 27. sep\nML\n\n ML modul 2: Maskinlæringsmodeller\n\n40\n28. sep - 4. okt\nML\n\n ML modul 2: Maskinlæringsmodeller\n\n41\n5. - 11. okt\nAlg\n\n Chapter 3 & Chapter 4\n\n42\n12. - 18. okt\nAlg\n\n43\n19. - 25. okt\nML\n\n ML modul 3: End-to-end maskinlæringssystem\n\n44\n26. okt - 1. nov\nML\n\n  ML modul 3: End-to-end maskinlæringssystem\n\n45\n2. - 8. nov\nAlg\n\nChapter 6 & 7\n\n46\n9. - 15. nov\nAlg\n\n47\n16. - 21. nov\nML\n\nEksamen\n\n 08.12.2026 kl. 09:00\n\n Mer info på StudentWeb",
+      "updated": "2026-09-14T08:51:59Z",
+      "text": "Velkommen til DAT158 - Maskinlæring og videregående algoritmer\n\nGå til Moduler for å komme i gang.\n\nPraktisk informasjon\n\nEmnebeskrivelse: https://www.hvl.no/studier/studieprogram/emne/DAT158\n\nForelesere: Sven-Olai Høyland, Steffen Mæland og Erlend Raa Vagset\n\nStudentassistent: Severin Johannessen\n\nZoomlenker:\n\nML: Zoom\n\nAlgoritmer: Zoom\n\nReferansegruppe:  Jone Kjellstadli, Daniel Andre Kronheim, Christopher Chuchuay Strandheim, Simon Toft, William Waly, Jakob Østensvig-Austrheim\n\nTimeplan og rom: TimeEdit\n\nRepo for ML-delen: GitHub\n\nDiscord-server: invite\n\nFremdriftsplan\n\nPlanen oppdateres underveis -- sjekk innom regelmessig\n\nUke\nDel\n Tema\n\n34\n17. - 23. aug\n\nML\n\n ML modul 1: Introduksjon til maskinlæring\n\nOnsdag: Forelesningsnotater\n\nFredag: Forelesningsnotater\n\n35\n24. - 30. aug\n\nAlg\n\n Algoritmer - Tekstprosessering\n\nZoomlenke for Førde og Haugesund: Zoom\n\n36\n31. aug - 6. sep\nML\n\n ML modul 1: Introduksjon til maskinlæring\n\n Zoomlenke for Førde og Haugesund: Zoom\n\nOnsdag: Forelesningsnotater\n\nFredag: Forelesningsnotater\n\n37\n7. - 13. sep\nAlg\n\n Algoritmer - NP-completeness, Chapter 1\n\nZoomLinks to an external site.\n\nVeke 37 (07.09 - 13.09)\n\n38\n14. - 20. sep\nAlg\n\nChapter 2\n\nZoomLinks to an external site.\n\nVeke 38 (14.09 - 20.09)\n\n39\n21. - 27. sep\nML\n\n ML modul 2: Maskinlæringsmodeller\n\n40\n28. sep - 4. okt\nML\n\n ML modul 2: Maskinlæringsmodeller\n\n41\n5. - 11. okt\nAlg\n\n Chapter 3 & Chapter 4\n\n42\n12. - 18. okt\nAlg\n\n43\n19. - 25. okt\nML\n\n ML modul 3: End-to-end maskinlæringssystem\n\n44\n26. okt - 1. nov\nML\n\n  ML modul 3: End-to-end maskinlæringssystem\n\n45\n2. - 8. nov\nAlg\n\nChapter 6 & 7\n\n46\n9. - 15. nov\nAlg\n\n47\n16. - 21. nov\nML\n\nEksamen\n\n 08.12.2026 kl. 09:00\n\n Mer info på StudentWeb",
       "file_ids": [
-        3871696,
-        3871730
+        3871696
       ],
       "links": [
         "https://www.hvl.no/studier/studieprogram/emne/DAT158",
         "https://www.hvl.no/en/employee/?user=3600298",
         "https://www.hvl.no/person/?user=Steffen.Meland",
         "https://www.hvl.no/person/?user=Erlend.Raa.Vagset",
+        "https://hvl.zoom.us/j/63122964590?pwd=uCdb8RGnzbjZJNeafwlnOVJbEA9vpl.1",
+        "https://hvl.zoom.us/j/62224944761?pwd=LzZKK0dRN2xiUjlkTm00eEVMSmh0UT09",
         "https://cloud.timeedit.net/hvl/web/pen/riqY8y5X0gvZ71QZQ525717Q67876X6Y71161Z5Q60o8YY76X1876Q77Y767c8Zp7QZq1Qo.html",
         "https://github.com/HVL-ML/DAT158",
         "https://discord.gg/fYu4yh7kp",
-        "https://hvl.zoom.us/j/63122964590?pwd=uCdb8RGnzbjZJNeafwlnOVJbEA9vpl.1",
         "https://hvl-ml.github.io/DAT158/slides/1-intro/1-intro.html",
         "https://hvl-ml.github.io/DAT158/slides/1-intro/2-python.html",
+        "https://hvl-ml.github.io/DAT158/slides/1-intro/3-metrics.html",
+        "https://hvl-ml.github.io/DAT158/slides/1-intro/4-ml-engineering.html",
         "https://hvl-ml.github.io/DAT158/slides/3-systems/lecture3.html"
       ]
     },
@@ -69,13 +71,46 @@
       "title": "Veke 35 (24.08 - 30.08)",
       "slug": "veke-35-24-dot-08-30-dot-08",
       "module": "Advanced algorithms",
-      "updated": "2026-08-20T08:42:30Z",
-      "text": "Startar med tekst behandling\n\nZoomlenke: Sjå praktisk informasjon på startsida\n\nKapittel frå lærebok: Kapittel_9_GoodrichAndTammassia.pdf\n\nDet blir lagt ut lysark for heile tema / kapittel og så vil det bli opplyst kvar vi startar.\n\nLysark: Chapter 9 TextProcessing.pdf\n\nOnsdag 26. augsust - Frå starten\n\nFredag 28. august - Planlagt, men kan bli endre: Forsettelse på lysark 31 (Standard tries)\n\nMentimeter for spørsmål: Mentimeter for Spørsmål.pdf\n\nOppgaver (obligatorisk): Kommer",
+      "updated": "2026-08-26T06:59:09Z",
+      "text": "Startar med tekst behandling\n\nZoomlenke: Sjå praktisk informasjon på startsida\n\nKapittel frå lærebok: Kapittel_9_GoodrichAndTammassia.pdf\n\nDet blir lagt ut lysark for heile tema / kapittel og så vil det bli opplyst kvar vi startar.\n\nLysark: Chapter 9 TextProcessing.pdf\n\nOnsdag 26. augsust - Frå starten\n\nFredag 28. august - Planlagt, men kan bli endre: Forsettelse på lysark 31 (Standard tries)\n\nMentimeter for spørsmål: Mentimeter for Spørsmål.pdf\n\nOppgaver (obligatorisk): Algorithms number 1",
       "file_ids": [
         3871705,
         3923722,
         3871712
       ],
+      "links": []
+    },
+    {
+      "title": "Veke 37 (07.09 - 13.09)",
+      "slug": "veke-37-07-dot-09-13-dot-09",
+      "module": "Advanced algorithms",
+      "updated": "2026-09-09T12:03:46Z",
+      "text": "Det blir lagt ut lysark for heile tema / kapittel og så vil det bli opplyst kvar vi startar.\n\nOnsdag 9. september, kl 10 - 12\n\n  - NP-completeness: NP-Completeness.pdf\n\n  - Held fram med Kapittel 1: Chapter_1.pdf\n\nForelesning fredag får ny tid på grunn av begravelse.\n\nFredag 11. september, kl 12 - 14.\n\n  - Held fram i Chapter 1, start Lysark 10\n\nOppgaver: Ingen denne veka  sidan det er innlevering i ML\n\nFørre\n\nNeste",
+      "file_ids": [
+        3960022,
+        3965950
+      ],
+      "links": []
+    },
+    {
+      "title": "Veke 38 (14.09 - 20.09)",
+      "slug": "veke-38-14-dot-09-20-dot-09",
+      "module": "Advanced algorithms",
+      "updated": "2026-09-14T08:36:23Z",
+      "text": "Det blir lagt ut lysark for heile tema / kapittel og så vil det bli opplyst kvar vi startar.\n\nOnsdag 16. september, kl 10 - 12\n\n  - Kapittel 2: Chapter_2.pdf\n\nFredag 18. september, kl 12 - 14.\n\n  - Held fram i Chapter 2, Lysark ?\n\n  - Går gjennom løysing av noen oppgåver gitt i veke 38 (Exercise 2)\n\nOppgaver: Problems_2.pdf  NB! Oppgave 5 & 6 er del av neste obligaoriske øving.\n\nFørre\n\nNeste",
+      "file_ids": [
+        3965951,
+        3968627
+      ],
+      "links": []
+    },
+    {
+      "title": "Informasjon",
+      "slug": "informasjon",
+      "module": "Tidligere eksamer",
+      "updated": "2026-09-15T06:07:38Z",
+      "text": "Det blir lagt ut fleire eksamenar  og løysingsforslag seinare.\n\nFør 2021 var det muntleg eksame. I 2022 og 2023 var kontinuasjonseksamen muntleg.",
+      "file_ids": [],
       "links": []
     }
   ],
@@ -105,20 +140,104 @@
           "type": "Page",
           "page_url": "veke-35-24-dot-08-30-dot-08",
           "url": "https://hvl.instructure.com/courses/35853/modules/items/1104578"
+        },
+        {
+          "title": "Veke 37 (07.09 - 13.09)",
+          "type": "Page",
+          "page_url": "veke-37-07-dot-09-13-dot-09",
+          "url": "https://hvl.instructure.com/courses/35853/modules/items/1104577"
+        },
+        {
+          "title": "Veke 38 (14.09 - 20.09)",
+          "type": "Page",
+          "page_url": "veke-38-14-dot-09-20-dot-09",
+          "url": "https://hvl.instructure.com/courses/35853/modules/items/1104576"
+        }
+      ]
+    },
+    {
+      "name": "Tidligere eksamer",
+      "items": [
+        {
+          "title": "Informasjon",
+          "type": "Page",
+          "page_url": "informasjon",
+          "url": "https://hvl.instructure.com/courses/35853/modules/items/1104580"
+        },
+        {
+          "title": "V2025_Oppgaver_Uten_Løsning.pdf",
+          "type": "File",
+          "page_url": null,
+          "url": "https://hvl.instructure.com/courses/35853/modules/items/1104599"
         }
       ]
     }
   ],
   "announcements": [
     {
-      "title": "Første forelesning",
-      "posted": "2026-08-18T14:02:56Z",
-      "text": "Hei og velkommen til første forelesning i DAT158 i morgen kl 10.15. I Bergen møtes vi i F118 (Aud 14), i Førde i VIE1070 (Balchen), og i Haugesund i Auditorium B. Det blir sprek info om innhold og opplegg i kurset, så møt opp!",
+      "title": "Gratis bridgekurs og gratis pzza!",
+      "posted": "2026-09-15T07:55:52Z",
+      "text": "Gratis introduksjonskurs til kortspillet bridge onsdag 16. september kl 17. Det blir også servert gratis pizza. Kurset varer ca. to timer.\n\nDetter er en fin mulighet å bli bedre kjent med sine medstudenter.\n\nIngen forkunnskaper er nødvendige. Kurset varer ca. to timer.\nSted: Høgskulen på Vestlandet, Inndalsveien 28 (like ved bybanestopp Kronstad), Blokk K1, rom E403 Påmeldingsfrist onsdag  16. september kl 12.00.\n\nOm du ønsker å være litt forberedt, kan du gå inn på https://www.bridge.no/Laer-bridge/Laer-bridge-selvstudium.Lenker til eit ekstern område.\n\nDet er mulig å ta med venner.\n\nPåmelding bridgekurs -16. september 2026Lenker til eit ekstern område.",
+      "file_ids": [],
+      "links": [
+        "https://www.bridge.no/Laer-bridge/Laer-bridge-selvstudium.",
+        "https://forms.cloud.microsoft/e/hXDkvkfW6P"
+      ]
+    },
+    {
+      "title": "Eksempel på ein eksamen",
+      "posted": "2026-09-15T05:48:18Z",
+      "text": "Vi har fått ønske om legge ut ein eksamen. Det blir lagt ut fleire etter kvart.\n\nVåren 2025\n\nV2025_Oppgaver_Uten_Løsning.pdf",
+      "file_ids": [
+        3871737
+      ],
+      "links": []
+    },
+    {
+      "title": "Gratis bridgekurs",
+      "posted": "2026-09-07T12:00:05Z",
+      "text": "Gratis introduksjonskurs til kortspillet bridge onsdag 9. september kl 17.00 eller torsdag 10. september kl 18.00. Kurset varer ca. to timer.\n\nIngen forkunnskaper er nødvendige, men om du ønsker å vite litt, kan du gå inn på https://www.bridge.no/Laer-bridge/Laer-bridge-selvstudiumLenker til eit ekstern område.\n\nog se videoene Minibridge 1 og Minibridge 2.\n\nSted: Høgskulen på Vestlandet, Inndalsveien 28 (like ved bybanestopp Kronstad), Blokk K1, rom E403\n\nPåmeldingsfrist Kl 12.00 på kursdagen.  Påmelding: Påmelding bridgekurs - September 2026\n\nDet er mulig å ta med venner.",
+      "file_ids": [],
+      "links": [
+        "https://www.bridge.no/Laer-bridge/Laer-bridge-selvstudium",
+        "https://forms.cloud.microsoft/e/fEZcXbe4Xe"
+      ]
+    },
+    {
+      "title": "Avlyst labundervisning onsdag 9. september",
+      "posted": "2026-09-07T11:32:00Z",
+      "text": "På grunn av kong Harald si gravferd, er undervisninga 12.15 - 14 avlyst. Det er usikkert når det blir fjerna frå TimeEdit.",
+      "file_ids": [],
+      "links": []
+    },
+    {
+      "title": "Problem med grupper i Canvas",
+      "posted": "2026-09-04T12:02:23Z",
+      "text": "Eg har fått melding om at det er problem å få logga seg inn i Canvas for å melde seg inn i grupper. Fristen for innleveringa i algoritmer  blir derfor utsatt til mandag.",
       "file_ids": [],
       "links": []
     }
   ],
-  "assignments": [],
+  "assignments": [
+    {
+      "name": "Algorithms number 1",
+      "due_at": "2026-09-04T21:59:59Z",
+      "points": 0.0,
+      "url": "https://hvl.instructure.com/courses/35853/assignments/105965",
+      "text": "Compulsory_1.pdf",
+      "file_ids": [
+        3931346
+      ]
+    },
+    {
+      "name": "ML assignment 1",
+      "due_at": "2026-09-11T21:59:59Z",
+      "points": 20.0,
+      "url": "https://hvl.instructure.com/courses/35853/assignments/105890",
+      "text": "",
+      "file_ids": []
+    }
+  ],
   "files": {
     "3871696": {
       "name": "DAT158-course-logo.png",
@@ -150,17 +269,47 @@
       "type": "application/pdf",
       "updated": "2026-08-20T10:42:31Z"
     },
-    "3871730": {
-      "name": "FinalCurriculum_2025.pdf",
-      "size": 224141,
+    "3871737": {
+      "name": "V2025_Oppgaver_Uten_Løsning.pdf",
+      "size": 1945256,
       "type": "application/pdf",
-      "updated": "2026-06-22T13:23:44Z"
+      "updated": "2026-09-15T06:09:51Z"
     },
     "3923722": {
       "name": "Chapter 9 TextProcessing.pdf",
       "size": 836376,
       "type": "application/pdf",
       "updated": "2026-08-20T09:03:47Z"
+    },
+    "3931346": {
+      "name": "Compulsory_1.pdf",
+      "size": 806616,
+      "type": "application/pdf",
+      "updated": "2026-08-25T08:20:29Z"
+    },
+    "3960022": {
+      "name": "NP-Completeness.pdf",
+      "size": 946074,
+      "type": "application/pdf",
+      "updated": "2026-09-09T08:12:59Z"
+    },
+    "3965950": {
+      "name": "Chapter_1.pdf",
+      "size": 1200329,
+      "type": "application/pdf",
+      "updated": "2026-09-12T18:37:34Z"
+    },
+    "3965951": {
+      "name": "Chapter_2.pdf",
+      "size": 956826,
+      "type": "application/pdf",
+      "updated": "2026-09-12T21:18:25Z"
+    },
+    "3968627": {
+      "name": "Problems_2.pdf",
+      "size": 731444,
+      "type": "application/pdf",
+      "updated": "2026-09-14T10:20:18Z"
     }
   },
   "errors": [],

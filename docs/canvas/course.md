@@ -30,12 +30,19 @@ Course: `DAT158-1 26H` (id 35853)
 ### Advanced algorithms
 
 - **Veke 35 (24.08 - 30.08)** — Page
+- **Veke 37 (07.09 - 13.09)** — Page
+- **Veke 38 (14.09 - 20.09)** — Page
+
+### Tidligere eksamer
+
+- **Informasjon** — Page
+- **V2025_Oppgaver_Uten_Løsning.pdf** — File
 
 ## Pages
 
 ### DAT158-1 25H Maskinlæring og videregående algoritmer
 
-*Module: Front page · updated 2026-08-21T07:07:49Z*
+*Module: Front page · updated 2026-09-14T08:51:59Z*
 
 Velkommen til DAT158 - Maskinlæring og videregående algoritmer
 
@@ -47,7 +54,15 @@ Emnebeskrivelse: https://www.hvl.no/studier/studieprogram/emne/DAT158
 
 Forelesere: Sven-Olai Høyland, Steffen Mæland og Erlend Raa Vagset
 
-Studentassistenter: TBA
+Studentassistent: Severin Johannessen
+
+Zoomlenker:
+
+ML: Zoom
+
+Algoritmer: Zoom
+
+Referansegruppe:  Jone Kjellstadli, Daniel Andre Kronheim, Christopher Chuchuay Strandheim, Simon Toft, William Waly, Jakob Østensvig-Austrheim
 
 Timeplan og rom: TimeEdit
 
@@ -70,8 +85,6 @@ ML
 
  ML modul 1: Introduksjon til maskinlæring
 
- Zoomlenke for Førde og Haugesund: Zoom
-
 Onsdag: Forelesningsnotater
 
 Fredag: Forelesningsnotater
@@ -83,11 +96,19 @@ Alg
 
  Algoritmer - Tekstprosessering
 
+Zoomlenke for Førde og Haugesund: Zoom
+
 36
 31. aug - 6. sep
 ML
 
  ML modul 1: Introduksjon til maskinlæring
+
+ Zoomlenke for Førde og Haugesund: Zoom
+
+Onsdag: Forelesningsnotater
+
+Fredag: Forelesningsnotater
 
 37
 7. - 13. sep
@@ -95,11 +116,19 @@ Alg
 
  Algoritmer - NP-completeness, Chapter 1
 
+ZoomLinks to an external site.
+
+Veke 37 (07.09 - 13.09)
+
 38
 14. - 20. sep
 Alg
 
 Chapter 2
+
+ZoomLinks to an external site.
+
+Veke 38 (14.09 - 20.09)
 
 39
 21. - 27. sep
@@ -157,19 +186,21 @@ Eksamen
 
 **Attached files:**
 - DAT158-course-logo.png
-- FinalCurriculum_2025.pdf
 
 **Links:**
 - https://www.hvl.no/studier/studieprogram/emne/DAT158
 - https://www.hvl.no/en/employee/?user=3600298
 - https://www.hvl.no/person/?user=Steffen.Meland
 - https://www.hvl.no/person/?user=Erlend.Raa.Vagset
+- https://hvl.zoom.us/j/63122964590?pwd=uCdb8RGnzbjZJNeafwlnOVJbEA9vpl.1
+- https://hvl.zoom.us/j/62224944761?pwd=LzZKK0dRN2xiUjlkTm00eEVMSmh0UT09
 - https://cloud.timeedit.net/hvl/web/pen/riqY8y5X0gvZ71QZQ525717Q67876X6Y71161Z5Q60o8YY76X1876Q77Y767c8Zp7QZq1Qo.html
 - https://github.com/HVL-ML/DAT158
 - https://discord.gg/fYu4yh7kp
-- https://hvl.zoom.us/j/63122964590?pwd=uCdb8RGnzbjZJNeafwlnOVJbEA9vpl.1
 - https://hvl-ml.github.io/DAT158/slides/1-intro/1-intro.html
 - https://hvl-ml.github.io/DAT158/slides/1-intro/2-python.html
+- https://hvl-ml.github.io/DAT158/slides/1-intro/3-metrics.html
+- https://hvl-ml.github.io/DAT158/slides/1-intro/4-ml-engineering.html
 - https://hvl-ml.github.io/DAT158/slides/3-systems/lecture3.html
 
 ### Introduksjon til maskinlæring
@@ -287,7 +318,7 @@ Pandas:
 
 ### Veke 35 (24.08 - 30.08)
 
-*Module: Advanced algorithms · updated 2026-08-20T08:42:30Z*
+*Module: Advanced algorithms · updated 2026-08-26T06:59:09Z*
 
 Startar med tekst behandling
 
@@ -305,21 +336,143 @@ Fredag 28. august - Planlagt, men kan bli endre: Forsettelse på lysark 31 (Stan
 
 Mentimeter for spørsmål: Mentimeter for Spørsmål.pdf
 
-Oppgaver (obligatorisk): Kommer
+Oppgaver (obligatorisk): Algorithms number 1
 
 **Attached files:**
 - Kapittel_9_GoodrichAndTammassia.pdf
 - Chapter 9 TextProcessing.pdf
 - Mentimeter for Spørsmål.pdf
 
+### Veke 37 (07.09 - 13.09)
+
+*Module: Advanced algorithms · updated 2026-09-09T12:03:46Z*
+
+Det blir lagt ut lysark for heile tema / kapittel og så vil det bli opplyst kvar vi startar.
+
+Onsdag 9. september, kl 10 - 12
+
+  - NP-completeness: NP-Completeness.pdf
+
+  - Held fram med Kapittel 1: Chapter_1.pdf
+
+Forelesning fredag får ny tid på grunn av begravelse.
+
+Fredag 11. september, kl 12 - 14.
+
+  - Held fram i Chapter 1, start Lysark 10
+
+Oppgaver: Ingen denne veka  sidan det er innlevering i ML
+
+Førre
+
+Neste
+
+**Attached files:**
+- NP-Completeness.pdf
+- Chapter_1.pdf
+
+### Veke 38 (14.09 - 20.09)
+
+*Module: Advanced algorithms · updated 2026-09-14T08:36:23Z*
+
+Det blir lagt ut lysark for heile tema / kapittel og så vil det bli opplyst kvar vi startar.
+
+Onsdag 16. september, kl 10 - 12
+
+  - Kapittel 2: Chapter_2.pdf
+
+Fredag 18. september, kl 12 - 14.
+
+  - Held fram i Chapter 2, Lysark ?
+
+  - Går gjennom løysing av noen oppgåver gitt i veke 38 (Exercise 2)
+
+Oppgaver: Problems_2.pdf  NB! Oppgave 5 & 6 er del av neste obligaoriske øving.
+
+Førre
+
+Neste
+
+**Attached files:**
+- Chapter_2.pdf
+- Problems_2.pdf
+
+### Informasjon
+
+*Module: Tidligere eksamer · updated 2026-09-15T06:07:38Z*
+
+Det blir lagt ut fleire eksamenar  og løysingsforslag seinare.
+
+Før 2021 var det muntleg eksame. I 2022 og 2023 var kontinuasjonseksamen muntleg.
+
 ## Announcements
 
-### Første forelesning
+### Gratis bridgekurs og gratis pzza!
 
-*Posted 2026-08-18T14:02:56Z*
+*Posted 2026-09-15T07:55:52Z*
 
-Hei og velkommen til første forelesning i DAT158 i morgen kl 10.15. I Bergen møtes vi i F118 (Aud 14), i Førde i VIE1070 (Balchen), og i Haugesund i Auditorium B. Det blir sprek info om innhold og opplegg i kurset, så møt opp!
+Gratis introduksjonskurs til kortspillet bridge onsdag 16. september kl 17. Det blir også servert gratis pizza. Kurset varer ca. to timer.
+
+Detter er en fin mulighet å bli bedre kjent med sine medstudenter.
+
+Ingen forkunnskaper er nødvendige. Kurset varer ca. to timer.
+Sted: Høgskulen på Vestlandet, Inndalsveien 28 (like ved bybanestopp Kronstad), Blokk K1, rom E403 Påmeldingsfrist onsdag  16. september kl 12.00.
+
+Om du ønsker å være litt forberedt, kan du gå inn på https://www.bridge.no/Laer-bridge/Laer-bridge-selvstudium.Lenker til eit ekstern område.
+
+Det er mulig å ta med venner.
+
+Påmelding bridgekurs -16. september 2026Lenker til eit ekstern område.
+
+### Eksempel på ein eksamen
+
+*Posted 2026-09-15T05:48:18Z*
+
+Vi har fått ønske om legge ut ein eksamen. Det blir lagt ut fleire etter kvart.
+
+Våren 2025
+
+V2025_Oppgaver_Uten_Løsning.pdf
+
+### Gratis bridgekurs
+
+*Posted 2026-09-07T12:00:05Z*
+
+Gratis introduksjonskurs til kortspillet bridge onsdag 9. september kl 17.00 eller torsdag 10. september kl 18.00. Kurset varer ca. to timer.
+
+Ingen forkunnskaper er nødvendige, men om du ønsker å vite litt, kan du gå inn på https://www.bridge.no/Laer-bridge/Laer-bridge-selvstudiumLenker til eit ekstern område.
+
+og se videoene Minibridge 1 og Minibridge 2.
+
+Sted: Høgskulen på Vestlandet, Inndalsveien 28 (like ved bybanestopp Kronstad), Blokk K1, rom E403
+
+Påmeldingsfrist Kl 12.00 på kursdagen.  Påmelding: Påmelding bridgekurs - September 2026
+
+Det er mulig å ta med venner.
+
+### Avlyst labundervisning onsdag 9. september
+
+*Posted 2026-09-07T11:32:00Z*
+
+På grunn av kong Harald si gravferd, er undervisninga 12.15 - 14 avlyst. Det er usikkert når det blir fjerna frå TimeEdit.
+
+### Problem med grupper i Canvas
+
+*Posted 2026-09-04T12:02:23Z*
+
+Eg har fått melding om at det er problem å få logga seg inn i Canvas for å melde seg inn i grupper. Fristen for innleveringa i algoritmer  blir derfor utsatt til mandag.
 
 ## Assignments
 
-*None published yet.*
+### Algorithms number 1
+
+*Due: 2026-09-04T21:59:59Z · 0.0 points*
+
+Compulsory_1.pdf
+
+### ML assignment 1
+
+*Due: 2026-09-11T21:59:59Z · 20.0 points*
+
+
+

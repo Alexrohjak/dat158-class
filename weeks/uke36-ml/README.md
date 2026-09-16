@@ -117,7 +117,11 @@ Pandas:
 
 ## In this folder
 
-- `slides/` — empty
+- `slides/` — 4 item(s), 107 KB
+  - `3-metrics.html`
+  - `3-metrics_files`
+  - `4-ml-engineering.html`
+  - `4-ml-engineering_files`
 - `exercises/` — empty
 - `code/` — empty
 

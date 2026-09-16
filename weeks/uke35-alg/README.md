@@ -24,7 +24,7 @@ Fredag 28. august - Planlagt, men kan bli endre: Forsettelse på lysark 31 (Stan
 
 Mentimeter for spørsmål: Mentimeter for Spørsmål.pdf
 
-Oppgaver (obligatorisk): Kommer
+Oppgaver (obligatorisk): Algorithms number 1
 
 **Files:**
 - Kapittel_9_GoodrichAndTammassia.pdf

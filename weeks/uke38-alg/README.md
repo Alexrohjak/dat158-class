@@ -6,11 +6,35 @@ Reading: [`../../alg/README.md`](../../alg/README.md)
 
 ## Posted by the lecturer
 
-*Nothing published for this week yet.* Re-run `python src/canvas_sync.py` once it appears.
+### Veke 38 (14.09 - 20.09)
+
+Det blir lagt ut lysark for heile tema / kapittel og så vil det bli opplyst kvar vi startar.
+
+Onsdag 16. september, kl 10 - 12
+
+  - Kapittel 2: Chapter_2.pdf
+
+Fredag 18. september, kl 12 - 14.
+
+  - Held fram i Chapter 2, Lysark ?
+
+  - Går gjennom løysing av noen oppgåver gitt i veke 38 (Exercise 2)
+
+Oppgaver: Problems_2.pdf  NB! Oppgave 5 & 6 er del av neste obligaoriske øving.
+
+Førre
+
+Neste
+
+**Files:**
+- Chapter_2.pdf
+- Problems_2.pdf
 
 ## In this folder
 
-- `slides/` — empty
+- `slides/` — 2 item(s), 1648 KB
+  - `Chapter_2.pdf`
+  - `Problems_2.pdf`
 - `exercises/` — empty
 - `code/` — empty
 

@@ -6,11 +6,37 @@ Reading: [`../../alg/README.md`](../../alg/README.md)
 
 ## Posted by the lecturer
 
-*Nothing published for this week yet.* Re-run `python src/canvas_sync.py` once it appears.
+### Veke 37 (07.09 - 13.09)
+
+Det blir lagt ut lysark for heile tema / kapittel og så vil det bli opplyst kvar vi startar.
+
+Onsdag 9. september, kl 10 - 12
+
+  - NP-completeness: NP-Completeness.pdf
+
+  - Held fram med Kapittel 1: Chapter_1.pdf
+
+Forelesning fredag får ny tid på grunn av begravelse.
+
+Fredag 11. september, kl 12 - 14.
+
+  - Held fram i Chapter 1, start Lysark 10
+
+Oppgaver: Ingen denne veka  sidan det er innlevering i ML
+
+Førre
+
+Neste
+
+**Files:**
+- NP-Completeness.pdf
+- Chapter_1.pdf
 
 ## In this folder
 
-- `slides/` — empty
+- `slides/` — 2 item(s), 2096 KB
+  - `Chapter_1.pdf`
+  - `NP-Completeness.pdf`
 - `exercises/` — empty
 - `code/` — empty
 
