@@ -81,6 +81,19 @@ done
 The symlinks dangle until `reference/DAT158` exists, so re-clone it first if you
 have rebuilt this repo from scratch.
 
+**Module 2** is set up the same way in
+[`../weeks/uke39-ml/exercises/`](../weeks/uke39-ml/exercises/): all ten notebooks
+(2.1–2.4 for uke 39, 2.5–2.6 for uke 40, 2.7–2.10 marked *Extra*). Run end to
+end on 23 Sep: 2.1, 2.2 and 2.4 are clean. Two things in 2.3:
+
+- The tree drawings need the Graphviz *program*, not only the Python package
+  the notebook pip-installs itself: `sudo apt install graphviz`.
+- With Graphviz installed, two cells beside the Gini worked example fail with
+  `NameError: name 'decision_tree_figure' is not defined`. The notebook only
+  sets that name when Graphviz is *missing*. Scroll up to the tree drawn
+  earlier, or run `decision_tree_figure = Path("assets/decision_tree_diabetes.png")`
+  first.
+
 ## The tutorial track
 
 [`../tutorial/`](../tutorial/) has `ml01` and `ml02`, covering module 1 in two

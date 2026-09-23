@@ -1,11 +1,11 @@
 {
   "pages": [
     {
-      "title": "DAT158-1 25H Maskinlæring og videregående algoritmer",
-      "slug": "dat158-1-25h-maskinlaering-og-videregaende-algoritmer",
+      "title": "DAT158 26H Maskinlæring og videregående algoritmer",
+      "slug": "dat158-26h-maskinlaering-og-videregaende-algoritmer",
       "module": "Front page",
-      "updated": "2026-09-14T08:51:59Z",
-      "text": "Velkommen til DAT158 - Maskinlæring og videregående algoritmer\n\nGå til Moduler for å komme i gang.\n\nPraktisk informasjon\n\nEmnebeskrivelse: https://www.hvl.no/studier/studieprogram/emne/DAT158\n\nForelesere: Sven-Olai Høyland, Steffen Mæland og Erlend Raa Vagset\n\nStudentassistent: Severin Johannessen\n\nZoomlenker:\n\nML: Zoom\n\nAlgoritmer: Zoom\n\nReferansegruppe:  Jone Kjellstadli, Daniel Andre Kronheim, Christopher Chuchuay Strandheim, Simon Toft, William Waly, Jakob Østensvig-Austrheim\n\nTimeplan og rom: TimeEdit\n\nRepo for ML-delen: GitHub\n\nDiscord-server: invite\n\nFremdriftsplan\n\nPlanen oppdateres underveis -- sjekk innom regelmessig\n\nUke\nDel\n Tema\n\n34\n17. - 23. aug\n\nML\n\n ML modul 1: Introduksjon til maskinlæring\n\nOnsdag: Forelesningsnotater\n\nFredag: Forelesningsnotater\n\n35\n24. - 30. aug\n\nAlg\n\n Algoritmer - Tekstprosessering\n\nZoomlenke for Førde og Haugesund: Zoom\n\n36\n31. aug - 6. sep\nML\n\n ML modul 1: Introduksjon til maskinlæring\n\n Zoomlenke for Førde og Haugesund: Zoom\n\nOnsdag: Forelesningsnotater\n\nFredag: Forelesningsnotater\n\n37\n7. - 13. sep\nAlg\n\n Algoritmer - NP-completeness, Chapter 1\n\nZoomLinks to an external site.\n\nVeke 37 (07.09 - 13.09)\n\n38\n14. - 20. sep\nAlg\n\nChapter 2\n\nZoomLinks to an external site.\n\nVeke 38 (14.09 - 20.09)\n\n39\n21. - 27. sep\nML\n\n ML modul 2: Maskinlæringsmodeller\n\n40\n28. sep - 4. okt\nML\n\n ML modul 2: Maskinlæringsmodeller\n\n41\n5. - 11. okt\nAlg\n\n Chapter 3 & Chapter 4\n\n42\n12. - 18. okt\nAlg\n\n43\n19. - 25. okt\nML\n\n ML modul 3: End-to-end maskinlæringssystem\n\n44\n26. okt - 1. nov\nML\n\n  ML modul 3: End-to-end maskinlæringssystem\n\n45\n2. - 8. nov\nAlg\n\nChapter 6 & 7\n\n46\n9. - 15. nov\nAlg\n\n47\n16. - 21. nov\nML\n\nEksamen\n\n 08.12.2026 kl. 09:00\n\n Mer info på StudentWeb",
+      "updated": "2026-09-23T08:03:19Z",
+      "text": "Velkommen til DAT158 - Maskinlæring og videregående algoritmer\n\nGå til Moduler for å komme i gang.\n\nPraktisk informasjon\n\nEmnebeskrivelse: https://www.hvl.no/studier/studieprogram/emne/DAT158\n\nForelesere: Sven-Olai Høyland, Steffen Mæland og Erlend Raa Vagset\n\nStudentassistent: Severin Johannessen\n\nZoomlenker:\n\nML: Zoom\n\nAlgoritmer: Zoom\n\nReferansegruppe:  Jone Kjellstadli, Daniel Andre Kronheim, Christopher Chuchuay Strandheim, Simon Toft, William Waly, Jakob Østensvig-Austrheim\n\nTimeplan og rom: TimeEdit\n\nRepo for ML-delen: GitHub\n\nDiscord-server: invite\n\nFremdriftsplan\n\nPlanen oppdateres underveis -- sjekk innom regelmessig\n\nUke\nDel\n Tema\n\n34\n17. - 23. aug\n\nML\n\n ML modul 1: Introduksjon til maskinlæring\n\nOnsdag: Forelesningsnotater\n\nFredag: Forelesningsnotater\n\n35\n24. - 30. aug\n\nAlg\n\n Algoritmer - Tekstprosessering\n\nZoomlenke for Førde og Haugesund: Zoom\n\n36\n31. aug - 6. sep\nML\n\n ML modul 1: Introduksjon til maskinlæring\n\nOnsdag: Forelesningsnotater\n\nFredag: Forelesningsnotater\n\n37\n7. - 13. sep\nAlg\n\n Algoritmer - NP-completeness, Chapter 1\n\nZoomLinks to an external site.\n\nVeke 37 (07.09 - 13.09)\n\n38\n14. - 20. sep\nAlg\n\nChapter 2\n\nZoomLinks to an external site.\n\nVeke 38 (14.09 - 20.09)\n\n39\n21. - 27. sep\nML\n\n ML modul 2: Maskinlæringsmodeller\n\n Zoomlenke for Førde og Haugesund: Zoom\n\nOnsdag: Forelesningsnotater\n\nFredag: Forelesningsnotater (kommer)\n\n Delta i Kaggle-konkurransen 🏆\n\n40\n28. sep - 4. okt\nML\n\n ML modul 2: Maskinlæringsmodeller\n\nOnsdag: Forelesningsnotater (kommer)\n\nFredag: Forelesningsnotater (kommer)\n\n Delta i Kaggle-konkurransen 🏆 (frist 1. okt kl 23:59)\n\n41\n5. - 11. okt\nAlg\n\n Chapter 3 & Chapter 4\n\n42\n12. - 18. okt\nAlg\n\n43\n19. - 25. okt\nML\n\n ML modul 3: End-to-end maskinlæringssystem\n\n44\n26. okt - 1. nov\nML\n\n  ML modul 3: End-to-end maskinlæringssystem\n\n45\n2. - 8. nov\nAlg\n\nChapter 6 & 7\n\n46\n9. - 15. nov\nAlg\n\n47\n16. - 21. nov\nML\n\nEksamen\n\n 08.12.2026 kl. 09:00\n\n Mer info på StudentWeb",
       "file_ids": [
         3871696
       ],
@@ -23,6 +23,8 @@
         "https://hvl-ml.github.io/DAT158/slides/1-intro/2-python.html",
         "https://hvl-ml.github.io/DAT158/slides/1-intro/3-metrics.html",
         "https://hvl-ml.github.io/DAT158/slides/1-intro/4-ml-engineering.html",
+        "https://hvl-ml.github.io/DAT158/slides/2-models/5-overfitting.html",
+        "https://www.kaggle.com/t/1ff3a045f74546088e16c5cd00cdfb05",
         "https://hvl-ml.github.io/DAT158/slides/3-systems/lecture3.html"
       ]
     },
@@ -68,6 +70,21 @@
       ]
     },
     {
+      "title": "Et utvalg maskinlæringsmodeller",
+      "slug": "et-utvalg-maskinlaeringsmodeller",
+      "module": "ML modul 2: Maskinlæringsmodeller",
+      "updated": "2026-09-18T08:12:27Z",
+      "text": "I denne modulen skal vi begynne å se på de indre detaljene i noen viktige maskinlæringsmodeller.\n\nVi starter med beslutningstrær (decision trees), en type modell som er basert på en ganske enkel algoritme, men som kan -- når den utvides -- bli veldig kraftig. Stoffet i denne modulen bygger videre på det fra Modul 1, så det kan være nyttig å se over de forrige notebooks'ene på forhånd.\n\nVi skal se at selv om den enkle metoden med beslutningstrær utgjør en komplett maskinlæringsmodell, så er utvidelsen inn i det som kalles random forests en generell tilnærming til hvordan vi kan få bedre resultater på nye, usette data. En ytterligere utvidelse vi skal se på, som heter gradient boosting, hinter videre mot enda mer generelle konsepter innenfor maskinlæring.\n\nI den andre uken av denne modulen går vi gjennom gradient descent, en optimeringsalgoritme som underbygger nesten all moderne maskinlæring. Vi skal bruke den på en modell der der er lett å visualisere resultatene, nemlig lineær regresjon.\n\nLæringsmål\n\n  - Forstå hvordan ML-metodene nevnt over fungerer, og hvordan dette påvirker prediksjonene de gir.\n\n  - Bli kjent med gradient descent, og hvordan det kan brukes for å løse oppgaver som f.eks. lineær regresjon.\n\n  - På veien skal vi også lære om konseptene regularisering, bias/variance tradeoff, beslutningsgrenser, og ensembler av modeller.\n\nKapitler i boken\n\n  - Kap 4: Training models\n\n  - Kap 6: Decision trees\n\n  - Kap 7: Ensemble learning and Random Forests\n\nOppgaver\n\nLigger ute under kursets GitHub-side\n\nKaggle-konkurranse\n\nTest ferdighetene i maskinlæring mot medstudentene i denne konkurransen: Kaggle\n\nIkke obligatorisk, men gøy likevel!",
+      "file_ids": [
+        3871701
+      ],
+      "links": [
+        "https://github.com/HVL-ML/DAT158",
+        "https://www.kaggle.com/t/1ff3a045f74546088e16c5cd00cdfb05",
+        "https://www.kaggle.com/t/33bec2a7fe534e4cac1a0024ced44658"
+      ]
+    },
+    {
       "title": "Veke 35 (24.08 - 30.08)",
       "slug": "veke-35-24-dot-08-30-dot-08",
       "module": "Advanced algorithms",
@@ -96,11 +113,13 @@
       "title": "Veke 38 (14.09 - 20.09)",
       "slug": "veke-38-14-dot-09-20-dot-09",
       "module": "Advanced algorithms",
-      "updated": "2026-09-14T08:36:23Z",
-      "text": "Det blir lagt ut lysark for heile tema / kapittel og så vil det bli opplyst kvar vi startar.\n\nOnsdag 16. september, kl 10 - 12\n\n  - Kapittel 2: Chapter_2.pdf\n\nFredag 18. september, kl 12 - 14.\n\n  - Held fram i Chapter 2, Lysark ?\n\n  - Går gjennom løysing av noen oppgåver gitt i veke 38 (Exercise 2)\n\nOppgaver: Problems_2.pdf  NB! Oppgave 5 & 6 er del av neste obligaoriske øving.\n\nFørre\n\nNeste",
+      "updated": "2026-09-18T09:01:38Z",
+      "text": "Det blir lagt ut lysark for heile tema / kapittel og så vil det bli opplyst kvar vi startar.\n\nOnsdag 16. september, kl 10 - 12\n\n  - Kapittel 2: Chapter_2.pdf\n\nFredag 18. september, kl 12 - 14.\n\n  - Held fram i Chapter 2, Lysark 35\n\n  - Går gjennom løysing av noen oppgåver gitt i veke 38 (Exercise 2)\nProblemWeek_38.pdf\n\nOppgaver: Problems_2.pdf  NB! Oppgave 5 & 6 er del av neste obligaoriske øving.\n\nOppgave delt ut i forelesninga. Her kan du sjå at det å finne ei minste dominerande menge av nodar er ganske vanskeleg sjølv på ein liten graf. For generelle grafar er problemet NP-komplett. DominatingSet_Eksempel.pdf\n\nFørre\n\nNeste",
       "file_ids": [
         3965951,
-        3968627
+        3977760,
+        3968627,
+        3977578
       ],
       "links": []
     },
@@ -129,6 +148,17 @@
           "type": "Page",
           "page_url": "kom-igang-med-python-og-ml-bibliotekene",
           "url": "https://hvl.instructure.com/courses/35853/modules/items/1104567"
+        }
+      ]
+    },
+    {
+      "name": "ML modul 2: Maskinlæringsmodeller",
+      "items": [
+        {
+          "title": "Et utvalg maskinlæringsmodeller",
+          "type": "Page",
+          "page_url": "et-utvalg-maskinlaeringsmodeller",
+          "url": "https://hvl.instructure.com/courses/35853/modules/items/1104568"
         }
       ]
     },
@@ -175,6 +205,13 @@
   ],
   "announcements": [
     {
+      "title": "Møte i referansegruppa",
+      "posted": "2026-09-21T11:19:49Z",
+      "text": "Referansegruppa har bedt meg legge ut teksten under:\n\n\"Hei, vi i referansegruppen skal på møte onsdag 23.09. Har du noe ris/ros eller innspill til forbedringer i faget (forelesning, eller annet) send oss gjerne en melding på 186480@stud.hvl.no. Saker som sendes vil bli tatt opp anonymt.\nMvh Daniel/referansegruppen\".",
+      "file_ids": [],
+      "links": []
+    },
+    {
       "title": "Gratis bridgekurs og gratis pzza!",
       "posted": "2026-09-15T07:55:52Z",
       "text": "Gratis introduksjonskurs til kortspillet bridge onsdag 16. september kl 17. Det blir også servert gratis pizza. Kurset varer ca. to timer.\n\nDetter er en fin mulighet å bli bedre kjent med sine medstudenter.\n\nIngen forkunnskaper er nødvendige. Kurset varer ca. to timer.\nSted: Høgskulen på Vestlandet, Inndalsveien 28 (like ved bybanestopp Kronstad), Blokk K1, rom E403 Påmeldingsfrist onsdag  16. september kl 12.00.\n\nOm du ønsker å være litt forberedt, kan du gå inn på https://www.bridge.no/Laer-bridge/Laer-bridge-selvstudium.Lenker til eit ekstern område.\n\nDet er mulig å ta med venner.\n\nPåmelding bridgekurs -16. september 2026Lenker til eit ekstern område.",
@@ -191,30 +228,6 @@
       "file_ids": [
         3871737
       ],
-      "links": []
-    },
-    {
-      "title": "Gratis bridgekurs",
-      "posted": "2026-09-07T12:00:05Z",
-      "text": "Gratis introduksjonskurs til kortspillet bridge onsdag 9. september kl 17.00 eller torsdag 10. september kl 18.00. Kurset varer ca. to timer.\n\nIngen forkunnskaper er nødvendige, men om du ønsker å vite litt, kan du gå inn på https://www.bridge.no/Laer-bridge/Laer-bridge-selvstudiumLenker til eit ekstern område.\n\nog se videoene Minibridge 1 og Minibridge 2.\n\nSted: Høgskulen på Vestlandet, Inndalsveien 28 (like ved bybanestopp Kronstad), Blokk K1, rom E403\n\nPåmeldingsfrist Kl 12.00 på kursdagen.  Påmelding: Påmelding bridgekurs - September 2026\n\nDet er mulig å ta med venner.",
-      "file_ids": [],
-      "links": [
-        "https://www.bridge.no/Laer-bridge/Laer-bridge-selvstudium",
-        "https://forms.cloud.microsoft/e/fEZcXbe4Xe"
-      ]
-    },
-    {
-      "title": "Avlyst labundervisning onsdag 9. september",
-      "posted": "2026-09-07T11:32:00Z",
-      "text": "På grunn av kong Harald si gravferd, er undervisninga 12.15 - 14 avlyst. Det er usikkert når det blir fjerna frå TimeEdit.",
-      "file_ids": [],
-      "links": []
-    },
-    {
-      "title": "Problem med grupper i Canvas",
-      "posted": "2026-09-04T12:02:23Z",
-      "text": "Eg har fått melding om at det er problem å få logga seg inn i Canvas for å melde seg inn i grupper. Fristen for innleveringa i algoritmer  blir derfor utsatt til mandag.",
-      "file_ids": [],
       "links": []
     }
   ],
@@ -256,6 +269,12 @@
       "size": 261097,
       "type": "image/jpeg",
       "updated": "2026-08-04T13:54:35Z"
+    },
+    "3871701": {
+      "name": "dall-e3.png",
+      "size": 7146454,
+      "type": "image/png",
+      "updated": "2026-06-22T13:23:40Z"
     },
     "3871705": {
       "name": "Kapittel_9_GoodrichAndTammassia.pdf",
@@ -310,6 +329,18 @@
       "size": 731444,
       "type": "application/pdf",
       "updated": "2026-09-14T10:20:18Z"
+    },
+    "3977578": {
+      "name": "DominatingSet_Eksempel.pdf",
+      "size": 495912,
+      "type": "application/pdf",
+      "updated": "2026-09-18T09:29:58Z"
+    },
+    "3977760": {
+      "name": "ProblemWeek_38.pdf",
+      "size": 314023,
+      "type": "application/pdf",
+      "updated": "2026-09-18T09:10:06Z"
     }
   },
   "errors": [],

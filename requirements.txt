@@ -20,6 +20,9 @@ gradio
 openpyxl
 ipywidgets
 
+# hyperopt is imported by notebooks 1.6 and 2.6 (Bayesian hyperparameter search).
+hyperopt
+
 # Text extraction for src/find.py (searching slides and textbooks)
 pypdf
 cryptography

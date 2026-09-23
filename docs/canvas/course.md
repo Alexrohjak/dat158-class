@@ -27,6 +27,10 @@ Course: `DAT158-1 26H` (id 35853)
 - **Introduksjon til maskinlæring** — Page
 - **Kom igang med Python og ML-bibliotekene** — Page
 
+### ML modul 2: Maskinlæringsmodeller
+
+- **Et utvalg maskinlæringsmodeller** — Page
+
 ### Advanced algorithms
 
 - **Veke 35 (24.08 - 30.08)** — Page
@@ -40,9 +44,9 @@ Course: `DAT158-1 26H` (id 35853)
 
 ## Pages
 
-### DAT158-1 25H Maskinlæring og videregående algoritmer
+### DAT158 26H Maskinlæring og videregående algoritmer
 
-*Module: Front page · updated 2026-09-14T08:51:59Z*
+*Module: Front page · updated 2026-09-23T08:03:19Z*
 
 Velkommen til DAT158 - Maskinlæring og videregående algoritmer
 
@@ -104,8 +108,6 @@ ML
 
  ML modul 1: Introduksjon til maskinlæring
 
- Zoomlenke for Førde og Haugesund: Zoom
-
 Onsdag: Forelesningsnotater
 
 Fredag: Forelesningsnotater
@@ -136,11 +138,25 @@ ML
 
  ML modul 2: Maskinlæringsmodeller
 
+ Zoomlenke for Førde og Haugesund: Zoom
+
+Onsdag: Forelesningsnotater
+
+Fredag: Forelesningsnotater (kommer)
+
+ Delta i Kaggle-konkurransen 🏆
+
 40
 28. sep - 4. okt
 ML
 
  ML modul 2: Maskinlæringsmodeller
+
+Onsdag: Forelesningsnotater (kommer)
+
+Fredag: Forelesningsnotater (kommer)
+
+ Delta i Kaggle-konkurransen 🏆 (frist 1. okt kl 23:59)
 
 41
 5. - 11. okt
@@ -201,6 +217,8 @@ Eksamen
 - https://hvl-ml.github.io/DAT158/slides/1-intro/2-python.html
 - https://hvl-ml.github.io/DAT158/slides/1-intro/3-metrics.html
 - https://hvl-ml.github.io/DAT158/slides/1-intro/4-ml-engineering.html
+- https://hvl-ml.github.io/DAT158/slides/2-models/5-overfitting.html
+- https://www.kaggle.com/t/1ff3a045f74546088e16c5cd00cdfb05
 - https://hvl-ml.github.io/DAT158/slides/3-systems/lecture3.html
 
 ### Introduksjon til maskinlæring
@@ -316,6 +334,52 @@ Pandas:
 - https://www.kaggle.com/learn/pandas
 - https://pandas.pydata.org/docs/user_guide/10min.html
 
+### Et utvalg maskinlæringsmodeller
+
+*Module: ML modul 2: Maskinlæringsmodeller · updated 2026-09-18T08:12:27Z*
+
+I denne modulen skal vi begynne å se på de indre detaljene i noen viktige maskinlæringsmodeller.
+
+Vi starter med beslutningstrær (decision trees), en type modell som er basert på en ganske enkel algoritme, men som kan -- når den utvides -- bli veldig kraftig. Stoffet i denne modulen bygger videre på det fra Modul 1, så det kan være nyttig å se over de forrige notebooks'ene på forhånd.
+
+Vi skal se at selv om den enkle metoden med beslutningstrær utgjør en komplett maskinlæringsmodell, så er utvidelsen inn i det som kalles random forests en generell tilnærming til hvordan vi kan få bedre resultater på nye, usette data. En ytterligere utvidelse vi skal se på, som heter gradient boosting, hinter videre mot enda mer generelle konsepter innenfor maskinlæring.
+
+I den andre uken av denne modulen går vi gjennom gradient descent, en optimeringsalgoritme som underbygger nesten all moderne maskinlæring. Vi skal bruke den på en modell der der er lett å visualisere resultatene, nemlig lineær regresjon.
+
+Læringsmål
+
+  - Forstå hvordan ML-metodene nevnt over fungerer, og hvordan dette påvirker prediksjonene de gir.
+
+  - Bli kjent med gradient descent, og hvordan det kan brukes for å løse oppgaver som f.eks. lineær regresjon.
+
+  - På veien skal vi også lære om konseptene regularisering, bias/variance tradeoff, beslutningsgrenser, og ensembler av modeller.
+
+Kapitler i boken
+
+  - Kap 4: Training models
+
+  - Kap 6: Decision trees
+
+  - Kap 7: Ensemble learning and Random Forests
+
+Oppgaver
+
+Ligger ute under kursets GitHub-side
+
+Kaggle-konkurranse
+
+Test ferdighetene i maskinlæring mot medstudentene i denne konkurransen: Kaggle
+
+Ikke obligatorisk, men gøy likevel!
+
+**Attached files:**
+- dall-e3.png
+
+**Links:**
+- https://github.com/HVL-ML/DAT158
+- https://www.kaggle.com/t/1ff3a045f74546088e16c5cd00cdfb05
+- https://www.kaggle.com/t/33bec2a7fe534e4cac1a0024ced44658
+
 ### Veke 35 (24.08 - 30.08)
 
 *Module: Advanced algorithms · updated 2026-08-26T06:59:09Z*
@@ -373,7 +437,7 @@ Neste
 
 ### Veke 38 (14.09 - 20.09)
 
-*Module: Advanced algorithms · updated 2026-09-14T08:36:23Z*
+*Module: Advanced algorithms · updated 2026-09-18T09:01:38Z*
 
 Det blir lagt ut lysark for heile tema / kapittel og så vil det bli opplyst kvar vi startar.
 
@@ -383,11 +447,14 @@ Onsdag 16. september, kl 10 - 12
 
 Fredag 18. september, kl 12 - 14.
 
-  - Held fram i Chapter 2, Lysark ?
+  - Held fram i Chapter 2, Lysark 35
 
   - Går gjennom løysing av noen oppgåver gitt i veke 38 (Exercise 2)
+ProblemWeek_38.pdf
 
 Oppgaver: Problems_2.pdf  NB! Oppgave 5 & 6 er del av neste obligaoriske øving.
+
+Oppgave delt ut i forelesninga. Her kan du sjå at det å finne ei minste dominerande menge av nodar er ganske vanskeleg sjølv på ein liten graf. For generelle grafar er problemet NP-komplett. DominatingSet_Eksempel.pdf
 
 Førre
 
@@ -395,7 +462,9 @@ Neste
 
 **Attached files:**
 - Chapter_2.pdf
+- ProblemWeek_38.pdf
 - Problems_2.pdf
+- DominatingSet_Eksempel.pdf
 
 ### Informasjon
 
@@ -406,6 +475,15 @@ Det blir lagt ut fleire eksamenar  og løysingsforslag seinare.
 Før 2021 var det muntleg eksame. I 2022 og 2023 var kontinuasjonseksamen muntleg.
 
 ## Announcements
+
+### Møte i referansegruppa
+
+*Posted 2026-09-21T11:19:49Z*
+
+Referansegruppa har bedt meg legge ut teksten under:
+
+"Hei, vi i referansegruppen skal på møte onsdag 23.09. Har du noe ris/ros eller innspill til forbedringer i faget (forelesning, eller annet) send oss gjerne en melding på 186480@stud.hvl.no. Saker som sendes vil bli tatt opp anonymt.
+Mvh Daniel/referansegruppen".
 
 ### Gratis bridgekurs og gratis pzza!
 
@@ -433,34 +511,6 @@ Vi har fått ønske om legge ut ein eksamen. Det blir lagt ut fleire etter kvart
 Våren 2025
 
 V2025_Oppgaver_Uten_Løsning.pdf
-
-### Gratis bridgekurs
-
-*Posted 2026-09-07T12:00:05Z*
-
-Gratis introduksjonskurs til kortspillet bridge onsdag 9. september kl 17.00 eller torsdag 10. september kl 18.00. Kurset varer ca. to timer.
-
-Ingen forkunnskaper er nødvendige, men om du ønsker å vite litt, kan du gå inn på https://www.bridge.no/Laer-bridge/Laer-bridge-selvstudiumLenker til eit ekstern område.
-
-og se videoene Minibridge 1 og Minibridge 2.
-
-Sted: Høgskulen på Vestlandet, Inndalsveien 28 (like ved bybanestopp Kronstad), Blokk K1, rom E403
-
-Påmeldingsfrist Kl 12.00 på kursdagen.  Påmelding: Påmelding bridgekurs - September 2026
-
-Det er mulig å ta med venner.
-
-### Avlyst labundervisning onsdag 9. september
-
-*Posted 2026-09-07T11:32:00Z*
-
-På grunn av kong Harald si gravferd, er undervisninga 12.15 - 14 avlyst. Det er usikkert når det blir fjerna frå TimeEdit.
-
-### Problem med grupper i Canvas
-
-*Posted 2026-09-04T12:02:23Z*
-
-Eg har fått melding om at det er problem å få logga seg inn i Canvas for å melde seg inn i grupper. Fristen for innleveringa i algoritmer  blir derfor utsatt til mandag.
 
 ## Assignments
 

@@ -6,7 +6,49 @@ Reading: [`../../ml/book-homl/chapter-map.md`](../../ml/book-homl/chapter-map.md
 
 ## Posted by the lecturer
 
-*Nothing published for this week yet.* Re-run `python src/canvas_sync.py` once it appears.
+### Et utvalg maskinlæringsmodeller
+
+I denne modulen skal vi begynne å se på de indre detaljene i noen viktige maskinlæringsmodeller.
+
+Vi starter med beslutningstrær (decision trees), en type modell som er basert på en ganske enkel algoritme, men som kan -- når den utvides -- bli veldig kraftig. Stoffet i denne modulen bygger videre på det fra Modul 1, så det kan være nyttig å se over de forrige notebooks'ene på forhånd.
+
+Vi skal se at selv om den enkle metoden med beslutningstrær utgjør en komplett maskinlæringsmodell, så er utvidelsen inn i det som kalles random forests en generell tilnærming til hvordan vi kan få bedre resultater på nye, usette data. En ytterligere utvidelse vi skal se på, som heter gradient boosting, hinter videre mot enda mer generelle konsepter innenfor maskinlæring.
+
+I den andre uken av denne modulen går vi gjennom gradient descent, en optimeringsalgoritme som underbygger nesten all moderne maskinlæring. Vi skal bruke den på en modell der der er lett å visualisere resultatene, nemlig lineær regresjon.
+
+Læringsmål
+
+  - Forstå hvordan ML-metodene nevnt over fungerer, og hvordan dette påvirker prediksjonene de gir.
+
+  - Bli kjent med gradient descent, og hvordan det kan brukes for å løse oppgaver som f.eks. lineær regresjon.
+
+  - På veien skal vi også lære om konseptene regularisering, bias/variance tradeoff, beslutningsgrenser, og ensembler av modeller.
+
+Kapitler i boken
+
+  - Kap 4: Training models
+
+  - Kap 6: Decision trees
+
+  - Kap 7: Ensemble learning and Random Forests
+
+Oppgaver
+
+Ligger ute under kursets GitHub-side
+
+Kaggle-konkurranse
+
+Test ferdighetene i maskinlæring mot medstudentene i denne konkurransen: Kaggle
+
+Ikke obligatorisk, men gøy likevel!
+
+**Files:**
+- dall-e3.png
+
+**Links:**
+- https://github.com/HVL-ML/DAT158
+- https://www.kaggle.com/t/1ff3a045f74546088e16c5cd00cdfb05
+- https://www.kaggle.com/t/33bec2a7fe534e4cac1a0024ced44658
 
 ## In this folder
 

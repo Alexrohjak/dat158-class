@@ -16,11 +16,14 @@ Onsdag 16. september, kl 10 - 12
 
 Fredag 18. september, kl 12 - 14.
 
-  - Held fram i Chapter 2, Lysark ?
+  - Held fram i Chapter 2, Lysark 35
 
   - Går gjennom løysing av noen oppgåver gitt i veke 38 (Exercise 2)
+ProblemWeek_38.pdf
 
 Oppgaver: Problems_2.pdf  NB! Oppgave 5 & 6 er del av neste obligaoriske øving.
+
+Oppgave delt ut i forelesninga. Her kan du sjå at det å finne ei minste dominerande menge av nodar er ganske vanskeleg sjølv på ein liten graf. For generelle grafar er problemet NP-komplett. DominatingSet_Eksempel.pdf
 
 Førre
 
@@ -28,7 +31,9 @@ Neste
 
 **Files:**
 - Chapter_2.pdf
+- ProblemWeek_38.pdf
 - Problems_2.pdf
+- DominatingSet_Eksempel.pdf
 
 ## In this folder
 

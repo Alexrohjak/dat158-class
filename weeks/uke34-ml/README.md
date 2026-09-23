@@ -123,7 +123,7 @@ Pandas:
   - `1-intro_files`
   - `lecture3.html`
   - `lecture3_files`
-- `exercises/` — 10 item(s), 599 KB
+- `exercises/` — 10 item(s), 694 KB
   - `DAT158-1.1-Simple_examples.ipynb`
   - `DAT158-1.2-Intro_to_ML.ipynb`
   - `DAT158-1.3-Binary_classification.ipynb`
