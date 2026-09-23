@@ -68,6 +68,7 @@ cd tutorial
 | `ml01` | uke 34 — what ML is, numpy, a first model | 54 |
 | `ml02` | uke 36 — confusion matrix, precision/recall, ROC, cross-validation | 61 |
 | `alg01` | uke 35 — pattern matching, tries, Huffman, LCS | 76 |
+| `uke37-extra/` | uke 37 — NP-completeness, approximation, set cover (own runner: `./check.sh alg 8`) | 136 |
 
 Stubs report as `todo` rather than `FAIL`, so you can do one exercise at a time.
 No new dependencies — the harness is one stdlib-only file. See

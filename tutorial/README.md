@@ -10,6 +10,10 @@ algorithms weeks. They are independent — work whichever half the week is.
 
 ---
 
+**Uke 37 is covered separately** in [`uke37-extra/`](uke37-extra/): three
+tested weeks (NP-completeness, approximation, set cover) with their own runner,
+`./check.sh`. See its README.
+
 ## How to use this
 
 Every week is a folder with the same three things:
