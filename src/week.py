@@ -1,7 +1,14 @@
 """Where are we in the semester, what is due, and is anything missing?
 
-    python src/week.py            # current week
+    python src/week.py            # pull from GitHub, then the current week
     python src/week.py --all      # whole semester at a glance
+    python src/week.py --no-pull  # skip the GitHub check (offline, say)
+
+It starts by bringing this clone up to date with GitHub, because the repo is
+used from more than one machine and forgetting to pull once is how the two
+clones drifted apart for a month (see task.md, T-009). It only pulls when that
+is a clean fast-forward: on main, nothing uncommitted, nothing unpushed. In
+every other case it says what it found and leaves your files alone.
 
 Future weeks are never reported as missing — if a folder is empty it is almost
 certainly because the lecturer has not published anything yet.
@@ -12,6 +19,7 @@ line means Canvas has been synced for that week, not that anyone wrote anything.
 
 import argparse
 import json
+import subprocess
 from datetime import date, datetime, timezone
 
 from paths import ROOT
@@ -133,10 +141,54 @@ def line(uke: int, current: int) -> str:
     return f"{marker} uke{uke} {part:<3} {when:<6} [{' | '.join(bits)}]  {topic[:44]}"
 
 
+def _git(*args: str, timeout: int = 20) -> subprocess.CompletedProcess:
+    return subprocess.run(["git", "-C", str(ROOT), *args],
+                          capture_output=True, text=True, timeout=timeout)
+
+
+def sync_with_github() -> None:
+    """Pull from GitHub when that is a safe fast-forward; otherwise explain."""
+    try:
+        if _git("fetch", "--quiet", "origin").returncode != 0:
+            print("GitHub: could not reach it (offline?) — not pulled.\n")
+            return
+    except (OSError, subprocess.TimeoutExpired):
+        print("GitHub: no answer within 20 s — not pulled.\n")
+        return
+
+    branch = _git("branch", "--show-current").stdout.strip()
+    counts = _git("rev-list", "--left-right", "--count", "HEAD...origin/main").stdout.split()
+    ahead, behind = (int(counts[0]), int(counts[1])) if len(counts) == 2 else (0, 0)
+    dirty = bool(_git("status", "--porcelain", "--untracked-files=no").stdout.strip())
+
+    if branch != "main":
+        print(f"GitHub: you are on '{branch}', not main — not pulled.\n")
+    elif ahead and behind:
+        print(f"GitHub: DIVERGED — {ahead} commit(s) only here, {behind} only on GitHub.\n"
+              "        Not pulled. Sort this out before committing more (ask Claude).\n")
+    elif behind and dirty:
+        print(f"GitHub: {behind} new commit(s), but you have uncommitted changes — not pulled.\n"
+              "        Commit them (or `git stash`), then run this again.\n")
+    elif behind:
+        r = _git("pull", "--ff-only", "--quiet", "origin", "main", timeout=120)
+        if r.returncode == 0:
+            print(f"GitHub: pulled {behind} new commit(s) from your other machine.\n")
+        else:
+            print(f"GitHub: pull failed — {r.stderr.strip() or 'unknown error'}\n")
+    elif ahead:
+        print(f"GitHub: {ahead} commit(s) here are not on GitHub yet — `git push` when done.\n")
+    else:
+        print("GitHub: up to date.\n")
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--all", action="store_true", help="show every week")
+    ap.add_argument("--no-pull", action="store_true", help="skip the GitHub check")
     args = ap.parse_args()
+
+    if not args.no_pull:
+        sync_with_github()
 
     today = date.today()
     current = today.isocalendar().week

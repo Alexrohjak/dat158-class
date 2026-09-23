@@ -236,7 +236,7 @@ The final project is expected to be delivered as a publicly accessible repo.
 ## Where are we?
 
 ```bash
-python src/week.py          # current week + what is filed so far
+python src/week.py          # pull from GitHub, then current week + what is filed
 python src/week.py --all    # whole semester
 ```
 

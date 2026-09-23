@@ -17,7 +17,7 @@ below is on paper.
 
 | When | What | Command |
 |---|---|---|
-| **Monday** | Orient — which half, what's due | `python src/week.py` |
+| **Monday** | Pull from GitHub, orient — which half, what's due | `python src/week.py` |
 | Monday | Pull anything new from Canvas | `python src/canvas_sync.py` |
 | **Wednesday** | Lecture, then lab 12:15 | — |
 | Wednesday pm | Re-sync; file code written in class | `python src/canvas_sync.py` |
@@ -35,8 +35,12 @@ cd ~/code/dat158-class
 python src/week.py
 ```
 
-Tells you the ISO week, which half it is, what has been filed so far, and what
-is due. Then:
+First it brings this clone up to date with GitHub: it pulls whatever your other
+machine pushed, but only when that is a clean fast-forward. If you have
+uncommitted or unpushed work, or the two have diverged, it says so and touches
+nothing. Then it tells you the ISO week, which half it is, what has been filed so
+far, and what is due. Run it at the start of **every** session, on either
+machine, not only on Mondays. Then:
 
 ```bash
 python src/canvas_sync.py
