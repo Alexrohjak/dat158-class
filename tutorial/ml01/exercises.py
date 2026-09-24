@@ -29,12 +29,16 @@ from lib.check import todo
 # ---------------------------------------------------------------------------
 
 def double_python(xs: list) -> list:
-    todo()
+    doubles = []
+    for x in xs:
+        doubles.append(x * 2)
+    return doubles
+
+    # return [x * 2 for x in xs]
 
 
 def double_numpy(a: np.ndarray) -> np.ndarray:
-    todo()
-
+    return a * 2
 
 # ---------------------------------------------------------------------------
 # Exercise 2  —  slicing
@@ -48,7 +52,7 @@ def double_numpy(a: np.ndarray) -> np.ndarray:
 # ---------------------------------------------------------------------------
 
 def middle(a: np.ndarray) -> np.ndarray:
-    todo()
+    return a[1:-1]
 
 
 # ---------------------------------------------------------------------------
@@ -70,11 +74,11 @@ def middle(a: np.ndarray) -> np.ndarray:
 # ---------------------------------------------------------------------------
 
 def squares(a: np.ndarray) -> np.ndarray:
-    todo()
+    return a ** 2
 
 
 def centre(a: np.ndarray) -> np.ndarray:
-    todo()
+    return a - a.mean(axis=0)
 
 
 # ---------------------------------------------------------------------------
@@ -100,7 +104,21 @@ def centre(a: np.ndarray) -> np.ndarray:
 # ---------------------------------------------------------------------------
 
 def role(phrase: str) -> str:
-    todo()
+    p = ["fraction", "score", "percentage", "rate", "accuracy", "how often", "proportion"]
+    e = ["data", "past", "labelled", "labeled", "marked", "tagged", "collected", "gathered", "examples", "records", "historical"]
+   
+    for word in p:
+        if word in phrase:
+            return "P"
+    for word in e:
+        if word in phrase:
+            return "E"
+
+    return "T"
+
+# P words -> number, fraction, score, percentage, accuracy, rate...
+# E words ->  data, emails, videos, images, points, counts, numbers...
+# T words -> deciding, predicting, calculating, examining, sorting...
 
 
 # ---------------------------------------------------------------------------
