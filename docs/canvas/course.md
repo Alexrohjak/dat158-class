@@ -46,7 +46,7 @@ Course: `DAT158-1 26H` (id 35853)
 
 ### DAT158 26H Maskinlæring og videregående algoritmer
 
-*Module: Front page · updated 2026-09-23T08:03:19Z*
+*Module: Front page · updated 2026-09-28T13:24:42Z*
 
 Velkommen til DAT158 - Maskinlæring og videregående algoritmer
 
@@ -138,13 +138,13 @@ ML
 
  ML modul 2: Maskinlæringsmodeller
 
- Zoomlenke for Førde og Haugesund: Zoom
-
 Onsdag: Forelesningsnotater
 
-Fredag: Forelesningsnotater (kommer)
+Fredag: Forelesningsnotater
 
  Delta i Kaggle-konkurransen 🏆
+
+ Sammendrag for uken: Nederst her
 
 40
 28. sep - 4. okt
@@ -152,7 +152,9 @@ ML
 
  ML modul 2: Maskinlæringsmodeller
 
-Onsdag: Forelesningsnotater (kommer)
+  Zoomlenke for Førde og Haugesund: Zoom
+
+Onsdag: Forelesningsnotater
 
 Fredag: Forelesningsnotater (kommer)
 
@@ -218,7 +220,9 @@ Eksamen
 - https://hvl-ml.github.io/DAT158/slides/1-intro/3-metrics.html
 - https://hvl-ml.github.io/DAT158/slides/1-intro/4-ml-engineering.html
 - https://hvl-ml.github.io/DAT158/slides/2-models/5-overfitting.html
+- https://hvl-ml.github.io/DAT158/slides/2-models/6-decision-trees.html
 - https://www.kaggle.com/t/1ff3a045f74546088e16c5cd00cdfb05
+- https://hvl-ml.github.io/DAT158/slides/2-models/7-gradient-descent.html
 - https://hvl-ml.github.io/DAT158/slides/3-systems/lecture3.html
 
 ### Introduksjon til maskinlæring
@@ -336,7 +340,7 @@ Pandas:
 
 ### Et utvalg maskinlæringsmodeller
 
-*Module: ML modul 2: Maskinlæringsmodeller · updated 2026-09-18T08:12:27Z*
+*Module: ML modul 2: Maskinlæringsmodeller · updated 2026-09-28T08:59:13Z*
 
 I denne modulen skal vi begynne å se på de indre detaljene i noen viktige maskinlæringsmodeller.
 
@@ -371,6 +375,36 @@ Kaggle-konkurranse
 Test ferdighetene i maskinlæring mot medstudentene i denne konkurransen: Kaggle
 
 Ikke obligatorisk, men gøy likevel!
+
+Sammendrag fra forelesning
+
+Uke 39
+
+Viktige konsept fra denne uken:
+
+  - Hyperparameter:
+Innstilling som bestemmer strukturen eller treningsmåten for en modell, men som vi må bestemme selv, på forhånd. Dermed kan den ikke optimaliseres gjennom treningsprosessen
+
+  - Loss function / tapsfunksjon:
+Metrikk som vi optimaliserer under trening. Bør være kontinuerlig og stykkevis deriverbar, vi skal se neste uke på hvorfor
+
+  - Avveiing mellom lav og høy kompleksitet (bias-variance tradeoff)
+
+  - Regularisering:
+Unngå overtilpasning ved å begrense hvor store parameterverdiene kan bli
+
+  - No free lunch theorem
+
+  - Beslutningstrær:
+
+  - Gini impurity: Måler hvor bra output fra en splitt er
+
+  - Information gain: Måler forbedring i Gini impurity for en gitt måte å splitte på
+
+  - Ensemble-modeller:
+Kan kombinere prediksjonene fra flere modeller for å få bedre ytelse.
+
+Neste uke: Mer om loss-funksjoner og hvordan den brukes til å finne optimale parametre (gjennom gradient descent)
 
 **Attached files:**
 - dall-e3.png
@@ -484,33 +518,6 @@ Referansegruppa har bedt meg legge ut teksten under:
 
 "Hei, vi i referansegruppen skal på møte onsdag 23.09. Har du noe ris/ros eller innspill til forbedringer i faget (forelesning, eller annet) send oss gjerne en melding på 186480@stud.hvl.no. Saker som sendes vil bli tatt opp anonymt.
 Mvh Daniel/referansegruppen".
-
-### Gratis bridgekurs og gratis pzza!
-
-*Posted 2026-09-15T07:55:52Z*
-
-Gratis introduksjonskurs til kortspillet bridge onsdag 16. september kl 17. Det blir også servert gratis pizza. Kurset varer ca. to timer.
-
-Detter er en fin mulighet å bli bedre kjent med sine medstudenter.
-
-Ingen forkunnskaper er nødvendige. Kurset varer ca. to timer.
-Sted: Høgskulen på Vestlandet, Inndalsveien 28 (like ved bybanestopp Kronstad), Blokk K1, rom E403 Påmeldingsfrist onsdag  16. september kl 12.00.
-
-Om du ønsker å være litt forberedt, kan du gå inn på https://www.bridge.no/Laer-bridge/Laer-bridge-selvstudium.Lenker til eit ekstern område.
-
-Det er mulig å ta med venner.
-
-Påmelding bridgekurs -16. september 2026Lenker til eit ekstern område.
-
-### Eksempel på ein eksamen
-
-*Posted 2026-09-15T05:48:18Z*
-
-Vi har fått ønske om legge ut ein eksamen. Det blir lagt ut fleire etter kvart.
-
-Våren 2025
-
-V2025_Oppgaver_Uten_Løsning.pdf
 
 ## Assignments
 

@@ -37,8 +37,10 @@ Neste
 
 ## In this folder
 
-- `slides/` — 2 item(s), 1648 KB
+- `slides/` — 4 item(s), 2439 KB
   - `Chapter_2.pdf`
+  - `DominatingSet_Eksempel.pdf`
+  - `ProblemWeek_38.pdf`
   - `Problems_2.pdf`
 - `exercises/` — empty
 - `code/` — empty

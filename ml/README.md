@@ -94,6 +94,28 @@ end on 23 Sep: 2.1, 2.2 and 2.4 are clean. Two things in 2.3:
   earlier, or run `decision_tree_figure = Path("assets/decision_tree_diabetes.png")`
   first.
 
+2.5 and 2.6 also run clean (30 Sep). 2.6's grid search fits 135 models, so it
+takes a few minutes. Both notebooks have quirks that the drill room's uke 40 Work
+tab asks you to find, so the answers are folded away here:
+
+<details><summary>Spoilers: the quirks in 2.5 and 2.6</summary>
+
+- 2.5's `evaluate_gradient(x, theta, y)` divides by `len(X)`, the global
+  100-row array, not by `len(x)`. In the SGD cells each step is therefore 100×
+  smaller than the formula says, and in the mini-batch cell (batch size 20) 5×
+  smaller.
+- 2.5's `lr_schedule(alpha, i)` is given the *inner* loop index, which restarts
+  at 0 every epoch. So the learning rate never decays across epochs: it runs
+  the same schedule again each epoch. In the mini-batch cell `i` steps by 20, and
+  with `alpha=0.01` the rate starts at 1.0.
+- 2.6 calls `ord_enc.fit_transform` on `X_test` as well as on `X_train`. The test
+  set should only be `transform`ed with the encoder fitted on training data.
+  Here the two happen to produce the same codes, because both sets contain all
+  five categories and `OrdinalEncoder` sorts them. With a missing category the
+  codes would shift silently.
+
+</details>
+
 ## The tutorial track
 
 [`../tutorial/`](../tutorial/) has `ml01` and `ml02`, covering module 1 in two

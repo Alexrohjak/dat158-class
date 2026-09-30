@@ -19,10 +19,23 @@ This file started on a second clone of the repo, which went its own way from
       Start-here checklist, and V2025 Q12–Q17 + Q20 as Quick-fire 3
 - [x] `sudo apt install graphviz` (23 Sep)
 - [ ] Work notebooks 2.1 → 2.4, "Your turn!" cells first
-- [ ] Friday 25 Sep: re-sync, and mirror lecture 6 (`6-decision-trees`) once
-      Canvas assigns it
-- [ ] uke 40: drill-room week for gradient descent (notebooks 2.5, 2.6, lecture 7)
+- [x] Mirror lecture 6 (`6-decision-trees`) — done in the 30 Sep sync (T-011)
+- [x] uke 40: drill-room week for gradient descent — done 30 Sep (T-011)
 - [ ] Tutorial `ml03` for modul 2. None of it has tested exercises yet
+
+### T-011 — uke 40: gradient descent
+- [x] 30 Sep sync. GitHub was already up to date, and `reference/DAT158` had no
+      new commits. Canvas posted lecture 6's and lecture 7's notes and a lecturer
+      summary of uke 39
+- [x] Lecture 6 mirrored to `weeks/uke39-ml/slides/2-models/`, and lecture 7 to
+      `weeks/uke40-ml/slides/2-models/` with its own `site_libs/`
+- [x] Notebooks 2.5 and 2.6 run clean. Their quirks are in `ml/README.md`,
+      folded away, because the Work tab asks you to find them
+- [x] Drill room: uke 40 week (7 concepts and a gradient-descent demo), the
+      V2025 Q18–Q19 as Quick-fire 4, a uke 40 Start-here checklist, a lecture 6
+      item in uke 39's checklist, and 4 new auto-marked questions
+- [ ] Work notebooks 2.5 and 2.6, "Your turn!" cells first
+- [ ] Friday 2 Oct: re-sync, and mirror Friday's deck once Canvas links it
 
 ### ~~T-009 — Reconcile the two clones~~ — done 23 Sep
 The other clone and `origin/main` had diverged from 4c16768: 10 commits there,

@@ -42,6 +42,36 @@ Test ferdighetene i maskinlæring mot medstudentene i denne konkurransen: Kaggle
 
 Ikke obligatorisk, men gøy likevel!
 
+Sammendrag fra forelesning
+
+Uke 39
+
+Viktige konsept fra denne uken:
+
+  - Hyperparameter:
+Innstilling som bestemmer strukturen eller treningsmåten for en modell, men som vi må bestemme selv, på forhånd. Dermed kan den ikke optimaliseres gjennom treningsprosessen
+
+  - Loss function / tapsfunksjon:
+Metrikk som vi optimaliserer under trening. Bør være kontinuerlig og stykkevis deriverbar, vi skal se neste uke på hvorfor
+
+  - Avveiing mellom lav og høy kompleksitet (bias-variance tradeoff)
+
+  - Regularisering:
+Unngå overtilpasning ved å begrense hvor store parameterverdiene kan bli
+
+  - No free lunch theorem
+
+  - Beslutningstrær:
+
+  - Gini impurity: Måler hvor bra output fra en splitt er
+
+  - Information gain: Måler forbedring i Gini impurity for en gitt måte å splitte på
+
+  - Ensemble-modeller:
+Kan kombinere prediksjonene fra flere modeller for å få bedre ytelse.
+
+Neste uke: Mer om loss-funksjoner og hvordan den brukes til å finne optimale parametre (gjennom gradient descent)
+
 **Files:**
 - dall-e3.png
 
@@ -52,7 +82,9 @@ Ikke obligatorisk, men gøy likevel!
 
 ## In this folder
 
-- `slides/` — empty
+- `slides/` — 2 item(s), 0 KB
+  - `1-intro`
+  - `2-models`
 - `exercises/` — 14 item(s), 1980 KB
   - `DAT158-2.1-PolyReg_learning_curves_bias-variance.ipynb`
   - `DAT158-2.10-Extra-Pipelines.ipynb`

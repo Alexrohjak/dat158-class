@@ -402,7 +402,7 @@ const PLAN = [
 ];
 const EXAM = new Date("2026-12-08T09:00:00");
 
-/* What is live right now, from the Canvas sync of 23 Sep. Each item shows
+/* What is live right now, from the Canvas sync of 30 Sep. Each item shows
    only between its dates, so the card empties itself rather than going stale
    — re-sync and add the next week's items here.                              */
 const AGENDA = [
@@ -414,7 +414,15 @@ const AGENDA = [
     closes 1 Oct at 23:59. It's optional. The join link is on Canvas under ML modul 2.`},
   {from:"2026-09-21", to:"2026-09-23", html:`<b>The reference group meets Wednesday 23 Sep.</b>
     Send them any feedback on the lectures before then. Their address is in the Canvas
-    announcement, and feedback is passed on anonymously.`}
+    announcement, and feedback is passed on anonymously.`},
+  {from:"2026-09-28", to:"2026-10-04", html:`<b>ML modul 2, week two: lecture 7, gradient descent.</b>
+    <a href="https://hvl-ml.github.io/DAT158/slides/2-models/7-gradient-descent.html"
+    target="_blank" rel="noopener">Slides</a>, also mirrored in <code>weeks/uke40-ml/slides/2-models/</code>.
+    Then notebooks 2.5 and 2.6, and uke40 in Learn. Friday's lecture notes aren't posted yet.`},
+  {from:"2026-09-28", to:"2026-10-04", html:`<b>Lecture 6's notes are up</b>: decision trees,
+    forests and boosting. <a href="https://hvl-ml.github.io/DAT158/slides/2-models/6-decision-trees.html"
+    target="_blank" rel="noopener">Slides</a>, mirrored in <code>weeks/uke39-ml/slides/2-models/</code>.
+    Canvas also has the lecturer's summary of uke 39, at the bottom of ML modul 2.`}
 ];
 
 const HALF = {
@@ -2277,7 +2285,23 @@ ml:[
           <em>easier</em> one to read. <strong>Q17 C.</strong> B belongs to gradient methods, and
           D is an output, not a setting. <strong>Q20 D.</strong> Regularisation limits complexity,
           which lowers variance. It usually makes training performance slightly <em>worse</em>,
-          which rules out A.`}}]},
+          which rules out A.`}},
+
+  {t:"Quick-fire 4: gradient descent",cite:"V2025 · Q18, Q19 · 2 p",
+   plain:"Revise: uke40, the update step and the three variants. Give the letter and say why.",
+   body:`<p><strong>Q18</strong> Which is true about stochastic gradient descent (SGD)? A it uses the
+     entire dataset to compute each gradient update · B it updates the parameters after examining one
+     training example at a time · C it doesn't update the parameters until all the data is processed ·
+     D it always finds the global minimum.</p>
+     <p><strong>Q19</strong> What might happen if the learning rate is set too high? A it gets stuck
+     in a local minimum · B it converges too slowly · C it overshoots the minimum and fails to
+     converge · D it will definitely find the global minimum.</p>`,
+   cp:{q:"V2025 Q18 and Q19 — letter and one-line reason for each.",
+       a:`<strong>Q18 B.</strong> One example per update is what "stochastic" means. A and C both
+          describe batch gradient descent, and no variant guarantees the global minimum unless the
+          loss is convex, which rules out D. <strong>Q19 C.</strong> Too big a step jumps past the
+          minimum and can land higher each time. B is what a learning rate that's too <em>low</em>
+          does.`}}]},
 {n:5,uke:"uke39",src:"Lecture 5 · notebooks 2.1–2.4 · HOML ch.4, 6, 7",topic:"Complexity, and the models that manage it",
  blurb:"Why a more flexible model can do worse, how to rein it in, and the trees and forests that do it for you.",
  concepts:[
@@ -2529,7 +2553,210 @@ ml:[
    cp:{q:"What does the no-free-lunch theorem say, and what does it force you to do in practice?",
        a:`No machine learning method is best on all problems. So you cannot pick a model in
           advance. You compare candidates on validation data or with cross-validation, and use
-          experience only to decide which ones to try.`}}]}
+          experience only to decide which ones to try.`}}]},
+
+{n:6,uke:"uke40",src:"Lecture 7 · notebooks 2.5–2.6 · HOML ch.4",topic:"Gradient descent",
+ blurb:"How a model actually finds its parameters: choose a loss, follow its slope downhill, and pick the step size with care.",
+ concepts:[
+  {t:"Two ways to minimise the loss",cite:"Lecture 7 slides 3–6 · nb 2.5 · HOML 4",
+   plain:"Training means making the loss as small as possible. For linear regression there is a formula that jumps straight to the answer, the normal equation. For almost every other model there isn't, so you start somewhere and walk downhill. That walk is gradient descent.",
+   body:`<p>Lecture 7 writes linear regression with <code>n</code> features as</p>
+     <p><code>ŷ = θ₀ + θ₁x₁ + … + θₙxₙ = θᵀx</code></p>
+     <p>The second form needs a trick: add a feature <code>x₀ = 1</code> to every data point. Then
+     <code>θ₀·x₀</code> is just <code>θ₀</code>, and the whole model is one dot product. Notebook
+     2.5 does this with <code>X_b = np.c_[np.ones((m,1)), X]</code>, and you'll see
+     <code>X_b</code> in every cell after that.</p>
+     <p>Finding the best θ is two steps (slides 4–6):</p>
+     <ol>
+       <li><strong>Define "best" with a loss.</strong> For regression, usually the mean squared error
+         <code>L = (1/N) Σ (θᵀx⁽ⁱ⁾ − y⁽ⁱ⁾)²</code>.</li>
+       <li><strong>Minimise it</strong>, either analytically or numerically.</li>
+     </ol>
+     <p><strong>Analytically</strong>, you set the derivative to zero and solve. For MSE that gives the
+     <strong>normal equation</strong>, <code>θ̂ = (XᵀX)⁻¹Xᵀy</code>, the answer in one step. It's
+     what <code>LinearRegression</code> computes, and ML week 1's closed form is its one-feature
+     case. Slide 5's catch: <em>only possible in the linear case</em>. HOML 4 adds a second one:
+     inverting <code>XᵀX</code> costs roughly <code>n^2.4</code> to <code>n³</code> in the number of
+     features, so with many thousands of features it gets slow.</p>
+     <p><strong>Numerically</strong>, you start from a guess and repeatedly improve it. Gradient descent
+     is the general-purpose way to do that, and it's how logistic regression, neural networks and
+     gradient boosting (uke39) are all trained.</p>`,
+   cp:{q:"Linear regression has the normal equation. Why does lecture 7 bother with gradient descent at all?",
+       a:`The normal equation only exists for a linear model with MSE. Most models have no
+          closed-form minimum, so they have to be trained numerically, and gradient descent works for
+          any differentiable loss. It also scales better when there are very many features, because
+          inverting <code>XᵀX</code> costs about <code>n^2.4</code>–<code>n³</code>.`}},
+
+  {t:"The gradient points uphill",cite:"Lecture 7 slides 6–9 · nb 2.5",
+   plain:"The gradient is a list of slopes, one for each parameter. Together they point in the direction where the loss rises fastest. Step the opposite way and the loss goes down.",
+   body:`<p>With one parameter the derivative says which way is uphill. With many parameters you take
+     the derivative with respect to each one, holding the others fixed, and stack the results. That
+     vector is the <strong>gradient</strong> <code>∇L(θ)</code>, and it lives in parameter space: it
+     says how to change θ, not x.</p>
+     <p>For MSE, slide 8 differentiates one parameter at a time:</p>
+     <p><code>∂L/∂θⱼ = (2/N) Σ (θᵀx⁽ⁱ⁾ − y⁽ⁱ⁾) · xⱼ⁽ⁱ⁾</code></p>
+     <p>and slide 9 packs all of them into one matrix expression:</p>
+     <p><code>∇L(θ) = (2/N) Xᵀ(Xθ − y)</code></p>
+     <p><strong>How to read it.</strong> <code>Xθ − y</code> is the vector of residuals, prediction
+     minus target, one per training point. Multiplying by <code>Xᵀ</code> weights each residual by
+     that point's value of feature <code>j</code> and adds them up, which gives one slope per
+     parameter. For <code>θ₀</code> the feature is the column of ones, so its slope is just the sum
+     of the residuals.</p>
+     <p><strong>A worked step.</strong> Two points, <code>(0, 2)</code> and <code>(2, 6)</code>,
+     starting from <code>θ = (0, 0)</code>. Both predictions are 0, so the residuals are
+     <code>−2</code> and <code>−6</code> and the MSE is <code>(4 + 36)/2 = 20</code>.</p>
+     <ul>
+       <li><code>∂L/∂θ₀ = (2/2)(−2 − 6) = −8</code></li>
+       <li><code>∂L/∂θ₁ = (2/2)(0·(−2) + 2·(−6)) = −12</code></li>
+     </ul>
+     <p>Both slopes are negative, so raising either parameter lowers the loss. One step with
+     <code>η = 0.1</code> gives <code>θ = (0.8, 1.2)</code>, and the MSE drops from 20 to 4.64. The
+     line through both points is <code>θ = (2, 2)</code>, and repeated steps head there.</p>`,
+   code:`X_b = np.c_[np.ones((m, 1)), X]          # the x₀ = 1 column\ngradients = 2/m * X_b.T.dot(X_b.dot(theta) - y)\n#           2/N     Xᵀ     (  Xθ       - y)`,
+   cp:{q:"In ∇L = (2/N)Xᵀ(Xθ − y), what is Xθ − y, and what does multiplying by Xᵀ do to it?",
+       a:`<code>Xθ − y</code> is the residual of every training point, prediction minus target.
+          <code>Xᵀ</code> weights each residual by that point's value of feature <code>j</code> and
+          sums, so you get one slope per parameter. For <code>θ₀</code>, whose feature is the column
+          of ones, the slope is just the sum of the residuals (times <code>2/N</code>).`}},
+
+  {t:"The update step, and the learning rate",cite:"Lecture 7 slides 10–12 · nb 2.5 · V2025 Q19",
+   plain:"Take a step against the gradient: θ ← θ − η∇L. The learning rate η is how big a step. Too small and training takes forever. Too big and each step overshoots the bottom and lands higher up the other side, so the loss grows instead of shrinking.",
+   body:`<p>Slide 10's loop is the whole algorithm:</p>
+     <p><code>θ⁽ⁿ⁺¹⁾ = θ⁽ⁿ⁾ − η ∇L</code></p>
+     <p><strong>η is a hyperparameter</strong>, in the "optimisation" group from lecture 5's slide 12.
+     Nothing in training chooses it. Slide 12 shows the three outcomes:</p>
+     <ul>
+       <li><strong>too small:</strong> every step is safe but short, and you run out of epochs
+         before you arrive;</li>
+       <li><strong>about right:</strong> the loss falls quickly and settles;</li>
+       <li><strong>too big:</strong> the step jumps past the minimum. If it lands higher than it
+         started, the next gradient is bigger, so the next jump is bigger still. The loss
+         <em>grows</em>, and the parameters run off to infinity.</li>
+     </ul>
+     <p><strong>How big is too big?</strong> It depends on how steep the bowl is, and that depends on
+     the data. On the demo's 50 points from notebook 2.5, batch descent is stable up to
+     η ≈ 0.52: 0.02 crawls, 0.1 is nearly there after 10 epochs, 0.5 zig-zags, and 0.6 blows up.
+     Géron's figure 4-8 uses 0.02, 0.1 and 0.5 on 100 points, and there 0.5 is already too big.</p>
+     <p><strong>The other choice is when to stop.</strong> Notebook 2.5 fixes the number of epochs
+     (one epoch is one pass through the training data). Its "Your turn!" asks you to grid-search η
+     for <code>n_epochs=100</code>. HOML 4 suggests setting many epochs and stopping once the
+     gradient is tiny.</p>`,
+   code:`theta = np.random.randn(2, 1)             # start anywhere\nfor epoch in range(n_epochs):\n    gradients = 2/N * X.T.dot(X.dot(theta) - y)\n    theta = theta - eta * gradients       # step downhill`,
+   demo:"gd",
+   cp:{q:"The training loss goes up every epoch and the parameters keep growing. What has happened, and what do you change?",
+       a:`The learning rate is too high. Each step overshoots the minimum and lands higher on the
+          other side, so the gradient and the next step both get bigger. Lower η, for example by a
+          factor of 10. If the features aren't scaled, scale them too, because unscaled features
+          force a much smaller η.`}},
+
+  {t:"Local minima, plateaus, and why scaling matters",cite:"Lecture 7 slides 13–16 · HOML fig. 4-7 · nb 2.5",
+   plain:"Gradient descent only sees the slope where it's standing. It can stop in a dip that isn't the lowest one, or crawl across a flat stretch. Linear regression has neither problem, because MSE is a single bowl. But if the features are on very different scales, the bowl becomes a long narrow valley and most of the steps are wasted.",
+   body:`<p>Slides 14–15 name two practical problems:</p>
+     <ul>
+       <li><strong>A local minimum</strong> is a dip where every direction goes up, but which isn't
+         the lowest point. The gradient there is zero, so gradient descent stops, and the model
+         predicts badly.</li>
+       <li><strong>A plateau</strong> is a nearly flat region. The gradient is tiny, so the steps are
+         tiny, and it converges slowly.</li>
+     </ul>
+     <p><strong>Neither happens for linear regression.</strong> Notebook 2.5 points out that MSE for a
+     linear model is <em>convex</em>: shaped like a bowl, with exactly one minimum. Neural networks
+     are not convex, which is part of why they're harder to train.</p>
+     <p><strong>Feature scaling (slide 16, Géron's figure 4-7).</strong> Suppose one feature runs from
+     0 to 2 and another from 0 to 2000. A small change in the second one's θ moves the predictions
+     a lot, so the loss is very steep in that direction and very flat in the other. The contours
+     become long, thin ellipses.</p>
+     <p>Now η is stuck. It has to be small enough not to overshoot in the steep direction, and that
+     makes the steps in the flat direction tiny. The path zig-zags across the valley and inches along
+     it. Standardise the features first and the bowl gets much rounder, so one η suits every direction.</p>
+     <p>In the demo, switch to "x × 5". Then 0.1 diverges, the safe limit drops to about 0.036, and
+     even 50 epochs at 0.02 don't reach the minimum. This is why notebook 2.2 puts a
+     <code>StandardScaler</code> in front of ridge. Trees are the exception: they don't use gradients, so
+     notebook 2.6 skips scaling for its random forest.</p>`,
+   demo:"gd",
+   cp:{q:"Gradient descent on unscaled features converges slowly, even though the MSE bowl still has only one minimum. Why?",
+       a:`Unscaled features stretch the bowl into a long, narrow valley. η has to be small enough
+          not to overshoot in the steep direction, so the steps along the flat direction are tiny
+          and the path zig-zags. Standardising the features makes the contours round, so one
+          learning rate works in every direction.`}},
+
+  {t:"Batch, stochastic, mini-batch",cite:"Lecture 7 slides 17–19 · nb 2.5 · V2025 Q18",
+   plain:"The three variants differ only in how many training points go into each gradient: all of them, one, or a small handful. Fewer points means cheaper steps and a noisier path.",
+   body:`<table class="tbl"><tr><th>variant</th><th>points per gradient</th><th>updates per epoch</th><th>behaviour</th></tr>
+       <tr><td><b>batch</b></td><td class="mono">N</td><td class="mono">1</td><td>smooth, but each step reads all the data</td></tr>
+       <tr><td><b>stochastic (SGD)</b></td><td class="mono">1</td><td class="mono">N</td><td>very cheap steps, erratic path</td></tr>
+       <tr><td><b>mini-batch</b></td><td class="mono">b, e.g. 20</td><td class="mono">N / b</td><td>in between, and fast on a GPU</td></tr></table>
+     <p><strong>Batch</strong> needs the whole training set for every step, and the notebook points out
+     that it often doesn't fit in memory.</p>
+     <p><strong>Stochastic</strong> updates after every single example, so one epoch makes
+     <code>N</code> updates. Each gradient is a noisy estimate from one point, so the path jitters.
+     With a constant η it never settles: it keeps bouncing around the minimum. The fix is a
+     <strong>learning schedule</strong> that shrinks η as training goes on. Notebook 2.5 writes one,
+     and notes that it adds another hyperparameter to tune. The noise has an upside too: it can
+     shake the parameters out of a shallow local minimum (HOML 4).</p>
+     <p><strong>Mini-batch</strong> averages a small random batch. It's less noisy than SGD, far
+     cheaper per step than batch, and the matrix form suits GPUs. It's what almost everyone uses, and
+     notebook 2.5 warns that people often say "SGD" when they mean mini-batch.</p>
+     <p>In scikit-learn, <code>SGDRegressor</code> trains a linear model by stochastic gradient
+     descent. Try all three variants in the demo at η = 0.1, one epoch at a time.</p>`,
+   demo:"gd",
+   cp:{q:"1000 training points, batch size 50. How many parameter updates happen in one epoch of batch, mini-batch and stochastic gradient descent?",
+       a:`<strong>1, 20 and 1000.</strong> Batch computes one gradient from all 1000 points.
+          Mini-batch makes <code>1000/50 = 20</code> updates. Stochastic makes one update per
+          point. More updates per epoch means cheaper, noisier steps.`}},
+
+  {t:"Momentum, and gradients nobody derives by hand",cite:"Lecture 7 slides 20–22 · HOML appendix B",
+   plain:"Momentum lets each step keep some of the previous step's speed, which smooths out zig-zags and carries you across flat stretches. And for real models nobody works out the gradient on paper: automatic differentiation computes it from the code for the loss.",
+   body:`<p><strong>Momentum.</strong> Plain gradient descent only looks at the current slope. With
+     momentum, the step is a running average of recent gradients:</p>
+     <p><code>v ← βv − η∇L</code> &nbsp;then&nbsp; <code>θ ← θ + v</code></p>
+     <p>with β around 0.9. In a narrow valley the side-to-side parts of the gradient keep changing
+     sign, so they cancel out, while the part along the valley keeps pointing the same way and
+     builds up speed. On a plateau the small gradients add up, so you cross it faster. Adam, RMSProp
+     and Adagrad, which notebook 2.5 mentions, build on this idea. DAT255 covers them properly.</p>
+     <p><strong>Automatic differentiation (slide 22).</strong> Working out
+     <code>(2/N)Xᵀ(Xθ − y)</code> by hand was fine for a line. For a neural network with millions of
+     parameters it isn't. Libraries like JAX, PyTorch and TensorFlow take the code that computes the
+     loss and give you the gradient automatically. You write <code>predict</code> and
+     <code>loss</code>, and that's all.</p>
+     <p>In the slide's code, <code>jax.grad(loss, argnums=1)</code> returns a new function that
+     computes ∂loss/∂θ. <code>argnums=1</code> means "differentiate with respect to the second
+     argument", which is <code>theta</code>. The update line is exactly the one from concept 3.</p>`,
+   code:`import jax\n\ndef predict(X, theta):\n    return X.dot(theta)\n\ndef loss(X, theta, y):\n    return ((predict(X, theta) - y)**2).mean()\n\nfor epoch in range(n_epochs):\n    theta = theta - eta * jax.grad(loss, argnums=1)(X, theta, y)`,
+   cp:{q:"In the slide's JAX loop, what do you write yourself, and what does jax.grad give you?",
+       a:`You write <code>predict</code> and <code>loss</code>. <code>jax.grad(loss,
+          argnums=1)</code> returns a function that computes the gradient of the loss with respect
+          to argument 1, which is <code>theta</code>. The update is still
+          <code>θ ← θ − η·∇L</code>. You just never derive <code>∇L</code> by hand.`}},
+
+  {t:"Hyperparameter search: grid, random, Bayesian",cite:"nb 2.6 · V2025 Q10, Q16",
+   plain:"Gradient descent tunes the parameters. It can't tune the hyperparameters, because the validation score isn't a smooth function of things like tree depth. So you search: try every combination, try random ones, or let each result guide the next guess.",
+   body:`<p>Why not gradient descent? A hyperparameter like <code>max_depth</code> is a whole number,
+     and changing it changes the model's structure. The validation score jumps from one value to the
+     next, so there is no slope to follow. Notebook 2.6 says it plainly: it's hard to write a
+     cost function for this that gradient descent can minimise.</p>
+     <p>Notebook 2.6 tunes a random forest on the California housing data three ways:</p>
+     <ul>
+       <li><strong>Grid search</strong> (<code>GridSearchCV</code>) tries every combination. Its grid
+         is 5 values of <code>n_estimators</code> × 3 of <code>max_depth</code> × 3 of
+         <code>max_features</code> = 45 settings. With 3-fold cross-validation that's 135 fits,
+         and the cost multiplies with every hyperparameter you add.</li>
+       <li><strong>Random search</strong> (<code>RandomizedSearchCV</code>) tries
+         <code>n_iter</code> random combinations. For a fixed budget it covers wide ranges of many
+         hyperparameters, which is V2025 Q10's answer. It guarantees nothing, and on the notebook's
+         small grid it doesn't beat grid search.</li>
+       <li><strong>Bayesian optimisation</strong> (<code>hyperopt</code>, with TPE) uses the scores it
+         has already seen to choose the next setting to try, so it wastes fewer fits on bad
+         regions.</li>
+     </ul>
+     <p><strong>The uke36 rule still applies.</strong> Each search compares settings by
+     cross-validation on the training set. The test set is scored once, at the end, on the
+     winner.</p>`,
+   cp:{q:"A grid of 4 × 3 × 5 settings, searched with 5-fold cross-validation: how many models are fitted during the search? And why can't gradient descent tune max_depth?",
+       a:`<strong>300.</strong> 60 settings × 5 folds. (<code>GridSearchCV</code> then refits the
+          winner on all the training data, which makes 301.) <code>max_depth</code> is a whole number
+          that changes the model's structure, so the validation score jumps between values and has
+          no gradient to follow.`}}]}
 
 ]};
 
@@ -2612,14 +2839,23 @@ ml:{
    paper:["Answer Q1, Q3, Q4, Q5 and Q22 in writing before drilling — together they are 27 of the 50 points.",
    "Rewrite Q5's code correctly on paper: separate X and y, encode city, split, use a regressor, score the test set.",
    "Q22: list every problem in the brief before proposing any fix. There are at least five.",
-   "Q12–Q17 and Q20 are uke39's material, and Q18–Q19 (gradient descent) come in uke40. Answer them once you've read uke39."]},
+   "Q12–Q20 are uke39 and uke40's material. Answer them once you've read those two weeks."]},
  5:{tut:null,note:"No tutorial week for modul 2 yet. For now the practice is the 'Your turn!' cells in notebooks 2.1–2.4. Try each one before you open its solution.",
    paper:["A node of 10 rows is 5/5. Split A gives children [4, 0] and [1, 5]; split B gives [3, 2] and [2, 3]. Compute J for both. Which does CART take?",
    "θ = [3, −4, 0]. Write down its L0, L1 and L2 norms.",
    "Sketch the learning curves you expect for degree 1 and for degree 10 on notebook 2.1's data. Label which one is high bias.",
    "y = [2, 4, 9]. Gradient boosting starts from F₀ = the mean. What residuals must the first tree learn?",
    "Explain in two sentences, without using the word 'random', why a forest needs both bootstrap samples and feature subsets.",
-   "V2025 Q12–Q17 and Q20, closed-book, then drill 'Quick-fire 3' in the past-exam week."]}
+   "V2025 Q12–Q17 and Q20, closed-book, then drill 'Quick-fire 3' in the past-exam week."]},
+ 6:{tut:null,note:"No tutorial week for modul 2 yet. The practice is the 'Your turn!' cells in notebooks 2.5 and 2.6, and the paper below.",
+   paper:["x = [0, 1, 2], y = [1, 3, 5], θ = (0, 0). Compute the MSE, the gradient (2/N)Xᵀ(Xθ − y), and θ after one step with η = 0.1. Check that the MSE went down.",
+   "Notebook 2.5's 'Your turn!': the MSE of the line ŷ = ½ + ¼x on the points (1, 1), (2, 1), (4, 2), by hand.",
+   "Differentiate MSE(θ₀, θ₁) = (1/N) Σ (θ₀ + θ₁xᵢ − yᵢ)² with respect to θ₀ and θ₁. Set both to zero and solve: you get ML week 1's closed form.",
+   "1000 points and batch size 50: how many updates per epoch for batch, mini-batch and stochastic descent? Which path is smoothest, and why?",
+   "Sketch training loss against epoch for η too small, about right, and too large.",
+   "Notebook 2.5's evaluate_gradient and lr_schedule each have a quirk that changes the real step size in the SGD and mini-batch cells. Find both. Hint: which m does the gradient divide by, and which i does the schedule get?",
+   "Notebook 2.6 encodes ocean_proximity in two lines. Find what the second line does that ML week 2 says never to do.",
+   "V2025 Q18 and Q19, closed-book, then drill 'Quick-fire 4' in the past-exam week."]}
 }};
 
 /* --------------------------------------------------------------- state --- */
@@ -2722,7 +2958,8 @@ const DEMO_TITLE = {
   onehot:"One-hot encoding", leakage:"Fit on train, or on everything",
   makespan:"Three schedulers, one set of jobs", tsp3:"Three tours, one map",
   poly:"Turn the degree up", ridge:"Add a penalty",
-  gini:"Score a split", boost:"Boost, one stump at a time"
+  gini:"Score a split", boost:"Boost, one stump at a time",
+  gd:"Walk down the loss"
 };
 
 function demoHTML(name){
@@ -4000,6 +4237,128 @@ DEMOS.boost = host => {
   draw();
 };
 
+/* --- ML week 6: gradient descent ------------------------------------------
+   Notebook 2.5's data, y = 4 + 3x + noise with x in [0, 2]. The loss surface
+   of linear regression is an exact quadratic, so its contours are ellipses
+   drawn from the eigenvectors of XᵀX/m rather than traced numerically.      */
+const GDDATA = (() => { const r = seeded(42);
+  return Array.from({length:50}, () => { const x = 2*r(); return [x, 4 + 3*x + gauss(r)]; }); })();
+const GD_START = [0, 0];
+function gdSetup(stretch){
+  const pts = GDDATA.map(([x,y]) => [x*stretch, y]), m = pts.length;
+  const sx = pts.reduce((s,p)=>s+p[0],0)/m, sxx = pts.reduce((s,p)=>s+p[0]*p[0],0)/m;
+  const sy = pts.reduce((s,p)=>s+p[1],0)/m, sxy = pts.reduce((s,p)=>s+p[0]*p[1],0)/m;
+  const det = sxx - sx*sx;                               /* the normal equation, 2×2 */
+  const opt = [(sxx*sy - sx*sxy)/det, (sxy - sx*sy)/det];
+  const loss = t => pts.reduce((s,[x,y]) => s + (t[0] + t[1]*x - y)**2, 0)/m;
+  const tr = 1 + sxx, dd = Math.sqrt((1 - sxx)**2/4 + sx*sx);   /* eigenvalues of XᵀX/m */
+  const lam = [tr/2 + dd, tr/2 - dd];
+  const vec = l => { const v = Math.abs(sx) > 1e-12 ? [sx, l - 1] : [1, 0], n = Math.hypot(...v); return [v[0]/n, v[1]/n]; };
+  return {pts, m, opt, loss, lam, vecs: lam.map(vec), limit: 1/lam[0]};  /* diverges above η = 2/(2λmax) */
+}
+function gdRun(S, eta, batch, epochs, seed){
+  const r = seeded(seed), path = [GD_START.slice()], L = [S.loss(GD_START)];
+  let t = GD_START.slice(), blown = false;
+  for(let e = 0; e < epochs && !blown; e++){
+    const idx = S.pts.map((_,i) => i);
+    for(let i = idx.length - 1; i > 0; i--){ const j = Math.floor(r()*(i+1)); [idx[i],idx[j]] = [idx[j],idx[i]]; }
+    for(let s = 0; s < S.m && !blown; s += batch){
+      const B = idx.slice(s, s + batch).map(i => S.pts[i]);
+      let g0 = 0, g1 = 0;
+      B.forEach(([x,y]) => { const res = t[0] + t[1]*x - y; g0 += res; g1 += res*x; });
+      t = [t[0] - eta*2/B.length*g0, t[1] - eta*2/B.length*g1];
+      path.push(t); L.push(S.loss(t));
+      if(!isFinite(L[L.length-1]) || Math.abs(t[0]) + Math.abs(t[1]) > 1e6) blown = true;
+    }
+  }
+  return {path, L, blown};
+}
+DEMOS.gd = host => {
+  host.innerHTML = `
+    <div class="row" id="d-gv">${[["batch","Batch",50],["mini","Mini-batch of 10",10],["sgd","Stochastic",1]].map((v,i)=>
+      `<button class="chip" data-v="${v[0]}" data-b="${v[2]}" aria-pressed="${i===0}">${v[1]}</button>`).join("")}</div>
+    <div class="row" id="d-ge">${[0.02,0.1,0.5,0.6].map((v,i)=>
+      `<button class="chip" data-e="${v}" aria-pressed="${i===1}">η = ${v}</button>`).join("")}</div>
+    <div class="row" id="d-gs">
+      <button class="chip" data-s="1" aria-pressed="true">x as generated, 0 to 2</button>
+      <button class="chip" data-s="5" aria-pressed="false">x × 5, unscaled</button></div>
+    <div class="row">
+      <button class="btn sm primary" id="d-g1">1 epoch</button>
+      <button class="btn sm ghost" id="d-g10">10 epochs</button>
+      <button class="btn sm ghost" id="d-g0">Reset</button></div>
+    <div id="d-out"></div>`;
+  let batch = 50, eta = 0.1, stretch = 1, epochs = 0;
+  const draw = () => {
+    const S = gdSetup(stretch), R = gdRun(S, eta, batch, epochs, 11);
+    const t = R.path[R.path.length-1], last = R.L[R.L.length-1], L0 = R.L[0], Lopt = S.loss(S.opt);
+    /* one scale on both axes, so the valley's real shape shows */
+    const xs = [GD_START[0], S.opt[0]], ys = [GD_START[1], S.opt[1]];
+    const span = Math.max(xs[1]-xs[0], Math.abs(ys[1]-ys[0]), 1)*1.5;
+    const cx = (xs[0]+xs[1])/2, cy = (ys[0]+ys[1])/2, W = 380, H = 240, pad = 18;
+    const k = Math.min((W-2*pad)/span, (H-2*pad)/span);
+    const px = v => W/2 + (v-cx)*k, py = v => H/2 - (v-cy)*k;
+    const cStart = S.lam.reduce((s,l,i) => {
+      const d = [GD_START[0]-S.opt[0], GD_START[1]-S.opt[1]], p = d[0]*S.vecs[i][0] + d[1]*S.vecs[i][1];
+      return s + l*p*p; }, 0);
+    const ellipse = c => Array.from({length:97}, (_,i) => { const a = i/96*2*Math.PI;
+      const u = [Math.cos(a)*Math.sqrt(c/S.lam[0]), Math.sin(a)*Math.sqrt(c/S.lam[1])];
+      const x = S.opt[0] + u[0]*S.vecs[0][0] + u[1]*S.vecs[1][0], y = S.opt[1] + u[0]*S.vecs[0][1] + u[1]*S.vecs[1][1];
+      return (i?"L":"M") + px(x).toFixed(1) + " " + py(y).toFixed(1); }).join("");
+    const shown = R.path.slice(0, 2000);
+    const path = shown.map((p,i) => (i?"L":"M") + px(p[0]).toFixed(1) + " " + py(p[1]).toFixed(1)).join("");
+    const LW = 380, LH = 110, lp = 18, n = R.L.length;
+    const lx = i => lp + (n > 1 ? i/(n-1) : 0)*(LW-2*lp);
+    const ly = v => LH - lp - Math.max(0, Math.min(1, (v - Lopt)/(L0 - Lopt)))*(LH-2*lp);
+    const lpath = R.L.map((v,i) => (i?"L":"M") + lx(i).toFixed(1) + " " + ly(v).toFixed(1)).join("");
+    const fmt = v => Math.abs(v) < 1e4 ? v.toFixed(3) : v.toExponential(1);
+    document.getElementById("d-out").innerHTML = `
+      <svg viewBox="0 0 ${W} ${H}" class="plot" role="img" aria-label="path of gradient descent in parameter space">
+        ${[1, 1/4, 1/16, 1/64].map(f => `<path d="${ellipse(cStart*f)}" class="diag" fill="none"/>`).join("")}
+        <path d="${path}" class="curve"/>
+        <circle cx="${px(S.opt[0])}" cy="${py(S.opt[1])}" r="4.5" class="predB"/>
+        <circle cx="${px(GD_START[0])}" cy="${py(GD_START[1])}" r="3.5" class="pt"/>
+        ${R.blown ? "" : `<circle cx="${px(t[0])}" cy="${py(t[1])}" r="4.5" class="predA"/>`}
+        <text x="${pad}" y="${H-6}" class="axt">θ₀ →</text>
+        <text x="${pad}" y="${pad}" class="axt">θ₁ ↑</text>
+      </svg>
+      <svg viewBox="0 0 ${LW} ${LH}" class="plot" role="img" aria-label="training loss after each update">
+        <line x1="${lp}" y1="${LH-lp}" x2="${LW-lp}" y2="${LH-lp}" class="ax"/>
+        <line x1="${lp}" y1="${lp}" x2="${lp}" y2="${LH-lp}" class="ax"/>
+        <path d="${lpath}" class="curve"/>
+        <text x="${lp+4}" y="${lp-4}" class="axt">MSE after each update</text>
+      </svg>
+      <table class="tbl"><tr><th></th><th>θ₀</th><th>θ₁</th><th>MSE</th></tr>
+        <tr><td><span class="key a"></span>after ${epochs} epoch${epochs===1?"":"s"} · ${R.path.length-1} updates</td>
+          <td class="mono">${R.blown ? "—" : fmt(t[0])}</td><td class="mono">${R.blown ? "—" : fmt(t[1])}</td>
+          <td class="mono ${R.blown || last > 1.05*Lopt ? "bad-t" : "ok-t"}">${R.blown ? "diverged" : fmt(last)}</td></tr>
+        <tr><td><span class="key b"></span>normal equation</td><td class="mono">${S.opt[0].toFixed(3)}</td>
+          <td class="mono">${S.opt[1].toFixed(3)}</td><td class="mono">${Lopt.toFixed(3)}</td></tr></table>
+      <p class="demo-k">batch gradient descent diverges above η ≈ <b>${S.limit.toFixed(3)}</b> on this data</p>
+      <p class="demo-n">${R.blown || (epochs > 0 && last > L0)
+        ? `The loss is higher than where it started. Each step overshoots the bottom of the bowl and
+           lands higher up the other side, further out every time. That's V2025 Q19's answer.
+           Lower η.`
+        : stretch > 1
+        ? `Multiplying x by 5 stretches the bowl into a long valley. The steep direction caps η, and
+           along the flat direction the steps are then tiny. Géron's figure 4-7 is this picture.
+           Standardising the feature makes the bowl round again.`
+        : `The dashed ellipses are contours of the loss, and the red dot is its minimum, which is what
+           the normal equation gives in one step. Batch descent moves straight downhill. The smaller
+           the batch, the cheaper and noisier each step, and with a constant η the stochastic path
+           keeps bouncing around the minimum instead of settling on it.`}</p>`;
+  };
+  const wire = (sel, set) => host.querySelectorAll(sel+" .chip").forEach(b => b.onclick = () => {
+    set(b.dataset); epochs = 0;
+    host.querySelectorAll(sel+" .chip").forEach(x=>x.setAttribute("aria-pressed",String(x===b)));
+    draw();
+  });
+  wire("#d-gv", ds => batch = +ds.b); wire("#d-ge", ds => eta = +ds.e); wire("#d-gs", ds => stretch = +ds.s);
+  document.getElementById("d-g1").onclick = () => { epochs += 1; draw(); };
+  document.getElementById("d-g10").onclick = () => { epochs += 10; draw(); };
+  document.getElementById("d-g0").onclick = () => { epochs = 0; draw(); };
+  draw();
+};
+
 /* ----------------------------------------------------------- start here --
    A concrete checklist per week: which file, which pages, what to produce.
    Written against what is actually in the repo; update it after each sync.  */
@@ -4039,6 +4398,19 @@ alg:[
    what:"Allow about 90 minutes. Skip 2 i, j and k (not taught yet). Then drill the answers below."}]}
 ],
 ml:[
+ {uke:"uke40",title:"Modul 2: gradient descent and hyperparameter search (lecture 7)",items:[
+  {id:"m40-l7",t:"Lecture 7 slides, Wednesday 30 Sep",where:"weeks/uke40-ml/slides/2-models/7-gradient-descent.html",
+   what:"The loss, the gradient, the learning rate, the three variants, momentum and autodiff. Read uke40 concepts 1–6 beside it.",learn:[6,0]},
+  {id:"m40-25",t:"Notebook 2.5: linear regression by gradient descent",where:"weeks/uke39-ml/exercises/DAT158-2.5-LinReg_GradientDescent.ipynb",
+   what:"Do the MSE-by-hand 'Your turn!' on paper first, then the learning-rate grid search. Before you run each variant, predict its path in the demo.",learn:[6,2]},
+  {id:"m40-26",t:"Notebook 2.6: grid, random and Bayesian search",where:"weeks/uke39-ml/exercises/DAT158-2.6-Hyperparameter_optimization.ipynb",
+   what:"The grid search fits 135 models, so give it a few minutes. The 'Your turn!' asks for a wider search than the notebook's.",learn:[6,6]},
+  {id:"m40-v",t:"V2025 Q18 and Q19, closed-book",where:"Drill Room → Learn → Past exam → Quick-fire 4",
+   what:"With these two, every ML question on the 2025 paper is on material you've been taught.",work:6},
+  {id:"m40-k",t:"Kaggle competition, optional, closes Thursday 1 Oct 23:59",where:"Canvas → ML modul 2 → Kaggle link",
+   what:"If you've entered, choose your final model by cross-validation, not by the public leaderboard."},
+  {id:"m40-sync",t:"Friday 2 Oct: sync Canvas for Friday's lecture notes",where:"python src/canvas_sync.py  →  weeks/uke40-ml/",
+   what:"Then ask me to mirror the deck. uke 41 switches to algorithms, chapters 3 and 4."}]},
  {uke:"uke39",title:"Modul 2: overfitting, regularisation, trees and forests (lecture 5)",items:[
   {id:"m39-l5",t:"Lecture 5 slides, Wednesday 23 Sep",where:"hvl-ml.github.io/DAT158/slides/2-models/5-overfitting.html",
    what:"Loss, hyperparameters, bias–variance, L1/L2 regularisation, no free lunch. Read uke39 concepts 1–3 and 9 beside it.",learn:[5,0]},
@@ -4048,6 +4420,8 @@ ml:[
    what:"2.1: predict each learning curve before you run the cell. 2.2: the ridge and lasso sliders, then the early-stopping 'Your turn!'.",learn:[5,1]},
   {id:"m39-23",t:"Notebooks 2.3 and 2.4",where:"weeks/uke39-ml/exercises/ · DAT158-2.3-Decision_trees · DAT158-2.4-Random_forests_and_ensembling",
    what:"2.3: work out the Gini numbers by hand before the notebook prints them. With Graphviz installed, two cells near the Gini example raise NameError: scroll up to the tree instead (ml/README.md). 2.4: forests, AdaBoost, and gradient boosting built from residuals.",learn:[5,4]},
+  {id:"m39-l6",t:"Lecture 6 slides, Friday 25 Sep",where:"weeks/uke39-ml/slides/2-models/6-decision-trees.html",
+   what:"Decision trees, Gini and entropy, random forests, boosting and stacking. Read uke39 concepts 5–8 beside it.",learn:[5,4]},
   {id:"m39-v",t:"V2025 Q12–Q17 and Q20, closed-book",where:"Drill Room → Learn → Past exam → Quick-fire 3",
    what:"8 points of the 2025 paper are this week's material. Answer on paper, then drill.",work:5},
   {id:"m39-k",t:"Kaggle competition, optional, closes 1 Oct 23:59",where:"Canvas → ML modul 2 → Kaggle link",
@@ -4074,7 +4448,7 @@ ml:[
    what:"Only for what the lecture left unclear: types of learning, instance- vs model-based, main challenges."}]},
  {uke:"V2025",title:"Past exam, spring 2025 — ML",items:[
   {id:"m-ex",t:"Seksjon 1: Q1–Q11, Q16, Q21, Q22 on paper",where:"docs/canvas/files/V2025_Oppgaver_Uten_Løsning.pdf (pages 1–14)",
-   what:"Q12–Q17 and Q20 are covered from uke39 on, and Q18–Q19 wait for uke40. Write Q5 and Q22 in full, then drill the answers below."},
+   what:"Q12–Q20 are uke39 and uke40's material, drilled as Quick-fire 3 and 4. Write Q5 and Q22 in full, then drill the answers below."},
   {id:"m-q5",t:"Fix Q5's code and actually run it",where:"scratch/",
    what:"Split, drop the target, one-hot encode city, use a regressor, score with RMSE on the test set."}]}
 ]};
@@ -4194,8 +4568,8 @@ const EXAM_NOTE = {
        now:"2 a–h, and all of Seksjon 3, 4 and 5.",
        later:"2 i knapsack dominance and 2 k bin packing (chapter 3, uke 41), 2 j derandomised MAX SAT (chapter 5)."},
   ml: {shape:"Seksjon 1 is the ML half: 22 questions for 50 points, mostly multiple choice, with written answers for Q1, Q3–Q5 and a 10-point case in Q22.",
-       now:"Q1–Q17 and Q20–Q22. Q12–Q15, Q17 and Q20 are in uke39 and drilled as Quick-fire 3.",
-       later:"Q18–Q19, stochastic gradient descent and the learning rate. Modul 2's second week, uke 40."}
+       now:"All of Q1–Q22. Q12–Q15, Q17 and Q20 are drilled as Quick-fire 3, and Q18–Q19 as Quick-fire 4.",
+       later:"Nothing. Since uke 40, every question in Seksjon 1 is on material that has been taught."}
 };
 
 function seenCount(h){
@@ -4402,7 +4776,18 @@ const CHECK = {
    {kind:"tokens", answer:[["D"]], fmt:"a letter", syn:{a:"A",b:"B",c:"C",d:"D"}},
  "Quick-fire 3: trees, forests, regularisation":
    {kind:"tokens", answer:[["B","C","B","B","C","D"]], fmt:"Q12, Q13, Q14, Q15, Q17, Q20 as letters — e.g. A D C B A C",
-    syn:{a:"A",b:"B",c:"C",d:"D"}}
+    syn:{a:"A",b:"B",c:"C",d:"D"}},
+ "Quick-fire 4: gradient descent":
+   {kind:"tokens", answer:[["B","C"]], fmt:"Q18 then Q19, as letters — e.g. A D",
+    syn:{a:"A",b:"B",c:"C",d:"D"}},
+ "The update step, and the learning rate":
+   {kind:"choice", choices:["The learning rate is too high — lower it",
+     "The learning rate is too low — raise it","It is stuck in a local minimum — restart elsewhere",
+     "Too few epochs — train for longer"], answer:0},
+ "Batch, stochastic, mini-batch":
+   {kind:"numbers", answer:[1,20,1000], fmt:"updates per epoch: batch, mini-batch, stochastic"},
+ "Hyperparameter search: grid, random, Bayesian":
+   {kind:"numbers", answer:[300], fmt:"the number of fits during the search"}
 };
 
 function autoMark(chk, given){
