@@ -31,11 +31,16 @@ Course: `DAT158-1 26H` (id 35853)
 
 - **Et utvalg maskinlæringsmodeller** — Page
 
+### ML modul 3: Komplett ML-system
+
+- **"End-to-end" maskinlæringssystem** — Page
+
 ### Advanced algorithms
 
 - **Veke 35 (24.08 - 30.08)** — Page
 - **Veke 37 (07.09 - 13.09)** — Page
 - **Veke 38 (14.09 - 20.09)** — Page
+- **Veke 41 (05.10 - 09.10)** — Page
 
 ### Tidligere eksamer
 
@@ -46,7 +51,7 @@ Course: `DAT158-1 26H` (id 35853)
 
 ### DAT158 26H Maskinlæring og videregående algoritmer
 
-*Module: Front page · updated 2026-09-28T13:24:42Z*
+*Module: Front page · updated 2026-10-05T09:42:15Z*
 
 Velkommen til DAT158 - Maskinlæring og videregående algoritmer
 
@@ -142,8 +147,6 @@ Onsdag: Forelesningsnotater
 
 Fredag: Forelesningsnotater
 
- Delta i Kaggle-konkurransen 🏆
-
  Sammendrag for uken: Nederst her
 
 40
@@ -152,19 +155,23 @@ ML
 
  ML modul 2: Maskinlæringsmodeller
 
-  Zoomlenke for Førde og Haugesund: Zoom
-
 Onsdag: Forelesningsnotater
 
-Fredag: Forelesningsnotater (kommer)
+Fredag: Forelesningsnotater
 
  Delta i Kaggle-konkurransen 🏆 (frist 1. okt kl 23:59)
 
 41
 5. - 11. okt
-Alg
+ML / Alg
 
- Chapter 3 & Chapter 4
+ Onsdag: ML modul 3: End-to-end ML-system
+
+  Zoomlenke for Førde og Haugesund: Zoom
+
+Forelesningsnotater
+
+ Fredag: Algoritmer
 
 42
 12. - 18. okt
@@ -172,9 +179,11 @@ Alg
 
 43
 19. - 25. okt
-ML
+Alg / ML
 
- ML modul 3: End-to-end maskinlæringssystem
+ Onsdag: Algoritmer
+
+ Fredag: ML modul 3: End-to-end maskinlæringssystem
 
 44
 26. okt - 1. nov
@@ -221,8 +230,10 @@ Eksamen
 - https://hvl-ml.github.io/DAT158/slides/1-intro/4-ml-engineering.html
 - https://hvl-ml.github.io/DAT158/slides/2-models/5-overfitting.html
 - https://hvl-ml.github.io/DAT158/slides/2-models/6-decision-trees.html
-- https://www.kaggle.com/t/1ff3a045f74546088e16c5cd00cdfb05
 - https://hvl-ml.github.io/DAT158/slides/2-models/7-gradient-descent.html
+- https://hvl-ml.github.io/DAT158/slides/2-models/8-linreg.html
+- https://www.kaggle.com/t/1ff3a045f74546088e16c5cd00cdfb05
+- https://hvl-ml.github.io/DAT158/slides/3-systems/9-ml-project-lifecycle.html
 - https://hvl-ml.github.io/DAT158/slides/3-systems/lecture3.html
 
 ### Introduksjon til maskinlæring
@@ -340,7 +351,7 @@ Pandas:
 
 ### Et utvalg maskinlæringsmodeller
 
-*Module: ML modul 2: Maskinlæringsmodeller · updated 2026-09-28T08:59:13Z*
+*Module: ML modul 2: Maskinlæringsmodeller · updated 2026-10-02T07:02:18Z*
 
 I denne modulen skal vi begynne å se på de indre detaljene i noen viktige maskinlæringsmodeller.
 
@@ -406,6 +417,32 @@ Kan kombinere prediksjonene fra flere modeller for å få bedre ytelse.
 
 Neste uke: Mer om loss-funksjoner og hvordan den brukes til å finne optimale parametre (gjennom gradient descent)
 
+Uke 40
+
+Viktige konsept fra denne uken:
+
+  - Gradient descent: Algoritme for å finne optimale modellparametere der vi deriverer loss-funksjonen med hensyn på parametrene, og tar steg i retning av lavere loss-verdi (=bedre prediksjoner)
+
+  - Learning rate: Hvor store steg vi skal ta når vi gjør gradient descent. Avveining mellom effektivitet og kvalitet
+
+  - Ulike varianter av gradient descent:
+
+  - Batch gradient descent: Regn ut gradienten for all treningsdataen samtidig
+
+  - Stochastic gradient descent: Regn ut gradienten for ett og ett datapunkt av gangen
+
+  - Minibatch gradient descent: Regn ut gradienten for en gruppe av data samtidig (men ikke alle)
+
+  - Læringskurver: Viser metrikker som funksjon av hvor lenge vi har trent modellen (eller, eventuelt, hvor mye data vi har brukt i treningen)
+
+  - Optimalisering av hyperparametre: Vi kan ikke finne de beste hyperparametrene ved å gjøre gredient descent, så vi må eksperimentere.
+
+  - Grid search: Test ut hyperparameter-verdier med bestemte mellomrom
+
+  - Random search: Test ut hyperparameter-verdier tilfeldig
+
+  - Adaptive search: Finn nye hyperparameter-verdier å teste ved å gjøre en intelligent vurdering av de forrige resultatene (mange ulike metoder her)
+
 **Attached files:**
 - dall-e3.png
 
@@ -413,6 +450,36 @@ Neste uke: Mer om loss-funksjoner og hvordan den brukes til å finne optimale pa
 - https://github.com/HVL-ML/DAT158
 - https://www.kaggle.com/t/1ff3a045f74546088e16c5cd00cdfb05
 - https://www.kaggle.com/t/33bec2a7fe534e4cac1a0024ced44658
+
+### "End-to-end" maskinlæringssystem
+
+*Module: ML modul 3: Komplett ML-system · updated 2026-10-05T09:06:47Z*
+
+Læringsmål
+
+  - Kunne formulere, designe og gjennomføre et fullstendig maskinlæringsprosjekt, fra dataforberedelse til endelig produkt.
+
+  - Ha kjennskap til fordeler og ulemper ved ulike designvalg i et ML-prosjekt, og utvikle forståelse for hva som er spesielt ved ML-baserte prosjekt sammenlignet med annen programvareutvikling
+
+  - Ha kjennskap til ulike verktøy som forenkler utvikling og vedlikehold av ML-modeller
+
+Kapittel i boken
+
+Denne modulen følger ikke boken så tett, men repetér kap 2 (End-to-End Machine Learning Project) og les appendix A (Machine Learning Project Checklist). I tillegg anbefaler vi å gå gjennom mini-kurset linket til under "Ekstra ressurser" under, som ikke er obligatorisk men som er nyttig og relevant for de som ser for seg å jobbe med ML i fremtiden,
+
+Oppgaver
+
+Ingen separate oppgaver disse ukene -- vi arbeider med prosjektet i innlevering 2!
+
+Ekstra ressurser
+
+  - Google's mini-kurs i Real-world ML beskriver mye av det vi skal gjennom i denne modulen, og har mye nyttig info rundt det praktiske ved å drive et ML-produkt.
+
+**Attached files:**
+- img.jpg
+
+**Links:**
+- https://developers.google.com/machine-learning/crash-course/production-ml-systems
 
 ### Veke 35 (24.08 - 30.08)
 
@@ -500,6 +567,29 @@ Neste
 - Problems_2.pdf
 - DominatingSet_Eksempel.pdf
 
+### Veke 41 (05.10 - 09.10)
+
+*Module: Advanced algorithms · updated 2026-10-01T11:37:49Z*
+
+Det blir lagt ut lysark for heile tema / kapittel og så vil det bli opplyst kvar vi startar.
+
+Onsdag 7. oktober, kl 10 - 12
+
+  - Maskinlæring (endra på grunn av begravelse)
+
+Fredag 9. oktober, kl 12 - 14.
+
+Chapter_3.pdf
+Oppgaver: Problems_3.pdf Notice Exercise 2 & 6 are part of next Comulsory.
+
+Førre
+
+Neste
+
+**Attached files:**
+- Chapter_3.pdf
+- Problems_3.pdf
+
 ### Informasjon
 
 *Module: Tidligere eksamer · updated 2026-09-15T06:07:38Z*
@@ -510,15 +600,6 @@ Før 2021 var det muntleg eksame. I 2022 og 2023 var kontinuasjonseksamen muntle
 
 ## Announcements
 
-### Møte i referansegruppa
-
-*Posted 2026-09-21T11:19:49Z*
-
-Referansegruppa har bedt meg legge ut teksten under:
-
-"Hei, vi i referansegruppen skal på møte onsdag 23.09. Har du noe ris/ros eller innspill til forbedringer i faget (forelesning, eller annet) send oss gjerne en melding på 186480@stud.hvl.no. Saker som sendes vil bli tatt opp anonymt.
-Mvh Daniel/referansegruppen".
-
 ## Assignments
 
 ### Algorithms number 1
@@ -526,6 +607,78 @@ Mvh Daniel/referansegruppen".
 *Due: 2026-09-04T21:59:59Z · 0.0 points*
 
 Compulsory_1.pdf
+
+### ML assignment 2: Project work
+
+*Due: 2026-10-30T22:59:59Z · 20.0 points*
+
+For oppgaven kan du fritt velge om du skriver på norsk eller engelsk. Beskrivelsen under er på engelsk for å være tilgjengelig for alle deltakere i kurset.
+
+For the final project work, your task is to make a complete, machine learning-based software product. You are free to choose the project idea, and which ML and web frameworks you want to use to deploy your model. Make sure, however, that you follow the instructions listed below. If need some assistance in defining a good project, come ask us at the lab or send a message on Discord.
+
+The goal of the project is to create an ML-based software in form of a website, that solves some kind of useful, cool, and/or fun task.
+
+Create a model from bottom up, following the steps of the ML project lifecycle we have discussed in lectures. This way you will have control of all steps and can tailor your model to be the optimal solution to the task you are trying to solve.
+
+Instructions
+
+  - You should work in groups of 2-3 students.
+
+  - You are allowed to use AI coding tools and take inspiration from solutions you find on the Internet, but you need to cite sources you use. Plagiarism is, as always, strictly forbidden.
+
+  - You must write a short report documenting your work. Template for the report can be found here: Norsk, English.  It's a good idea to start writing as soon as you have a plan for the project, as this helps you focus. You can upload the template to Google Docs for easier collaborative writing. You do not have to use the exact template, but you should try to stick to the suggested content. Upload the report on GitHub (next point)
+
+  - The code you write, the report, and everything related to the project, must be put in a GitHub repository. Your project submission here on Canvas will be a link to the repository. The repository has to be publicly readable.
+
+  - The final product must be a website that takes in user input, and gives a ML-based result in return. There are two ways to show how the website works: Either
+
+  - Deploy it publicly on the Internet (the preferred option -- some hosting options listed below), or
+
+  - Make a video/screencast of you interacting with it.
+
+  - The code and documentation in the GitHub repository must be complete, meaning anyone should be able to reproduce your results and deploy the website.
+
+How to submit
+
+Submit a link to the GitHub repository containing the group's work. Everyone must individually submit on Canvas, but within a group you just submit the same link.
+
+Submission checklist:
+
+The group's GitHub repo contains
+
+  - The report
+
+  - All code required to reproduce your results
+
+  - Documentation of you final website, either as
+
+  - Link to the live website, or
+
+  - Video of you showing the features of the website
+
+How much work is expected?
+
+There is no lower limit on the number of lines of code you are supposed to produce, since a big part of the project is to invent the idea, research the topic, and then plan and design the solution. The report should convey how much effort you spent on this part. You can expect to spend around a week of fulltime work to compete the project.
+
+Project ideas
+
+These are just suggestions to get your creativity flowing -- you don't have to choose among these, but they can be a point of inspiration for your own ideas. To find interesting datasets, look for instance on Kaggle, UCI ML repository, or Google Dataset Search.
+
+Make a web app to
+
+  - Estimate the value of a used car (data)
+
+  - Predict wine quality (data)
+
+  - Classify mushrooms as poisonous or edible (data)
+
+Website hosting
+
+Some suggestions for ways to easily host your website:
+
+  - Gradio
+
+  - Streamlit
 
 ### ML assignment 1
 

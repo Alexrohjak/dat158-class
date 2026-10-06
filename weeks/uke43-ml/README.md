@@ -1,6 +1,6 @@
 # Uke 43 — Machine Learning
 
-**19. - 25. okt** · ML modul 3: End-to-end maskinlæringssystem
+**19. - 25. okt** · Ons: Algoritmer / Fre: ML modul 3: End-to-end maskinlæringssystem
 
 Reading: [`../../ml/book-homl/chapter-map.md`](../../ml/book-homl/chapter-map.md)
 

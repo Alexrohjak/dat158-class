@@ -72,6 +72,32 @@ Kan kombinere prediksjonene fra flere modeller for å få bedre ytelse.
 
 Neste uke: Mer om loss-funksjoner og hvordan den brukes til å finne optimale parametre (gjennom gradient descent)
 
+Uke 40
+
+Viktige konsept fra denne uken:
+
+  - Gradient descent: Algoritme for å finne optimale modellparametere der vi deriverer loss-funksjonen med hensyn på parametrene, og tar steg i retning av lavere loss-verdi (=bedre prediksjoner)
+
+  - Learning rate: Hvor store steg vi skal ta når vi gjør gradient descent. Avveining mellom effektivitet og kvalitet
+
+  - Ulike varianter av gradient descent:
+
+  - Batch gradient descent: Regn ut gradienten for all treningsdataen samtidig
+
+  - Stochastic gradient descent: Regn ut gradienten for ett og ett datapunkt av gangen
+
+  - Minibatch gradient descent: Regn ut gradienten for en gruppe av data samtidig (men ikke alle)
+
+  - Læringskurver: Viser metrikker som funksjon av hvor lenge vi har trent modellen (eller, eventuelt, hvor mye data vi har brukt i treningen)
+
+  - Optimalisering av hyperparametre: Vi kan ikke finne de beste hyperparametrene ved å gjøre gredient descent, så vi må eksperimentere.
+
+  - Grid search: Test ut hyperparameter-verdier med bestemte mellomrom
+
+  - Random search: Test ut hyperparameter-verdier tilfeldig
+
+  - Adaptive search: Finn nye hyperparameter-verdier å teste ved å gjøre en intelligent vurdering av de forrige resultatene (mange ulike metoder her)
+
 **Files:**
 - dall-e3.png
 

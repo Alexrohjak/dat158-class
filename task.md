@@ -35,7 +35,28 @@ This file started on a second clone of the repo, which went its own way from
       V2025 Q18–Q19 as Quick-fire 4, a uke 40 Start-here checklist, a lecture 6
       item in uke 39's checklist, and 4 new auto-marked questions
 - [ ] Work notebooks 2.5 and 2.6, "Your turn!" cells first
-- [ ] Friday 2 Oct: re-sync, and mirror Friday's deck once Canvas links it
+- [x] Friday 2 Oct: re-sync, and mirror Friday's deck once Canvas links it — done
+      in the 6 Oct sync (T-012): lecture 8, `8-linreg`
+
+### T-012 — uke 41: a split week, and ML assignment 2
+- [x] 6 Oct sync. GitHub was up to date, and `reference/DAT158` had no new
+      commits. Canvas posted the uke 41 algorithms page (`Chapter_3.pdf`,
+      `Problems_3.pdf`), the ML modul 3 page, the lecturer's uke 40 summary,
+      and **ML assignment 2** with its two report templates
+- [x] The semester plan changed: uke 41 is ML on Wednesday (moved, 7 Oct
+      10–12) and algorithms on Friday (9 Oct 12–14). uke 43 is the mirror image.
+      `PLAN` in `src/week.py` and the README table say so. Folder names stay
+- [x] Lecture 8 mirrored to `weeks/uke40-ml/slides/2-models/`, and lecture 9
+      (`9-ml-project-lifecycle`) to `weeks/uke41-alg/slides/3-systems/` with its
+      own `site_libs/`, because that is the week it is taught. Both render offline
+- [ ] **ML assignment 2, due Fri 30 Oct 23:59, 20 points.** A group of 2–3
+      builds an ML-backed website: public GitHub repo, a report (templates in
+      `assignments/`), and a live deployment or a screencast. Everyone submits
+      the repo link individually. Find the group and pick the idea first
+- [ ] Algorithms: `Problems_3.pdf` problems 2 and 6 are part of the next
+      compulsory. No Canvas assignment or deadline for it yet
+- [ ] Drill room: alg Chapter 3 week, and lecture 8 (linear regression,
+      regularisation, learning curves) for the ML half
 
 ### ~~T-009 — Reconcile the two clones~~ — done 23 Sep
 The other clone and `origin/main` had diverged from 4c16768: 10 commits there,

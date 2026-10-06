@@ -28,9 +28,9 @@ weeks, matching Canvas.
 | 38 | 14.–20. sep | Alg | Chapter 2 | [`uke38-alg`](weeks/uke38-alg/) |
 | 39 | 21.–27. sep | ML | Modul 2: Maskinlæringsmodeller | [`uke39-ml`](weeks/uke39-ml/) |
 | 40 | 28. sep–4. okt | ML | Modul 2: Maskinlæringsmodeller | [`uke40-ml`](weeks/uke40-ml/) |
-| 41 | 5.–11. okt | Alg | Chapter 3 & 4 | [`uke41-alg`](weeks/uke41-alg/) |
+| 41 | 5.–11. okt | ML / Alg | Ons: ML modul 3 (forelesning 9) · Fre: Chapter 3 | [`uke41-alg`](weeks/uke41-alg/) |
 | 42 | 12.–18. okt | Alg | *(TBA)* | [`uke42-alg`](weeks/uke42-alg/) |
-| 43 | 19.–25. okt | ML | Modul 3: End-to-end maskinlæringssystem | [`uke43-ml`](weeks/uke43-ml/) |
+| 43 | 19.–25. okt | Alg / ML | Ons: Algoritmer · Fre: Modul 3: End-to-end maskinlæringssystem | [`uke43-ml`](weeks/uke43-ml/) |
 | 44 | 26. okt–1. nov | ML | Modul 3: End-to-end maskinlæringssystem | [`uke44-ml`](weeks/uke44-ml/) |
 | 45 | 2.–8. nov | Alg | Chapter 6 & 7 | [`uke45-alg`](weeks/uke45-alg/) |
 | 46 | 9.–15. nov | Alg | *(TBA)* | [`uke46-alg`](weeks/uke46-alg/) |

@@ -1,16 +1,40 @@
 # Uke 41 — Advanced Algorithms
 
-**5. - 11. okt** · Chapter 3 & Chapter 4
+**5. - 11. okt** · Ons: ML modul 3 (forelesning 9) / Fre: Algoritmer - Chapter 3
 
 Reading: [`../../alg/README.md`](../../alg/README.md)
 
 ## Posted by the lecturer
 
-*Nothing published for this week yet.* Re-run `python src/canvas_sync.py` once it appears.
+### Veke 41 (05.10 - 09.10)
+
+Det blir lagt ut lysark for heile tema / kapittel og så vil det bli opplyst kvar vi startar.
+
+Onsdag 7. oktober, kl 10 - 12
+
+  - Maskinlæring (endra på grunn av begravelse)
+
+Fredag 9. oktober, kl 12 - 14.
+
+Chapter_3.pdf
+Oppgaver: Problems_3.pdf Notice Exercise 2 & 6 are part of next Comulsory.
+
+Førre
+
+Neste
+
+**Files:**
+- Chapter_3.pdf
+- Problems_3.pdf
 
 ## In this folder
 
-- `slides/` — empty
+- `slides/` — 5 item(s), 1767 KB
+  - `1-intro`
+  - `2-models`
+  - `3-systems`
+  - `Chapter_3.pdf`
+  - `Problems_3.pdf`
 - `exercises/` — empty
 - `code/` — empty
 
