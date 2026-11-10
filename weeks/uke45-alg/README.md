@@ -6,7 +6,27 @@ Reading: [`../../alg/README.md`](../../alg/README.md)
 
 ## Posted by the lecturer
 
-*Nothing published for this week yet.* Re-run `python src/canvas_sync.py` once it appears.
+### Veke 45  (2.11 - 08.11)
+
+Eg er blitt bedt om å publisere siste delene av pensum no slik at dei som ønskjer kan gjere ferdig den obligatoriske øvinga. Nedanfor er foreløpig materiale (same som i fjor). Det kan bli mindre endringar før forelesningane.
+
+Onsdag 4. november, kl 10 - 12
+
+  - Kapittel 6: Chapter_6.pdf
+
+  - Start på Kapittel 7: Chapter_7.pdf
+
+Fredag 6. november, kl 12 - 14.
+
+  - Gjer ferdig Kapittel 7: Chapter_7.pdf
+
+  - Eksamen H2021 (berre algoritmedelen): Tidligere eksamer
+
+Oppgaver: Kommer
+
+**Files:**
+- Chapter_6.pdf
+- Chapter_7.pdf
 
 ## In this folder
 

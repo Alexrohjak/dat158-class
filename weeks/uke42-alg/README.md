@@ -6,7 +6,33 @@ Reading: [`../../alg/README.md`](../../alg/README.md)
 
 ## Posted by the lecturer
 
-*Nothing published for this week yet.* Re-run `python src/canvas_sync.py` once it appears.
+### Veke 42 (12.10 - 16.10)
+
+Det blir lagt ut lysark for heile tema / kapittel og så vil det bli opplyst kvar vi startar.
+
+Onsdag 14. oktober, kl 10 - 12
+
+  - Gjer ferdig Kapittel 3: Start på lysark 32 Chapter_3.pdf
+
+  - Start på Kapittel 4: Chapter_4.pdf
+
+Fredag 16. oktober, kl 12 - 14.
+
+  - Gjer ferdig Kapittel 4 (Starter på lysark 22)
+
+  - Start på Kapittel 5  Chapter_5.pdf
+
+Oppgaver: Problems_3.pdf
+
+Førre
+
+Neste
+
+**Files:**
+- Chapter_3.pdf
+- Chapter_4.pdf
+- Chapter_5.pdf
+- Problems_3.pdf
 
 ## In this folder
 

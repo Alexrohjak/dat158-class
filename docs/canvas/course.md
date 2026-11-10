@@ -18,7 +18,7 @@ Course: `DAT158-1 26H` (id 35853)
 | Panopto video | /courses/35853/external_tools/1650 |
 | Zoom | /courses/35853/external_tools/1247 |
 | Pensum/Litteratur | /courses/35853/external_tools/2182 |
-| Notebook | /courses/35853/notebook |
+| Notatbok | /courses/35853/notebook |
 
 ## Modules
 
@@ -41,6 +41,9 @@ Course: `DAT158-1 26H` (id 35853)
 - **Veke 37 (07.09 - 13.09)** — Page
 - **Veke 38 (14.09 - 20.09)** — Page
 - **Veke 41 (05.10 - 09.10)** — Page
+- **Veke 42 (12.10 - 16.10)** — Page
+- **Veke 43 (19.10 - 23.10)** — Page
+- **Veke 45  (2.11 - 08.11)** — Page
 
 ### Tidligere eksamer
 
@@ -51,7 +54,7 @@ Course: `DAT158-1 26H` (id 35853)
 
 ### DAT158 26H Maskinlæring og videregående algoritmer
 
-*Module: Front page · updated 2026-10-05T09:42:15Z*
+*Module: Front page · updated 2026-11-10T10:41:29Z*
 
 Velkommen til DAT158 - Maskinlæring og videregående algoritmer
 
@@ -167,11 +170,11 @@ ML / Alg
 
  Onsdag: ML modul 3: End-to-end ML-system
 
-  Zoomlenke for Førde og Haugesund: Zoom
-
 Forelesningsnotater
 
  Fredag: Algoritmer
+
+ZoomLinks to an external site.
 
 42
 12. - 18. okt
@@ -185,11 +188,19 @@ Alg / ML
 
  Fredag: ML modul 3: End-to-end maskinlæringssystem
 
+Forelesningsnotater
+
 44
 26. okt - 1. nov
 ML
 
-  ML modul 3: End-to-end maskinlæringssystem
+ ML modul 3: End-to-end maskinlæringssystem
+
+ Zoomlenke for Førde og Haugesund: Zoom
+
+Onsdag: Forelesningsnotater
+
+Fredag: Gjesteforelesning! ML i næringslivet, av Sathiesh Kaliyugarasan (med bonus om agentisk KI 🤖)
 
 45
 2. - 8. nov
@@ -204,6 +215,10 @@ Alg
 47
 16. - 21. nov
 ML
+
+ Onsdag: Repetisjon og gjennomgang gamle eksamensoppgaver fra ML-delen
+
+ Fredag: Ingen forelesning - vi setter istedet opp en spørretime nærmere eksamen
 
 Eksamen
 
@@ -234,7 +249,9 @@ Eksamen
 - https://hvl-ml.github.io/DAT158/slides/2-models/8-linreg.html
 - https://www.kaggle.com/t/1ff3a045f74546088e16c5cd00cdfb05
 - https://hvl-ml.github.io/DAT158/slides/3-systems/9-ml-project-lifecycle.html
+- https://hvl-ml.github.io/DAT158/slides/3-systems/10-verification.html
 - https://hvl-ml.github.io/DAT158/slides/3-systems/lecture3.html
+- https://hvl-ml.github.io/DAT158/slides/3-systems/11-problems.html
 
 ### Introduksjon til maskinlæring
 
@@ -590,6 +607,83 @@ Neste
 - Chapter_3.pdf
 - Problems_3.pdf
 
+### Veke 42 (12.10 - 16.10)
+
+*Module: Advanced algorithms · updated 2026-10-16T06:53:13Z*
+
+Det blir lagt ut lysark for heile tema / kapittel og så vil det bli opplyst kvar vi startar.
+
+Onsdag 14. oktober, kl 10 - 12
+
+  - Gjer ferdig Kapittel 3: Start på lysark 32 Chapter_3.pdf
+
+  - Start på Kapittel 4: Chapter_4.pdf
+
+Fredag 16. oktober, kl 12 - 14.
+
+  - Gjer ferdig Kapittel 4 (Starter på lysark 22)
+
+  - Start på Kapittel 5  Chapter_5.pdf
+
+Oppgaver: Problems_3.pdf
+
+Førre
+
+Neste
+
+**Attached files:**
+- Chapter_3.pdf
+- Chapter_4.pdf
+- Chapter_5.pdf
+- Problems_3.pdf
+
+### Veke 43 (19.10 - 23.10)
+
+*Module: Advanced algorithms · updated 2026-10-23T13:59:37Z*
+
+Det blir lagt ut lysark for heile tema / kapittel og så vil det bli opplyst kvar vi startar.
+
+Onsdag 21. oktober, kl 10 - 12
+
+  - Kapittel 5: Chapter_5.pdf
+Start lysark: 30 - Flipping biased coins
+
+Oppgaver: Problems_4.pdf
+
+Fredag 23. oktober: Maskinlæring
+
+Førre
+
+Neste
+
+**Attached files:**
+- Chapter_5.pdf
+- Problems_4.pdf
+
+### Veke 45  (2.11 - 08.11)
+
+*Module: Advanced algorithms · updated 2026-10-27T10:08:32Z*
+
+Eg er blitt bedt om å publisere siste delene av pensum no slik at dei som ønskjer kan gjere ferdig den obligatoriske øvinga. Nedanfor er foreløpig materiale (same som i fjor). Det kan bli mindre endringar før forelesningane.
+
+Onsdag 4. november, kl 10 - 12
+
+  - Kapittel 6: Chapter_6.pdf
+
+  - Start på Kapittel 7: Chapter_7.pdf
+
+Fredag 6. november, kl 12 - 14.
+
+  - Gjer ferdig Kapittel 7: Chapter_7.pdf
+
+  - Eksamen H2021 (berre algoritmedelen): Tidligere eksamer
+
+Oppgaver: Kommer
+
+**Attached files:**
+- Chapter_6.pdf
+- Chapter_7.pdf
+
 ### Informasjon
 
 *Module: Tidligere eksamer · updated 2026-09-15T06:07:38Z*
@@ -679,6 +773,30 @@ Some suggestions for ways to easily host your website:
   - Gradio
 
   - Streamlit
+
+### Algorithms number 2
+
+*Due: 2026-11-13T22:59:59Z · 0.0 points*
+
+Your find the exercises in the files below. At most 3 students per group.
+
+Problems_2.pdf (Number 5 & 6)
+
+Problems_3.pdf (Number 2 & 6)
+
+Problems_4.pdf (Number 2 & 3)
+
+Problems_5.pdf (Number 1 & 2)
+
+Det har vorte noko gale med guppeoppsettet. Dei som leverer i grupper, kan bruke levere via "Oppgave 2 ny"
+
+### Oppgave 2 ny
+
+*Due: 2026-11-13T22:59:59Z · 0.0 points*
+
+Det har skjedd noko gale med gruppene for andre innlevering i algoritmer. Denne er oppgava er kun for å levere som grupper.
+
+Sven-Olai
 
 ### ML assignment 1
 

@@ -6,7 +6,26 @@ Reading: [`../../ml/book-homl/chapter-map.md`](../../ml/book-homl/chapter-map.md
 
 ## Posted by the lecturer
 
-*Nothing published for this week yet.* Re-run `python src/canvas_sync.py` once it appears.
+### Veke 43 (19.10 - 23.10)
+
+Det blir lagt ut lysark for heile tema / kapittel og så vil det bli opplyst kvar vi startar.
+
+Onsdag 21. oktober, kl 10 - 12
+
+  - Kapittel 5: Chapter_5.pdf
+Start lysark: 30 - Flipping biased coins
+
+Oppgaver: Problems_4.pdf
+
+Fredag 23. oktober: Maskinlæring
+
+Førre
+
+Neste
+
+**Files:**
+- Chapter_5.pdf
+- Problems_4.pdf
 
 ## In this folder
 
