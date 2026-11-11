@@ -45,14 +45,14 @@ no computer. So a notebook gets **45 minutes, hard cap**:
 Skip 1.6 — 2.6 is the same notebook again. The extras 2.7–2.10 are lookup
 material for the project, not study material.
 
-## Algorithms final compulsory — noted 4 Nov, 3 of 8 done (10 Nov)
+## Algorithms final compulsory — noted 4 Nov, 6 of 8 done (11 Nov)
 
 Eight problems from the weekly sheets. PDFs and a checklist are in
 `assignments/alg-compulsory-2/`. **Deadline: Fri 13 Nov, 23:59.** Groups ≤ 3 submit via "Oppgave 2 ny".
 
 - [x] `Problems_2.pdf` — 5 and 6
-- [ ] `Problems_3.pdf` — 2 and 6
-- [ ] `Problems_4.pdf` — 2 and 3
+- [x] `Problems_3.pdf` — 2 and 6
+- [x] `Problems_4.pdf` — 2 and 3
 - [ ] `Problems_5.pdf` — 1 and 2
 
 ## The backlog queue

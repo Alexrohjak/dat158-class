@@ -397,71 +397,266 @@ Phase 1: SRPT table
 
 t = 0, jobs released : J1 (6), J2 (5)
 
-Job with lowest Processing time -> J2, and is released and works for t = 1
+Job with lowest remaining processing time -> J2, and is released and works for t = 1
 
 t = 1, job released : J3 (3)
 
 current remaining work: J1 (6), J2 (4)
 
-Job with lowest Processing time -> J3 is released and works for t = 1
+Job with lowest remaining processing time -> J3 is released and works for t = 1
 
 t = 2, job released : J4 (1)
 
 current remaining work: J1 (6), J2 (4), J3 (2)
 
-Job with lowest Processing time -> J4 is released and works for t = 1 -> J4 complete at t = 3
+Job with lowest remaining processing time -> J4 is released and works for t = 1 -> J4 complete at t = 3
 
 t = 3, job released : J5 (4)
 
 current remaining work: J1 (6), J2 (4), J3 (2)
 
-Job with lowest processing time -> J3 is released and works for t = 1
+Job with lowest remaining processing time -> J3 is released and works for t = 1
 
 t = 4, job released : J6 (2)
 
 current remaining work: J1 (6), J2 (4), J3 (1), J5 (4), J6 (2)
 
-Job with lowest Processing time -> J3 is released and works for t = 1 -> J3 complete at t = 5
+Job with lowest remaining processing time -> J3 is released and works for t = 1 -> J3 complete at t = 5
 
 t = 5, job released : None
 
 current remaining work: J1 (6), J2 (4), J5 (4), J6 (2)
 
-Job with lowest Processing time -> J6 is released and works for t = 2 -> J6 complete at t = 7
+Job with lowest remaining processing time -> J6 is released and works for t = 2 -> J6 complete at t = 7
 
 t = 7, job released : None
 
-current remaining work: J1 (6), J2 (4), J5 (4)
+current remaining work: J1 (6), J2 (4), J5 (4) -> J2 and J5 tie, go with lower number
 
-Job with lowest Processing time -> J2 is released and works for t = 4 -> J2 complete at t = 11
+Job with lowest remaining processing time -> J2 is released and works for t = 4 -> J2 complete at t = 11
 
 t = 11, job released : None
 
 current remaining work: J1 (6), J5 (4)
 
-Job with lowest Processing time -> J5 is released and works for t = 4 -> J5 complete at t = 15
+Job with lowest remaining processing time -> J5 is released and works for t = 4 -> J5 complete at t = 15
 
 t = 15, job released : None
 
 current remaining work; J1 (6)
 
-Job with lowest Processing time -> J1 is released and works for t = 4
+Job with lowest remaining processing time -> J1 is released and works for t = 4
 
 t = 19, job released : J7 (2)
 
-current remaining work: J1 (2), J7 (2)
+current remaining work: J1 (2), J7 (2) -> J1 and J7 tie, go with lower number
 
-Job with lowest Processing time -> J1 is released and works for t = 2 -> J1 complete at t = 21
+Job with lowest remaining processing time -> J1 is released and works for t = 2 -> J1 complete at t = 21
 
 t = 21, job released : None
 
 current remaining work: J7 (2)
 
-Job with lowest Processing time -> J7 is released and works for t = 2 -> J7 complete at t = 23
+Job with lowest remaining processing time -> J7 is released and works for t = 2 -> J7 complete at t = 23
+
+Completion order: J4 = 3, J3 = 5, J6 = 7, J2 = 11, J5 = 15, J1 = 21, J7 = 23
+
+Sum of tasks    : 3 + 5 + 7 + 11 + 15 + 21 + 23 = 85
+
+Phase 2: no pausing
+
+J4 (2, 1), Start = max(2, 0), End = 2 + 1 = 3
+
+J3 (1, 3), Start = max(1, 3), End = 3 + 3 = 6 
+
+J6 (4, 2), Start = max(4, 6), End = 6 + 2 = 8
+
+J2 (0, 5), Start = max(0, 8), End = 8 + 5 = 13
+
+J5 (3, 4), Start = max(3, 13), End = 13 + 4 = 17
+
+J1 (0, 6), Start = max(0, 17), End = 17 + 6 = 23
+
+J7 (19, 2), Start = max(19, 23), End = 23 + 2 = 25
+
+Sum of tasks     : 3 + 6 + 8 + 13 + 17 + 23 + 25 = 95
+
+Phase 1 sum (85) <= OPT <= Phase 2 sum (95) <= 2 x 85
 
 
+-- Problems 4
 
+2).
 
- 
+    a). 
+    
+    find answers in answers.py
 
+    b).
+
+    x1 -> 
+
+    C1 = 3(x1 || (not) x2 || x3)
+
+    x1 = true  -> 3(True || open || open), weight = 3x1 = 3
+    x1 = false -> 3(False || open || open), weight = 3 x (1-1/2²) = 3x3/4 = 2.25
+
+    C2 = 4(x1 || (not) x3)
+
+    x1 = true  -> 4(True || open), weight = 4x1 = 4
+    x1 = false -> 4(False || open), weight = 4 x (1-1/2¹) = 4x1/2 = 2
+
+    C3 = 1((not) x1 || x2 || (not) x5)
+
+    x1 = true  -> 1(False || open || open), weight = 1 x (1-1/2²) = 1x3/4 = 0.75
+    x1 = false -> 1(True || open || open), weight = 1 x 1 = 1
+
+    C4 = 3((not) x1 || x3)
+
+    x1 = true  -> 3(False || open), weight = 3 x (1-1/2¹) = 3x1/2 = 1.5
+    x1 = false -> 3(True || open), weight = 3 x 1 = 3
+
+    Sum of x1 = true -> 3 + 4 + 0.75 + 1.5 = 9.25
+    Sum of x1 = false -> 2.25 + 2 + 1 + 3 = 8.25
+
+    9.25 >= 8.25 -> x1 = true
+
+    x2 -> x1 is locked to True
+
+    C1 = 3(x1 || (not) x2 || x3)
+
+    x2 = true  -> 3(True || False || open), weight = 3 x 1 = 3
+    x2 = false -> 3(True || True || open), weight = 3 x 1 = 3
+
+    C3 = 1((not) x1 || x2 || (not) x5)
+
+    x2 = true  -> 1(False || True || open), weight = 1 x 1 = 1
+    x2 = false -> 1(False || False || open), weight = 1 x (1-1/2¹) = 1x1/2 = 0.5
+
+    C5 = 2(x2 || (not) x4)
+
+    x2 = true  -> 2(True || open), weight = 2 x 1 = 2
+    x2 = false -> 2(False || open), weight = 2 x (1-1/2¹) = 2x1/2 = 1
+
+    C6 = 7((not) x2 || x5 || x9)
+
+    x2 = true  -> 7(False || open || open), weight = 7 x (1-1/2²) = 7x3/4 = 5.25
+    x2 = false -> 7(True || open || open), weight = 7 x 1 = 7
+
+    Sum of x2 = true -> 3 + 1 + 2 + 5.25 = 11.25
+    Sum of x2 = false -> 3 + 0.5 + 1 + 7 = 11.5
+
+    11.25 <= 11.5 -> x2 = false
+
+    x3 -> x1 is locked to True, x2 is locked to False
+
+    C1 = 3(x1 || (not) x2 || x3)
+
+    x3 = true  -> 3(True || True || True), weight = 3 x 1 = 3
+    x3 = false -> 3(True || True || False), weight = 3 x 1 = 3
+
+    C2 = 4(x1 || (not) x3)
+
+    x3 = true  -> 4(True || False), weight = 4 x 1 = 4
+    x3 = false -> 4(True || True), weight = 4 x 1 = 4
+
+    C4 = 3((not) x1 || x3)
+
+    x3 = true  -> 3(False || True), weight = 3 x 1 = 3
+    x3 = false -> 3(False || False), weight = 3 x (1-1/2^0) = 3x0 = 0
+
+    C7 = 2(x3 || (not) x4)
+
+    x3 = true  -> 2(True || open), weight = 2 x 1 = 2
+    x3 = false -> 2(False || open), weight = 2 x (1-1/2¹) = 2x1/2 = 1
+
+    Sum of x3 = true -> 3 + 4 + 3 + 2 = 12
+    Sum of x3 = false -> 3 + 4 + 0 + 1 = 8
+
+    12 >= 8 -> x3 = true
+
+    x4 -> x1 is locked to True, x2 is locked to False, x3 is locked to True
+
+    C5 = 2(x2 || (not) x4)
+
+    x4 = true  -> 2(False || False), weight = 2 x (1-1/2^0) = 2x0 = 0
+    x4 = false -> 2(False || True), weight = 2 x 1 = 2
+
+    C7 = 2(x3 || (not) x4)
+
+    x4 = true  -> 2(True || False), weight = 2 x 1 = 2
+    x4 = false -> 2(True || True), weight = 2 x 1 = 2
+
+    C8 = 3((not) x4 || (not) x5 || x21)
+
+    x4 = true  -> 3(False || open || open), weight = 3 x (1-1/2²) = 3x3/4 = 2.25
+    x4 = false -> 3(True || open || open), weight = 3 x 1 = 3
+
+    Sum of x4 = true -> 0 + 2 + 2.25 = 4.25
+    Sum of x4 = false -> 2 + 2 + 3 = 7
+
+    4.25 <= 7 -> x4 = false
+
+    x5 -> x1 is locked to True, x2 is locked to False, x3 is locked to True, x4 is locked to false
+
+    C3 = 1((not) x1 || x2 || (not) x5)
+
+    x5 = true  -> 1(False || False || False), weight = 1 x (1-1/2⁰) = 1x0 = 0
+    x5 = false -> 1(False || False || True), weight = 1 x 1 = 1
+
+    C6 = 7((not) x2 || x5 || x9)
+
+    x5 = true  -> 7(True || True || open), weight = 7 x 1 = 7
+    x5 = false -> 7(True || False || open), weight = 7 x 1 = 7
+
+    C8 = 3((not) x4 || (not) x5 || x21)
+
+    x5 = true  -> 3(True || False || open), weight = 3 x 1 = 3
+    x5 = false -> 3(True || True || open), weight = 3 x 1 = 3
+
+    C9 = 5(x5 || (not) x12)
+
+    x5 = true  -> 5(True || open), weight = 5 x 1 = 5
+    x5 = false -> 5(False || open), weight = 5 x (1-1/2¹) = 5x1/2 = 2.5
+
+    Sum of x5 = true -> 0 + 7 + 3 + 5 = 15
+    Sum of x5 = false -> 1 + 7 + 3 + 2.5 = 13.5
+
+    15 >= 13.5 -> x5 = true
+
+    Result: x1 = true, x2 = false, x3 = true, x4 = false, x5 = true
+
+3).
+
+    a). ILP formulation
+
+    C1 = 4(x1 || (not) x3), C2 = 3((not) x1 || x4), C3 = 2((not) x2 || x4), C4 = 1((not) x2 || (not) x3 || x4)
+
+    maximize -> 4z1 + 3z2 + 2z3 + z4
+
+    subject to:
+    
+        y1 + (1 - y3)            >= z1
+        (1 - y1) + y4            >= z2
+        (1 - y2) + y4            >= z3
+        (1 - y2) + (1 - y3) + y4 >= z4
+
+        yi is in {0, 1}, i = 1..4
+        zj is in {0, 1}, j = 1..4
+
+    b). LP formulation
+
+    C1 = 4(x1 || (not) x3), C2 = 3((not) x1 || x4), C3 = 2((not) x2 || x4), C4 = 1((not) x2 || (not) x3 || x4)
+
+    maximize -> 4z1 + 3z2 + 2z3 + z4
+
+    subject to:
+
+        y1 + (1 - y3)            >= z1
+        (1 - y1) + y4            >= z2
+        (1 - y2) + y4            >= z3
+        (1 - y2) + (1 - y3) + y4 >= z4
+
+        0 <= yi <= 1, i = 1..4
+        0 <= zj <= 1, j = 1..4
     

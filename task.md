@@ -9,12 +9,12 @@ This file started on a second clone of the repo, which went its own way from
 
 ## Now
 
-### T-013 — Algorithms final compulsory (due Fri 13 Nov 23:59; 3 of 8 done)
+### T-013 — Algorithms final compulsory (due Fri 13 Nov 23:59; 6 of 8 done)
 - [x] Brief noted: `Problems_2` #5–6, `Problems_3` #2 and #6, `Problems_4`
       #2–3, `Problems_5` #1–2. PDFs and a checklist in
       `assignments/alg-compulsory-2/`
 - [x] Deadline Fri 13 Nov 23:59; groups of ≤ 3 submit via "Oppgave 2 ny"
-- [ ] Work the eight problems — P2 #5, P2 #6, P3 #2 done; P3 #6 phase 1 done
+- [ ] Work the eight problems — P2 #5–6, P3 #2 and #6, P4 #2–3 done
 
 ### T-010 — uke 39: ML modul 2 starts
 - [x] Canvas sync: the modul 2 page, the Kaggle competition (closes 1 Oct 23:59),
