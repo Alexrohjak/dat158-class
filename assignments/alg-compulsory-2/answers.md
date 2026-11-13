@@ -660,3 +660,133 @@ Phase 1 sum (85) <= OPT <= Phase 2 sum (95) <= 2 x 85
         0 <= yi <= 1, i = 1..4
         0 <= zj <= 1, j = 1..4
     
+
+-- Problems 5
+
+1). Coloring a 3-colorable graph with O(sqrt(n)) colors
+
+    Neighbors from the adjacency matrix:
+
+        1: 3, 4, 6, 8
+        2: 7, 9
+        3: 1, 4, 6
+        4: 1, 3
+        5: 6, 9
+        6: 1, 3, 5, 8
+        7: 2, 8, 9
+        8: 1, 6, 7
+        9: 2, 5, 7
+
+    n = 9 -> sqrt(n) = 3
+
+    Round 1:
+
+        Degrees: 1:4, 2:2, 3:3, 4:2, 5:2, 6:4, 7:3, 8:3, 9:3
+        Lowest vertex with degree >= 3 -> vertex 1, new colors A, B, C
+
+        1 = A
+
+        2-color the neighbors {3, 4, 6, 8} with B and C, edges between them: 3-4, 3-6, 6-8
+
+            3 = B (start), S = {3}
+            4 = C (neighbor 3 is B)
+            6 = C (neighbor 3 is B)
+            8 = B (neighbor 6 is C)
+
+        Remove 1, 3, 4, 6, 8
+
+    Round 2:
+
+        Left: 2, 5, 7, 9, edges: 2-7, 2-9, 5-9, 7-9
+        Degrees: 2:2, 5:1, 7:2, 9:3
+        Vertex 9 has degree 3 >= 3 -> new colors D, E, F
+
+        9 = D
+
+        2-color the neighbors {2, 5, 7} with E and F, edges between them: 2-7
+
+            2 = E (start), S = {2}
+            7 = F (neighbor 2 is E)
+            5 = E (no neighbor in S, own component, start again)
+
+        Remove 2, 5, 7, 9
+
+    Last step:
+
+        No vertices left -> the (Delta + 1) coloring has nothing to color
+
+    Result: 1 = A, 2 = E, 3 = B, 4 = C, 5 = E, 6 = C, 7 = F, 8 = B, 9 = D
+
+    Check: 1-3 A/B, 1-4 A/C, 1-6 A/C, 1-8 A/B, 2-7 E/F, 2-9 E/D, 3-4 B/C,
+           3-6 B/C, 5-6 E/C, 5-9 E/D, 6-8 C/B, 7-8 F/B, 7-9 F/D -> all OK
+
+    6 colors used <= 4 * sqrt(n) = 12 (Theorem 6.20)
+
+2). Minimum vertex cover
+
+    Edges: (1,2), (1,3), (1,5), (2,3), (2,5), (4,5)
+
+    a). ILP formulation
+
+    xi = 1 if vertex i is in the cover C, 0 if not
+
+    minimize -> x1 + x2 + x3 + x4 + x5
+
+    subject to:
+
+        x1 + x2 >= 1
+        x1 + x3 >= 1
+        x1 + x5 >= 1
+        x2 + x3 >= 1
+        x2 + x5 >= 1
+        x4 + x5 >= 1
+
+        xi is in {0, 1}, i = 1..5
+
+    (Optimal: 1-2-3 is a triangle so it needs 2 of them, and (4,5) needs one more -> OPT = 3, e.g. C = {1, 2, 5})
+
+    b). LP relaxation
+
+    minimize -> x1 + x2 + x3 + x4 + x5
+
+    subject to:
+
+        x1 + x2 >= 1
+        x1 + x3 >= 1
+        x1 + x5 >= 1
+        x2 + x3 >= 1
+        x2 + x5 >= 1
+        x4 + x5 >= 1
+
+        0 <= xi <= 1, i = 1..5
+
+    c). Dual
+
+    One dual variable y_ij for each edge (the "price" of the edge), one constraint for each vertex:
+    the prices of the edges touching a vertex can't sum to more than its weight (1).
+
+    maximize -> y12 + y13 + y15 + y23 + y25 + y45
+
+    subject to:
+
+        y12 + y13 + y15 <= 1      (vertex 1)
+        y12 + y23 + y25 <= 1      (vertex 2)
+        y13 + y23       <= 1      (vertex 3)
+        y45             <= 1      (vertex 4)
+        y15 + y25 + y45 <= 1      (vertex 5)
+
+        y_ij >= 0 for all edges
+
+    d). LP solution = 500 on a graph with 10.000 vertices
+
+    The LP is a relaxation of the ILP (more solutions allowed), so it can only be as good or better
+    for a minimization problem:
+
+        Z_LP <= OPT -> OPT >= 500
+
+    Rounding: put vertex i in the cover if xi >= 1/2. For every edge xi + xj >= 1, so at least one
+    of them is >= 1/2 -> it is a vertex cover. Every chosen vertex costs 1 <= 2 * xi, so the
+    rounded cover has size <= 2 * Z_LP = 1000 (f = 2, each edge is in 2 "sets").
+
+    So: 500 <= OPT <= 1000. The minimum vertex cover has between 500 and 1000 vertices, and we can
+    find a cover with at most 1000 vertices in polynomial time (2-approximation).

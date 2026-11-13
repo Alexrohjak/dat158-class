@@ -20,5 +20,5 @@ Eight problems in all. **Deadline: Fri 13 Nov 2026, 23:59.** Groups of at most 3
 - [x] Problems_3 #6
 - [x] Problems_4 #2
 - [x] Problems_4 #3
-- [ ] Problems_5 #1
-- [ ] Problems_5 #2
+- [x] Problems_5 #1
+- [x] Problems_5 #2
